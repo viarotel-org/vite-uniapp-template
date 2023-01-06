@@ -5,10 +5,10 @@
 
 💡 [查看预览地址](https://static-3e173b30-f914-4276-8526-f91cd7e32d6a.bspapp.com/) (请将浏览器切换为手机模式打开,账号密码不为空即可,由于是免费的服务器,如遇打不开的情况,请多刷新几次)<br/>
 💕 css 框架 使用 [unocss](https://uno.antfu.me/)<br/>
-💕 request 库 使用[uni-network](https://github.com/uni-helper/uni-network/) (api 同 axios)<br/>
+💕 request 库 使用 [uni-network](https://github.com/uni-helper/uni-network/) (api 同 axios)<br/>
 💕 router 路由 使用 [uni-native-router](https://github.com/Gertyxs/uni-native-router/) (通过二次封装 api 同 vue-router)<br/>
 💕 store 库 使用 [pinia](https://pinia.vuejs.org/)<br/>
-💕 ui 库 使用 [uview](https://v1.uviewui.com/)(已配置全自动按需导入)
+💕 ui 库 使用 [uview](https://v1.uviewui.com/) (已配置全自动按需导入)
 
 <!-- PROJECT SHIELDS -->
 
@@ -25,7 +25,7 @@
 
 <p align="center">
   <a href="https://github.com/viarotel/vite-uniapp-template">
-    <img src="src/static/images/logo.png" alt="viarotel" height="80">
+    <img src="src/assets/images/logo.png" alt="viarotel" height="80">
   </a>
   <h3 align="center">vite-uniapp-template</h3>
   <p align="center">
