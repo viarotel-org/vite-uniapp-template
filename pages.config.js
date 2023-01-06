@@ -30,7 +30,7 @@ export default definePages({
     {
       path: 'pages/home/tab-1/index',
       shortcut: '/tab-1',
-      middleware: ['permission'],
+      // middleware: ['permission'],
       style: {
         navigationBarTitleText: '我的',
         navigationStyle: 'custom',

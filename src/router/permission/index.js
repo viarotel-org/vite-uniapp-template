@@ -1,5 +1,5 @@
 // TODO
-import NProgress from 'nprogress' // progress bar
+// import NProgress from 'nprogress' // progress bar
 // import 'nprogress/nprogress.css' // progress bar style
 import store from '@/store/index.js'
 // const isDevelopment = process.env.NODE_ENV === 'development'
@@ -21,12 +21,19 @@ export default (router) => {
     console.log('from', from)
     // console.log('next', next)
 
-    const userStore = store.useUserStore()
+    // TODO
+    let userStore = {}
+    try {
+      userStore = store.useUserStore()
+    } catch (error) {
+      console.log('error', error)
+    }
+
     const token = userStore.token
     const userId = userStore.userId
 
-    // console.log('token', token)
-    // console.log('userId', userId)
+    console.log('token', token)
+    console.log('userId', userId)
 
     if (whiteList.indexOf(to.path) !== -1) {
       // 在免登录白名单，直接进入

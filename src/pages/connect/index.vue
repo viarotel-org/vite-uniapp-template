@@ -12,7 +12,7 @@
     </div>
     <div class="px-4 bg-white">
       <u-form
-        label-width="160"
+        label-width="200"
         border
       >
         <u-form-item label="邮箱">
