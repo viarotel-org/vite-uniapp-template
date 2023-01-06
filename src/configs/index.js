@@ -1,5 +1,6 @@
-const isProduction = process.env.NODE_ENV === 'production'
 // const isDevelopment = process.env.NODE_ENV === 'development'
+const isProduction = process.env.NODE_ENV === 'production'
+const isH5 = process.env.UNI_PLATFORM === 'h5'
 
 export const title = 'vite-uniapp-temolate'
 
@@ -15,8 +16,9 @@ export const appBasePath = isProduction ? './' : './'
 // 请求地址
 export const requestURL = 'http://192.168.0.186:9009/'
 // export const requestURL = 'http://huishencloud.cn:9101/'
+
 // 是否开启代理
-export const useProxy = false
+export const useProxy = isH5
 // 代理路径
 export const proxyPath = '/api'
 // 代理端口号
