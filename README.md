@@ -34,7 +34,7 @@
     <a href="https://github.com/viarotel/vite-uniapp-template"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/viarotel/vite-uniapp-template">查看Demo</a>
+    <a href="https://static-3e173b30-f914-4276-8526-f91cd7e32d6a.bspapp.com/">查看Demo</a>
     ·
     <a href="https://github.com/viarotel/vite-uniapp-template/issues">报告Bug</a>
     ·
