@@ -1,0 +1,58 @@
+/*初始化*/
+page,
+view,
+text,
+scroll-view,
+swiper,
+swiper-item,
+cover-view,
+cover-image,
+icon,
+rich-text,
+progress,
+button,
+checkbox,
+form,
+input,
+label,
+radio,
+slider,
+switch,
+textarea,
+navigator,
+audio,
+camera,
+image,
+video,
+uni-base,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+}
+
+page {
+  height: 100%;
+  @apply bg-gray-100;
+}
+
+button {
+  background-color: transparent;
+  border-radius: 0rpx;
+  padding: 0rpx;
+  margin: 0rpx;
+  display: inline-block;
+  line-height: 1;
+  font-size: 1rem;
+}
+
+button::after {
+  /*button的边框样式是通过::after方式实现的*/
+  border: none;
+}
+
+navigator {
+  display: inline-block;
+}

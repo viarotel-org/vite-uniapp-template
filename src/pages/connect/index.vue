@@ -1,0 +1,80 @@
+<template>
+  <div class="">
+    <div class="h-[35vh] flex flex-col justify-center">
+      <img
+        src="@/assets/images/logo.png"
+        alt=""
+        class="w-20 h-20 block mx-auto"
+      />
+      <div class="text-black text-xl text-center font-bold mt-4">
+        {{ title }}
+      </div>
+    </div>
+    <div class="px-4 bg-white">
+      <u-form
+        label-width="160"
+        border
+      >
+        <u-form-item label="邮箱">
+          <div
+            class=""
+            @click="handleCopy(company.mail)"
+          >
+            {{ company.mail }}
+            <via-icon
+              name="fuzhi"
+              class="text-gray-400"
+            ></via-icon>
+          </div>
+        </u-form-item>
+        <u-form-item label="微信号">
+          <div
+            class=""
+            @click="handleCopy(company.wechat)"
+          >
+            {{ company.wechat }}
+            <via-icon
+              name="fuzhi"
+              class="text-gray-400"
+            ></via-icon>
+          </div>
+        </u-form-item>
+        <u-form-item label="微信二维码">
+          <img
+            :src="wechatImage"
+            alt=""
+            class="w-20 h-20"
+          />
+        </u-form-item>
+      </u-form>
+    </div>
+  </div>
+</template>
+
+<script>
+import { company } from '@/configs/index'
+import wechatImage from '@/assets/images/image-wechat.png'
+
+export default {
+  data() {
+    return {
+      company,
+      title: company.name,
+      wechatImage,
+    }
+  },
+  methods: {
+    handleCopy(data) {
+      uni.setClipboardData({
+        data,
+        showToast: false,
+        success: () => {
+          this.$toast('内容已复制')
+        },
+      })
+    },
+  },
+}
+</script>
+
+<style></style>

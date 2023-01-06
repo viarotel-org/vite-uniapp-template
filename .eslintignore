@@ -1,0 +1,5 @@
+# user
+node_modules/*
+/public/*
+/dist/*
+/src/uni_modules/*
