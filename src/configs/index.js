@@ -2,7 +2,7 @@
 const isProduction = process.env.NODE_ENV === 'production'
 const isH5 = process.env.UNI_PLATFORM === 'h5'
 
-export const title = 'vite-uniapp-temolate'
+export const title = 'vite-uniapp-template'
 
 export const company = {
   name: 'vite-uniapp-template',
