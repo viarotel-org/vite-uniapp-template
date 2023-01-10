@@ -1,16 +1,16 @@
 <template>
-  <div class="bg-white h-full overflow-hidden">
-    <div class="mt-8">
-      <img
+  <view class="bg-white h-full overflow-hidden">
+    <view class="mt-8">
+      <image
         src="@/assets/images/logo.png"
         alt=""
         class="w-20 h-20 block mx-auto"
       />
-      <div class="text-2xl text-center mt-4 font-bold">
+      <view class="text-2xl text-center mt-4 font-bold">
         {{ title }}
-      </div>
-    </div>
-    <div class="px-4 mt-18">
+      </view>
+    </view>
+    <view class="px-4 mt-18">
       <u-button
         type="success"
         shape="circle"
@@ -21,7 +21,7 @@
         <!-- @getphonenumber="handleLogin" -->
         手机号快捷登录
       </u-button>
-      <div class="text-center mt-3">
+      <view class="text-center mt-3">
         <u-checkbox
           v-model="agree"
           class=""
@@ -32,12 +32,12 @@
             @click.stop="handleAgree"
           >《产品服务协议》</span>
         </u-checkbox>
-      </div>
-    </div>
-    <div class="absolute inset-x-0 bottom-0 text-center mb-4 text-gray-400">
+      </view>
+    </view>
+    <view class="absolute inset-x-0 bottom-0 text-center mb-4 text-gray-400">
       {{ title }}
-    </div>
-  </div>
+    </view>
+  </view>
 </template>
 
 <script>

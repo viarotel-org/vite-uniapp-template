@@ -5,7 +5,7 @@ const isH5 = process.env.UNI_PLATFORM === 'h5'
 export const title = 'vite-uniapp-temolate'
 
 export const company = {
-  name: 'vite-uniapp-temolate',
+  name: 'vite-uniapp-template',
   wechat: 'viarotel',
   mail: 'viarotel@qq.com',
   address: '河南省郑州市',

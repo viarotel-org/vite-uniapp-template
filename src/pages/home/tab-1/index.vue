@@ -1,44 +1,44 @@
 <template>
-  <div class="h-full">
-    <div
+  <view class="h-full">
+    <view
       class="flex items-center bg-gradient-to-l to-primary from-green-700 px-4 h-[30vh]"
       @click="handleLogin"
     >
-      <div class="overflow-hidden rounded-full w-20 h-20">
+      <view class="overflow-hidden rounded-full w-20 h-20">
         <!-- :src="userData.headImage" -->
-        <img
+        <image
           src="@/assets/images/image-user.png"
           alt=""
           class="w-full h-full"
         />
-      </div>
-      <div class="text-white text-xl ml-4">
-        <div
+      </view>
+      <view class="text-white text-xl ml-4">
+        <view
           v-if="isLogin"
           class=""
         >
           {{ userData.userName }}
-        </div>
-        <div v-else>立即登录</div>
-      </div>
-    </div>
-    <div class="">
-      <div
+        </view>
+        <view v-else>立即登录</view>
+      </view>
+    </view>
+    <view class="">
+      <view
         v-for="(item, index) of listModel"
         :key="index"
         class="flex items-center py-4 px-4 border-b border-gray-200 bg-white"
         @click="handleInfo(item)"
       >
-        <div class="w-10 flex-none truncate text-primary-500 text-2xl">
+        <view class="w-10 flex-none truncate text-primary-500 text-2xl">
           <via-icon :name="item.icon"></via-icon>
-        </div>
-        <div class="flex-1 w-0">{{ item.text }}</div>
-        <div class="flex-none w-10 text-right text-gray-500">
+        </view>
+        <view class="flex-1 w-0">{{ item.text }}</view>
+        <view class="flex-none w-10 text-right text-gray-500">
           <via-icon name="right"></via-icon>
-        </div>
-      </div>
-    </div>
-    <div
+        </view>
+      </view>
+    </view>
+    <view
       v-if="isLogin"
       class="mt-8 px-4"
     >
@@ -50,8 +50,8 @@
       >
         退出登录
       </u-button>
-    </div>
-  </div>
+    </view>
+  </view>
 </template>
 
 <script>

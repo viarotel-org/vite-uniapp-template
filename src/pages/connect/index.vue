@@ -1,22 +1,22 @@
 <template>
-  <div class="">
-    <div class="h-[35vh] flex flex-col justify-center">
-      <img
+  <view class="">
+    <view class="h-[35vh] flex flex-col justify-center">
+      <image
         src="@/assets/images/logo.png"
         alt=""
         class="w-20 h-20 block mx-auto"
       />
-      <div class="text-black text-xl text-center font-bold mt-4">
+      <view class="text-black text-xl text-center font-bold mt-4">
         {{ title }}
-      </div>
-    </div>
-    <div class="px-4 bg-white">
+      </view>
+    </view>
+    <view class="px-4 bg-white">
       <u-form
         label-width="200"
         border
       >
         <u-form-item label="邮箱">
-          <div
+          <view
             class=""
             @click="handleCopy(company.mail)"
           >
@@ -25,10 +25,10 @@
               name="fuzhi"
               class="text-gray-400"
             ></via-icon>
-          </div>
+          </view>
         </u-form-item>
         <u-form-item label="微信号">
-          <div
+          <view
             class=""
             @click="handleCopy(company.wechat)"
           >
@@ -37,18 +37,18 @@
               name="fuzhi"
               class="text-gray-400"
             ></via-icon>
-          </div>
+          </view>
         </u-form-item>
         <u-form-item label="微信二维码">
-          <img
+          <image
             :src="wechatImage"
             alt=""
             class="w-20 h-20"
           />
         </u-form-item>
       </u-form>
-    </div>
-  </div>
+    </view>
+  </view>
 </template>
 
 <script>

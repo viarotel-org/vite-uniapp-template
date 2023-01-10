@@ -6,7 +6,7 @@
 			<view v-if="noData" class="uni-table-loading">
 				<view class="uni-table-text" :class="{ 'empty-border': border }">{{ emptyText }}</view>
 			</view>
-			<view v-if="loading" class="uni-table-mask" :class="{ 'empty-border': border }"><div class="uni-table--loader"></div></view>
+			<view v-if="loading" class="uni-table-mask" :class="{ 'empty-border': border }"><view class="uni-table--loader"></view></view>
 		</table>
 		<!-- #endif -->
 		<!-- #ifndef H5 -->
@@ -15,7 +15,7 @@
 			<view v-if="noData" class="uni-table-loading">
 				<view class="uni-table-text" :class="{ 'empty-border': border }">{{ emptyText }}</view>
 			</view>
-			<view v-if="loading" class="uni-table-mask" :class="{ 'empty-border': border }"><div class="uni-table--loader"></div></view>
+			<view v-if="loading" class="uni-table-mask" :class="{ 'empty-border': border }"><view class="uni-table--loader"></view></view>
 		</view>
 		<!-- #endif -->
 	</view>

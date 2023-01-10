@@ -1,7 +1,6 @@
 # vite-uniapp-template
 
 > 基于 vite 驱动的 uniapp 最佳实践的集成模板 <br/>
-> 请注意 该项目目前正在进行中 目前仅对 H5 及 Weapp 进行测试 其他平台尚未支持 请自行测试
 
 💡 [查看预览地址](https://static-3e173b30-f914-4276-8526-f91cd7e32d6a.bspapp.com/) (请将浏览器切换为手机模式打开, 此处为模拟手机号快捷登录, 不需要验证手机号直接点击登录即可, 由于是免费的服务器,如遇打不开的情况,请多刷新几次)<br/>
 💕 css 框架 使用 [unocss](https://uno.antfu.me/)<br/>
@@ -108,6 +107,10 @@ pnpm build:h5 更多环境命令请参考 package.json 中的 scripts字段
 2. 使用 pnpm install | yarn install | npm install 安装好依赖
 3. 点击项目 src 目录中的任意文件
 4. 点击编辑器上方点击发行选择需要打包的环境
+
+### 注意事项
+
+- 遇到app端dev运行时无法正常运行请尝试使用较高的安卓版本, 经测试android x 及以上版本可以正常运行 android v6版本无法正常运行
 
 ### 文件目录说明
 
