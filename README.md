@@ -97,8 +97,8 @@ pnpm dev:h5
 ```powershell
 # 安装依赖 yarn install | npm install
 pnpm install
-# 打包 yarn build:h5 | npm run build:h5
-pnpm build:h5 更多环境命令请参考 package.json 中的 scripts字段
+# 打包 yarn build:h5 | npm run build:h5 更多环境命令请参考 package.json 中的 scripts字段
+pnpm build:h5 
 ```
 
 ##### 在 HBuilder 中发行本项目
