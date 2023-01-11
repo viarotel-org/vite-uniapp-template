@@ -98,7 +98,7 @@ pnpm dev:h5
 # 安装依赖 yarn install | npm install
 pnpm install
 # 打包 yarn build:h5 | npm run build:h5 更多环境命令请参考 package.json 中的 scripts字段
-pnpm build:h5 
+pnpm build:h5
 ```
 
 ##### 在 HBuilder 中发行本项目
@@ -110,7 +110,7 @@ pnpm build:h5
 
 ### 注意事项
 
-- 遇到app端dev运行时无法正常运行请尝试使用较高的安卓版本, 经测试android x 及以上版本可以正常运行 android v6版本无法正常运行
+- 遇到 app 端 dev 运行时无法正常运行请尝试使用较高的安卓版本, 经测试 android x 及以上版本可以正常运行 android 6 版本及以下版本无法正常运行
 
 ### 文件目录说明
 
