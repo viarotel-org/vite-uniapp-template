@@ -2,7 +2,7 @@
 
 > 基于 vite 驱动的 uniapp 最佳实践的集成模板 <br/>
 
-💡 [查看预览地址](https://static-3e173b30-f914-4276-8526-f91cd7e32d6a.bspapp.com/) (请将浏览器切换为手机模式打开, 此处为模拟手机号快捷登录, 不需要验证手机号直接点击登录即可, 由于是免费的服务器,如遇打不开的情况,请多刷新几次)<br/>
+💡 [查看预览地址](https://static-mp-9c74f872-c4fb-44a1-88c6-7b6d8cd0b4fa.next.bspapp.com/) (请将浏览器切换为手机模式打开, 此处为模拟手机号快捷登录, 不需要验证手机号直接点击登录即可, 由于是免费的服务器,如遇打不开的情况,请多刷新几次)<br/>
 💕 css 框架 使用 [unocss](https://uno.antfu.me/)<br/>
 💕 request 库 使用 [uni-network](https://github.com/uni-helper/uni-network/) (api 同 axios)<br/>
 💕 router 路由 使用 [uni-native-router](https://github.com/Gertyxs/uni-native-router/) (通过二次封装 api 同 vue-router)<br/>
@@ -33,7 +33,7 @@
     <a href="https://github.com/viarotel/vite-uniapp-template"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://static-3e173b30-f914-4276-8526-f91cd7e32d6a.bspapp.com/">查看Demo</a>
+    <a href="https://static-mp-9c74f872-c4fb-44a1-88c6-7b6d8cd0b4fa.next.bspapp.com/">查看Demo</a>
     ·
     <a href="https://github.com/viarotel/vite-uniapp-template/issues">报告Bug</a>
     ·
