@@ -191,8 +191,6 @@ filetree
 
 viarotel@qq.com
 
-qq:523469508 wx: viarotel
-
 _您也可以在贡献者名单中参看所有参与该项目的开发者。_
 
 ### 版权说明
