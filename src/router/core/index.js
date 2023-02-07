@@ -1,3 +1,4 @@
+import _isString from 'lodash/isString.js'
 import { createRouter as _createRouter } from 'uni-native-router'
 import { resolvePages, routerModel } from './utils.js'
 
@@ -21,11 +22,23 @@ export const createRouter = (options = {}) => {
  */
 export const aliasTransformer = (router) => ({
   ...(router || {}),
-  push: (options) => routerModel('navigateTo', { ...options, router, pages }),
-  replace: (options) => routerModel('redirectTo', { ...options, router, pages }),
-  replaceAll: (options) => routerModel('reLaunch', { ...options, router, pages }),
-  back: (delta = 1, options) => router.navigateBack({
-    ...options,
+  push: (params) => routerModel('navigateTo', {
+    ...(_isString(params) ? { path: params } : params),
+    router,
+    pages,
+  }),
+  replace: (params) => routerModel('redirectTo', {
+    ...(_isString(params) ? { path: params } : params),
+    router,
+    pages,
+  }),
+  replaceAll: (params) => routerModel('reLaunch', {
+    ...(_isString(params) ? { path: params } : params),
+    router,
+    pages,
+  }),
+  back: (delta = 1, params) => router.navigateBack({
+    ...(_isString(params) ? { path: params } : params),
     delta,
   }),
 })

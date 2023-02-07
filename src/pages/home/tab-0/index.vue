@@ -6,7 +6,10 @@
         alt=""
         class="w-20 h-20 block mx-auto"
       />
-      <view class="text-black text-xl text-center font-bold mt-4">
+      <view
+        class="text-black text-xl text-center font-bold mt-4"
+        @click="$Router.push('/login')"
+      >
         {{ title }}
       </view>
     </view>

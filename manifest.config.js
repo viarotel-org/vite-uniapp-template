@@ -1,20 +1,20 @@
-import { title } from './src/configs/index'
-import { proxyPort } from './src/configs/devServer.js'
+import { title } from "./src/configs/index";
+import { proxyPort } from "./src/configs/devServer.js";
 
 export default {
   name: title,
-  appid: '__UNI__D808828',
-  description: '',
-  versionName: '1.0.0',
-  versionCode: '100',
+  appid: "",
+  description: "",
+  versionName: "1.0.0",
+  versionCode: "100",
   transformPx: false,
   h5: {
     devServer: {
       port: proxyPort,
     },
   },
-  'mp-weixin': {
-    appid: '',
+  "mp-weixin": {
+    appid: "",
     setting: {
       urlCheck: false,
     },
@@ -22,9 +22,9 @@ export default {
   },
 
   /* 5+App特有相关 */
-  'app-plus': {
+  "app-plus": {
     usingComponents: true,
-    nvueStyleCompiler: 'uni-app',
+    nvueStyleCompiler: "uni-app",
     compilerVersion: 3,
     splashscreen: {
       alwaysShowBeforeRender: true,
@@ -67,17 +67,17 @@ export default {
   quickapp: {},
 
   /* 小程序特有相关 */
-  'mp-alipay': {
+  "mp-alipay": {
     usingComponents: true,
   },
-  'mp-baidu': {
+  "mp-baidu": {
     usingComponents: true,
   },
-  'mp-toutiao': {
+  "mp-toutiao": {
     usingComponents: true,
   },
   uniStatistics: {
     enable: false,
   },
-  vueVersion: '3',
-}
+  vueVersion: "3",
+};

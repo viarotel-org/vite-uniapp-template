@@ -93,6 +93,6 @@ export const routerModel = (methodName, { pages, router, ...options } = {}) => {
   return router[methodName]({
     ..._omit(options, 'path'),
     url,
-    query: options.query,
+    query: options.query || {},
   })
 }
