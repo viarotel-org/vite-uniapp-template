@@ -40,7 +40,7 @@ export default (router) => {
       next()
     } else if (token) {
       if (to.path === 'pages/login/index') {
-        next({ path: '/tab-0' })
+        next({ path: '/tab-home' })
       } else if (!userId) {
         Promise.all([userStore.getUserInfo()])
           .then(() => {

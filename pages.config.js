@@ -21,16 +21,16 @@ export default defineUniPages({
       },
     },
     {
-      path: 'pages/home/tab-0/index',
-      shortcut: '/tab-0',
+      path: 'pages/home/tab-home/index',
+      shortcut: '/tab-home',
       style: {
         navigationBarTitleText: '项目简介',
         // navigationStyle: 'custom',
       },
     },
     {
-      path: 'pages/home/tab-1/index',
-      shortcut: '/tab-1',
+      path: 'pages/home/tab-personal/index',
+      shortcut: '/tab-personal',
       style: {
         navigationBarTitleText: '我的',
         navigationStyle: 'custom',
@@ -76,15 +76,15 @@ export default defineUniPages({
     backgroundColor: '#F8F8F8',
     list: [
       {
-        iconPath: 'static/images/tabbar/tab-0.png',
-        selectedIconPath: 'static/images/tabbar/tab-0-active.png',
-        pagePath: 'pages/home/tab-0/index',
+        iconPath: 'static/images/tabbar/tab-home.png',
+        selectedIconPath: 'static/images/tabbar/tab-home-active.png',
+        pagePath: 'pages/home/tab-home/index',
         text: '首页',
       },
       {
-        iconPath: 'static/images/tabbar/tab-1.png',
-        selectedIconPath: 'static/images/tabbar/tab-1-active.png',
-        pagePath: 'pages/home/tab-1/index',
+        iconPath: 'static/images/tabbar/tab-personal.png',
+        selectedIconPath: 'static/images/tabbar/tab-personal-active.png',
+        pagePath: 'pages/home/tab-personal/index',
         text: '我的',
       },
     ],
@@ -99,8 +99,8 @@ export default defineUniPages({
     current: 0,
     list: [
       {
-        name: 'pages/home/tab-0/index',
-        path: 'pages/home/tab-0/index',
+        name: 'pages/home/tab-home/index',
+        path: 'pages/home/tab-home/index',
         query: '',
       },
       {

@@ -100,7 +100,7 @@ export default {
       if (res.code === '0000') {
         this.$store.userStore.setToken(res.data.token)
         await this.$toast('登录成功', { type: 'success' })
-        this.$Router.push({ path: '/tab-0' })
+        this.$Router.push({ path: '/tab-home' })
       }
     },
   },
