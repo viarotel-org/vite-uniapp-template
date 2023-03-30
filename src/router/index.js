@@ -5,7 +5,7 @@ import {
   aliasTransformer,
 } from './core/index'
 import pages from '@/pages.json'
-import permission from './permission'
+// import permission from './permission'
 
 const nativeRouter = createRouter({
   pages,
@@ -14,7 +14,7 @@ const nativeRouter = createRouter({
 const router = aliasTransformer(nativeRouter)
 // console.log('router', router)
 
-permission(router)
+// permission(router)
 
 export default {
   install(app) {

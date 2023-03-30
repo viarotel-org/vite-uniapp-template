@@ -1,7 +1,8 @@
-import { definePages } from '@uni-helper/vite-plugin-uni-pages'
+import { defineUniPages } from '@uni-helper/vite-plugin-uni-pages'
 import { title } from './src/configs/index'
 
-export default definePages({
+export default defineUniPages({
+  // middleware: ['permission'],
   easycom: {
     autoscan: true,
     custom: {
@@ -30,7 +31,6 @@ export default definePages({
     {
       path: 'pages/home/tab-1/index',
       shortcut: '/tab-1',
-      // middleware: ['permission'],
       style: {
         navigationBarTitleText: '我的',
         navigationStyle: 'custom',

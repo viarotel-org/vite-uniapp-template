@@ -1,4 +1,3 @@
-// TODO 目前仅作测试使用 插件问题 暂不生效
 import {
   defineConfig,
   transformerDirectives,
@@ -14,16 +13,6 @@ import {
 
 const primary = {
   DEFAULT: '#2b9939',
-  50: '#e9f2f8',
-  100: '#e8f2f9',
-  200: '#d6e9f9',
-  300: '#bfdef8',
-  400: '#a7d3f7',
-  500: '#8cc5f2',
-  600: '#79baee',
-  700: '#65aee9',
-  800: '#53a0dd',
-  900: '#4392d1',
 }
 
 const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp-')

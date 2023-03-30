@@ -9,6 +9,8 @@ import ViaIcon from './icons/components/ViaIcon/index.vue'
 
 import { useDialog, useToast, useLoading } from './utils/modals/index.js'
 
+// TODO 在非 main.js 中引入 import 'uno.css' 会导致报错
+import 'uno.css'
 import './styles/css/index.js'
 
 export function createApp() {

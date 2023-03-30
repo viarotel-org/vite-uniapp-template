@@ -3,7 +3,7 @@ import path from 'node:path'
 import useUniapp from '@dcloudio/vite-plugin-uni'
 import useUniPages from '@uni-helper/vite-plugin-uni-pages'
 import useUniManifest from '@uni-helper/vite-plugin-uni-manifest'
-import useUniMiddleware from '@uni-helper/vite-plugin-uni-middleware'
+// import useUniMiddleware from '@uni-helper/vite-plugin-uni-middleware'
 import useUnocss from 'unocss/vite'
 import useEslint from 'vite-plugin-eslint'
 import {
@@ -16,19 +16,14 @@ import {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    useUnocss(),
     useUniPages({
-      onAfterScanPages(ctx) {
-        // console.log('onAfterScanPages.ctx', ctx)
-        // TODO 禁用合并自动扫描到的pages
-        ctx.pagesPathInfo = []
-        return ctx
-      },
+      mergePages: false,
     }),
     useUniManifest(),
-    useUniMiddleware(),
-    useUniapp(),
     useEslint(),
+    useUnocss(),
+    useUniapp(),
+    // useUniMiddleware(),
   ],
   server: {
     host: true,
