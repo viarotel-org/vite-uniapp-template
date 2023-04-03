@@ -112,7 +112,7 @@ export default {
 
       await this.$store.userStore.logout()
       await this.$toast('退出登录成功', { type: 'success' })
-      this.$Router.replace({ path: '/login' })
+      // this.$Router.replace({ path: '/login' })
     },
   },
 }

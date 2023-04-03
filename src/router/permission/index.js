@@ -1,25 +1,36 @@
 // TODO
-// import NProgress from 'nprogress' // progress bar
-// import 'nprogress/nprogress.css' // progress bar style
 import store from '@/store/index.js'
-// const isDevelopment = process.env.NODE_ENV === 'development'
+import { resolvePagePath } from '@/utils/uni-router/utils'
+import { useToast } from '@/utils/modals'
 
-export default (router) => {
+export default (router, { pages } = {}) => {
   // console.log('permission.router', router)
-  // NProgress.configure({
-  //   showSpinner: false,
-  // })
+  const shortcutMap = resolvePagePath(pages)
+  console.log('shortcutMap', shortcutMap)
 
   // 路由白名单
-  const whiteList = ['pages/login/index']
+  const whiteList = ['/pages/login/phone/index']
 
-  // if (isDevelopment) whiteList.push('/example')
+  router.beforeEach((to, from) => {
+    const next = (route) => {
+      console.log('next.route', route)
+      const path = shortcutMap[route?.path || route]
 
-  router.beforeEach((to, from, next) => {
-    // NProgress.start()
+      if (!path || path === to.path) {
+        next.route = true
+        return true
+      }
+
+      next.route = {
+        ...(route || {}),
+        path,
+      }
+      useToast('请先进行登录')
+      return false
+    }
+
     console.log('to', to)
     console.log('from', from)
-    // console.log('next', next)
 
     // TODO
     let userStore = {}
@@ -39,7 +50,7 @@ export default (router) => {
       // 在免登录白名单，直接进入
       next()
     } else if (token) {
-      if (to.path === 'pages/login/index') {
+      if (to.path === '/pages/login/phone/index') {
         next({ path: '/tab-home' })
       } else if (!userId) {
         Promise.all([userStore.getUserInfo()])
@@ -66,7 +77,7 @@ export default (router) => {
       }
     } else {
       next({
-        path: '/login',
+        path: '/pages/login/phone/index',
         query: {
           redirectView: JSON.stringify({
             path: to.path,
@@ -75,9 +86,10 @@ export default (router) => {
         },
       })
     }
+
+    console.log('next.route.after', next.route)
+    return next.route
   })
 
-  router.afterEach(() => {
-    // NProgress.done() // finish progress bar
-  })
+  router.afterEach(() => {})
 }

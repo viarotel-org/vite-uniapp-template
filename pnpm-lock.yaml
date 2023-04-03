@@ -19,6 +19,8 @@ specifiers:
   '@dcloudio/uni-quickapp-webview': 3.0.0-3070920230324001
   '@dcloudio/uni-stacktracey': 3.0.0-3070920230324001
   '@dcloudio/vite-plugin-uni': 3.0.0-3070920230324001
+  '@gowiny/js-utils': ^1.0.7
+  '@gowiny/uni-router': ^1.0.15
   '@uni-helper/uni-network': ^0.14.0
   '@uni-helper/vite-plugin-uni-manifest': ^0.1.1
   '@uni-helper/vite-plugin-uni-middleware': ^0.0.1
@@ -73,6 +75,8 @@ dependencies:
   '@dcloudio/uni-mp-toutiao': registry.npmmirror.com/@dcloudio/uni-mp-toutiao/3.0.0-3070920230324001_postcss@8.4.21+vue@3.2.47
   '@dcloudio/uni-mp-weixin': registry.npmmirror.com/@dcloudio/uni-mp-weixin/3.0.0-3070920230324001_postcss@8.4.21+vue@3.2.47
   '@dcloudio/uni-quickapp-webview': registry.npmmirror.com/@dcloudio/uni-quickapp-webview/3.0.0-3070920230324001_postcss@8.4.21+vue@3.2.47
+  '@gowiny/js-utils': registry.npmmirror.com/@gowiny/js-utils/1.0.7
+  '@gowiny/uni-router': registry.npmmirror.com/@gowiny/uni-router/1.0.15
   '@uni-helper/uni-network': registry.npmmirror.com/@uni-helper/uni-network/0.14.0_vue@3.2.47
   crypto-js: registry.npmmirror.com/crypto-js/4.1.1
   dayjs: registry.npmmirror.com/dayjs/1.11.7
@@ -80,7 +84,6 @@ dependencies:
   lodash.merge: registry.npmmirror.com/lodash.merge/4.6.2
   pinia: registry.npmmirror.com/pinia/2.0.33_vue@3.2.47
   qs: registry.npmmirror.com/qs/6.11.1
-  statuses: registry.npmmirror.com/statuses/2.0.1
   uni-native-router: registry.npmmirror.com/uni-native-router/1.1.2
   vk-uview-ui: registry.npmmirror.com/vk-uview-ui/1.4.4
   vue: registry.npmmirror.com/vue/3.2.47
@@ -113,6 +116,7 @@ devDependencies:
   postcss: registry.npmmirror.com/postcss/8.4.21
   sass: registry.npmmirror.com/sass/1.60.0
   side-channel: registry.npmmirror.com/side-channel/1.0.4
+  statuses: registry.npmmirror.com/statuses/2.0.1
   unocss: registry.npmmirror.com/unocss/0.50.6_postcss@8.4.21+vite@4.1.4
   unocss-applet: registry.npmmirror.com/unocss-applet/0.3.4
   unocss-preset-weapp: registry.npmmirror.com/unocss-preset-weapp/0.5.2
@@ -2413,6 +2417,24 @@ packages:
     version: 8.37.0
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  registry.npmmirror.com/@gowiny/js-utils/1.0.7:
+    resolution: {integrity: sha512-ZA4asrVS0jYUgDJQ0X3fjgSGHAzZNmjF/cn8q3RfqLgIuBOXe3PCcW/za7Neu92M2FZ8NBi9k57DRYaeJx3Q2w==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@gowiny/js-utils/-/js-utils-1.0.7.tgz}
+    name: '@gowiny/js-utils'
+    version: 1.0.7
+    dependencies:
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.21.0
+    dev: false
+
+  registry.npmmirror.com/@gowiny/uni-router/1.0.15:
+    resolution: {integrity: sha512-LPV7jeOk1H9s2B2z5X4va/5KuZPIMMfZmTf1+ixt3pW9499C08DdYzVl98ulQt6NgU2aJGL6dGyHtbU9CNyDJQ==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@gowiny/uni-router/-/uni-router-1.0.15.tgz}
+    name: '@gowiny/uni-router'
+    version: 1.0.15
+    dependencies:
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.21.0
+      '@gowiny/js-utils': registry.npmmirror.com/@gowiny/js-utils/1.0.7
+      qs: registry.npmmirror.com/qs/6.11.1
+    dev: false
 
   registry.npmmirror.com/@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==, registry: https://packages.aliyun.com/61e946d262ff79a3acfdbf93/npm/npm-registry/, tarball: https://registry.npmmirror.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz}

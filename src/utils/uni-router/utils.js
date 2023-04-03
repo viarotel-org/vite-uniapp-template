@@ -1,5 +1,3 @@
-import { useRouter } from 'uni-native-router'
-import _omit from 'lodash/omit'
 /**
  * 检查指定的页面路径是否为 tabbar类型
  * @param {*} pages 页面配置
@@ -53,7 +51,7 @@ export const getRootPagePath = (pages) => `/${pages?.pages?.[0].path}`
  * @param {*} pages 页面配置
  * @returns
  */
-export const resolvePagePath = (pages, { shortcutName = 'shortcut' } = {}) => {
+export const resolvePagePath = (pages = {}, { shortcutName = 'shortcut' } = {}) => {
   const pathList = resolvePages(pages)
   const pathMap = pathList.reduce((obj, item) => {
     const path = `/${item.path}`
@@ -74,25 +72,4 @@ export const resolvePagePath = (pages, { shortcutName = 'shortcut' } = {}) => {
   console.log('resolvePagePath.value', value)
 
   return value
-}
-
-/**
- * 路由模型
- * @param {string} methodName 路由跳转方法名
- * @param {object} options 路由配置
- * @returns
- */
-export const routerModel = (methodName, { pages, router, ...options } = {}) => {
-  // console.log('options', options)
-  const pathMap = resolvePagePath(pages)
-  const url = pathMap[options.path || '/']
-
-  methodName = hasTabBar(pages, url) ? 'switchTab' : methodName
-  router = router || useRouter()
-
-  return router[methodName]({
-    ..._omit(options, 'path'),
-    url,
-    query: options.query || {},
-  })
 }

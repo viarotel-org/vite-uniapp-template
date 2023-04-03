@@ -50,6 +50,8 @@ module.exports = {
     'func-names': 'off',
     'no-undef': 'warn',
     'prefer-promise-reject-errors': 'off',
+
+    'no-proto': 'off',
     quotes: [
       'error',
       'single',
