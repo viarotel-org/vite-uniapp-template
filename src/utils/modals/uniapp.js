@@ -74,6 +74,10 @@ export function useToast(
  * @param {*} options
  */
 export function useLoading(content, { overlay = true, ...moreOptions } = {}) {
+  if (content && typeof content === 'boolean') {
+    content = '努力加载中...'
+  }
+
   if (!content) {
     uni.hideLoading()
     return

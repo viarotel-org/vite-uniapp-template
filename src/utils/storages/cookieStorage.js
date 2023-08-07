@@ -17,7 +17,8 @@ export default {
     const json = jsCookie.get(key)
     try {
       return JSON.parse(json)
-    } catch (error) {
+    }
+    catch (error) {
       return json
     }
   },

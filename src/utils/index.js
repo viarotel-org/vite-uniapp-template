@@ -2,28 +2,15 @@ import _camelCase from 'lodash/camelCase'
 import _kebabCase from 'lodash/kebabCase'
 import _get from 'lodash/get'
 
-export const packTreeData = (source, id, parentId, children) => {
-  const cloneData = JSON.parse(JSON.stringify(source))
-  return cloneData.filter((father) => {
-    const branchArr = cloneData.filter(
-      (child) => father[id] == child[parentId],
-    )
-    if (branchArr.length > 0) {
-      father[children] = branchArr
-    }
-    return (
-      !father[parentId] || father[parentId] == '0' || father[parentId] == null
-    )
-  })
-}
-
 /**
  * @desc 使用async await 进项进行延时操作
  * @param {*} time
  */
-export const delay = (time = 1000) => new Promise((resolve) => {
-  setTimeout(() => resolve(true), time)
-})
+export function sleep(time = 1000) {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(true), time)
+  })
+}
 
 /**
  * 使用indexof方法实现模糊查询
@@ -31,11 +18,11 @@ export const delay = (time = 1000) => new Promise((resolve) => {
  * @param  {String} keyWord  查询的关键词
  * @return {Array}           查询的结果
  */
-export const fuzzyQuery = (list, keyWord, { keyName = '' } = {}) => {
+export function fuzzyQuery(list, keyWord, { keyName = '' } = {}) {
   const arr = []
   for (let i = 0; i < list.length; i++) {
     const str = keyName ? list[i][keyName] : list[i]
-    if (str.indexOf(keyWord) >= 0) {
+    if (str.includes(keyWord)) {
       arr.push(list[i])
     }
   }
@@ -47,28 +34,30 @@ export const fuzzyQuery = (list, keyWord, { keyName = '' } = {}) => {
  * @param {*} propNames
  * @returns
  */
-export const createVariableProps = (
-  propNames,
-  { prefix = 'scope', emitUpdate = true, setCallback = null } = {},
-) => ({
-  data: propNames.reduce((obj, name) => {
-    obj[_camelCase(`temp-${name}`)] = null
-    return obj
-  }, {}),
-  computed: propNames.reduce((obj, name) => {
-    obj[_camelCase(`${prefix}-${name}`)] = {
-      get() {
-        return this[_camelCase(`temp-${name}`)] || this[name]
-      },
-      set(value) {
-        if (setCallback) setCallback(value)
-        if (emitUpdate) this.$emit(`update:${_kebabCase(name)}`, value)
-        this[_camelCase(`temp-${name}`)] = value
-      },
-    }
-    return obj
-  }, {}),
-})
+export function createVariableProps(propNames,
+  { prefix = 'scope', emitUpdate = true, setCallback = null } = {}) {
+  return {
+    data: propNames.reduce((obj, name) => {
+      obj[_camelCase(`temp-${name}`)] = null
+      return obj
+    }, {}),
+    computed: propNames.reduce((obj, name) => {
+      obj[_camelCase(`${prefix}-${name}`)] = {
+        get() {
+          return this[_camelCase(`temp-${name}`)] || this[name]
+        },
+        set(value) {
+          if (setCallback)
+            setCallback(value)
+          if (emitUpdate)
+            this.$emit(`update:${_kebabCase(name)}`, value)
+          this[_camelCase(`temp-${name}`)] = value
+        },
+      }
+      return obj
+    }, {}),
+  }
+}
 
 /**
  * 解构对象属性为可响应的计算属性
@@ -76,12 +65,13 @@ export const createVariableProps = (
  * @param {String} sourcePath 默认值为 '$Route.query'
  * @returns {Object} Computeds
  */
-export const mapComputed = (keys = [], sourcePath = '$Route.query') => {
+export function mapComputed(keys = [], sourcePath = '$Route.query') {
   const arr = Array.isArray(keys)
-    ? keys.map((name) => [name, name])
+    ? keys.map(name => [name, name])
     : Object.entries(keys)
   const computeds = arr.reduce((obj, [name, replaceName]) => {
-    if (!replaceName) replaceName = name
+    if (!replaceName)
+      replaceName = name
     const formatPath = [...sourcePath.split('.'), name].join('.')
     obj[replaceName] = function () {
       return _get(this, formatPath)
@@ -97,7 +87,7 @@ export const mapComputed = (keys = [], sourcePath = '$Route.query') => {
  * @param {*} methodNames 需要继承的方法名列表
  * @returns
  */
-export const inheritComponentMethods = (refName, methodNames) => {
+export function inheritComponentMethods(refName, methodNames) {
   const methods = {}
   methodNames.forEach((name) => {
     methods[name] = function (...params) {
@@ -141,8 +131,21 @@ export const mapDict = function (
  * @param {*} value 富文本
  * @returns
  */
-export const removeTag = (value) => value
-  .replace(/<[^>]+>/g, '')
-  .replace(/&nbsp;/g, '')
-  .replace(/&ldquo;/g, '')
-  .replace(/&rdquo;/g, '')
+export function removeTag(value) {
+  return value
+    .replace(/<[^>]+>/g, '')
+    .replace(/&nbsp;/g, '')
+    .replace(/&ldquo;/g, '')
+    .replace(/&rdquo;/g, '')
+}
+
+/**
+ * 根据身份证号判断男女
+ */
+export function getSexText(idCardNo) {
+  const gender = idCardNo.substr(-2, 1)
+  if (gender % 2 === 1) {
+    return '男'
+  }
+  return '女'
+}

@@ -1,13 +1,15 @@
-import * as base from './modules/base'
-import * as user from './modules/user'
-import * as weChat from './modules/weChat'
+import * as base from './base/index.js'
+import * as user from './user/index.js'
+import * as home from './home/index.js'
 
-export const requests = {
+const api = {
   ...base,
   ...user,
-  ...weChat,
+  ...home,
 }
 
-export default function install(app) {
-  app.config.globalProperties.$req = requests
+export default {
+  install(app) {
+    app.config.globalProperties.$api = api
+  },
 }

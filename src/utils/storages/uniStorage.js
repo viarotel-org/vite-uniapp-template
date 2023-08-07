@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /**
  * 通用存储 store
  * @method set 设置永久缓存

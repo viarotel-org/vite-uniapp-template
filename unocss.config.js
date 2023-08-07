@@ -1,5 +1,42 @@
-// 采用两种实现方式可以选择任意一种方案
-import unocssConfig from './unocss.config.preset.applet.js'
-// import unocssConfig from './unocss.config.preset.weapp.js'
+import { defineConfig } from 'unocss'
+import transformerDirectives from '@unocss/transformer-directives'
+import { presetApplet, presetRemRpx, transformerApplet } from 'unocss-applet'
 
-export default unocssConfig
+const primary = {
+  DEFAULT: 'rgba(var(--color-primary), <alpha-value>)',
+  50: 'rgba(var(--color-primary-50), <alpha-value>)',
+  100: 'rgba(var(--color-primary-100), <alpha-value>)',
+  200: 'rgba(var(--color-primary-200), <alpha-value>)',
+  300: 'rgba(var(--color-primary-300), <alpha-value>)',
+  400: 'rgba(var(--color-primary-400), <alpha-value>)',
+  500: 'rgba(var(--color-primary-500), <alpha-value>)',
+  600: 'rgba(var(--color-primary-600), <alpha-value>)',
+  700: 'rgba(var(--color-primary-700), <alpha-value>)',
+  800: 'rgba(var(--color-primary-800), <alpha-value>)',
+  900: 'rgba(var(--color-primary-900), <alpha-value>)',
+  950: 'rgba(var(--color-primary-950), <alpha-value>)',
+}
+
+const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp-') || false
+
+const appletPreset = presetApplet({ enable: isApplet })
+
+export default defineConfig({
+  shortcuts: {
+    'position-center':
+      'absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2',
+    'position-x-center': 'absolute left-1/2 transform -translate-x-1/2',
+    'position-y-center': 'absolute top-1/2 transform -translate-y-1/2',
+  },
+  theme: {
+    colors: {
+      gray: appletPreset?.theme?.colors?.neutral,
+      primary,
+    },
+  },
+  presets: [appletPreset, presetRemRpx({ enable: isApplet })],
+  transformers: [
+    transformerApplet({ enable: isApplet }),
+    transformerDirectives(),
+  ],
+})

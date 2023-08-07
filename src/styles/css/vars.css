@@ -1,0 +1,15 @@
+:root,
+page {
+  --color-primary: 2, 141, 113;
+  --color-primary-50: 230, 244, 241;
+  --color-primary-100: 204, 232, 227;
+  --color-primary-200: 154, 209, 198;
+  --color-primary-300: 103, 187, 170;
+  --color-primary-400: 53, 164, 141;
+  --color-primary-500: 2, 141, 113;
+  --color-primary-600: 2, 113, 90;
+  --color-primary-700: 1, 85, 68;
+  --color-primary-800: 1, 56, 45;
+  --color-primary-900: 0, 28, 23;
+  --color-primary-950: 0, 14, 11;
+}
