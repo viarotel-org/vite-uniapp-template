@@ -1,12 +1,14 @@
 import Color from 'color'
 
 // 根据基础颜色生成不同深度的颜色
-export function generateShades(color,
+export function generateShades(
+  color,
   {
     shades = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950],
     baseShade = 500,
     returnRgb = false,
-  } = {}) {
+  } = {},
+) {
   const baseColor = Color(color)
   console.log('baseColor', baseColor)
   const result = {}
@@ -47,7 +49,8 @@ export function setThemeVariables(baseColor) {
   const shadeColors = generateShades(baseColor, { returnRgb: true })
   console.log('shadeColors', shadeColors)
 
-  const setProperty = (key, value) => document.documentElement.style.setProperty(key, value)
+  const setProperty = (key, value) =>
+    document.documentElement.style.setProperty(key, value)
 
   Object.entries(shadeColors).forEach(([weight, rgbColor]) => {
     // console.log('rgbColor', rgbColor)

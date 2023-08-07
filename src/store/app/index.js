@@ -10,7 +10,7 @@ export const useAppStore = defineStore({
   state() {
     return {
       themeConfig: storage.get('app/themeConfig') || {
-        primaryColor: '#e82328',
+        primaryColor: 'rgba(2, 141, 113, 1)',
       },
       siteInfo: {},
       systemInfo: {},
