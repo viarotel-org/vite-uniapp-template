@@ -5,7 +5,6 @@ import useEslint from 'vite-plugin-eslint'
 import useUnoCSS from 'unocss/vite'
 import useUniPages from '@uni-helper/vite-plugin-uni-pages'
 
-// import useH5ProdEffectPlugin from 'uni-vite-plugin-h5-prod-effect'
 import postcssConfig from './postcss.config.js'
 
 import {
@@ -28,7 +27,6 @@ export default defineConfig({
       homePage,
     }),
     useUni(),
-    // useH5ProdEffectPlugin(),
   ],
   server: {
     cors: true,
