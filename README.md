@@ -179,8 +179,8 @@ export default (router) => {
 
 ```js
 // 使用名为 realname 的中间件
-const config = {
-  path: 'index',
+const pageConfig = {
+  path: '/pages/personal/index',
   aliasPath: '/personal',
   meta: {
     middleware: ['realname'],
@@ -276,9 +276,9 @@ export default (router) => {
 
 删除 pnpm-lock.yaml / yarn.lock / package-lock.json 文件后重新安装依赖
 
-### 获得帮助
+### 获得支持
 
-> 因为是开源项目 全靠用爱发电 所以支持有限 更新节奏不固定
+> 因为是开源项目 全靠爱发电 所以支持有限 更新节奏不固定
 
 - issues: [issues](https://github.com/viarotel-org/vite-uniapp-template/issues)
 - email: viarotel@qq.com

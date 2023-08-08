@@ -81,9 +81,6 @@
     "@unocss/transformer-directives": "^0.53.1",
     "@viarotel-org/eslint-config": "^0.5.8",
     "eslint": "^8.42.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-vue": "^9.14.1",
     "mini-types": "^0.1.7",
     "miniprogram-api-typings": "^3.10.0",
     "postcss": "^8.4.24",
@@ -92,10 +89,9 @@
     "postcss-remove-inline-comments": "^0.0.2",
     "postcss-scss": "^4.0.6",
     "sass": "^1.63.4",
-    "unocss": "^0.53.1",
+    "unocss": "^0.54.2",
     "unocss-applet": "^0.5.3",
     "vite": "4.1.4",
-    "vite-plugin-eslint": "^1.8.1",
-    "vue-eslint-parser": "^9.3.1"
+    "vite-plugin-eslint": "^1.8.1"
   }
 }

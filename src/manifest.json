@@ -1,8 +1,8 @@
 {
   "name": "vite-uniapp-template",
-  "appid": "__UNI__2909EE9",
+  "appid": "",
   "description": "",
-  "versionName": "1.0.0",
+  "versionName": "2.0.0",
   "versionCode": "100",
   "transformPx": false,
   "app-plus": {
@@ -42,7 +42,7 @@
   },
   "quickapp": {},
   "mp-weixin": {
-    "appid": "wx71a428ef2b4881ed",
+    "appid": "",
     "setting": {
       "urlCheck": false
     },
