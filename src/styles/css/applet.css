@@ -36,6 +36,7 @@ uni-base,
 
 page {
   height: 100%;
+  background-color: theme("colors.gray.50");
 }
 
 button {

@@ -1,7 +1,12 @@
 {
   "name": "vite-uniapp-template",
   "type": "module",
-  "version": "0.0.0",
+  "version": "2.0.0",
+  "author": {
+    "name": "viarotel",
+    "email": "viarotel@qq.com",
+    "url": "https://viarotel.eu.org/"
+  },
   "scripts": {
     "lint": "pnpm run lint:js",
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md --ignore-path .eslintignore --fix",

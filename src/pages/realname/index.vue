@@ -1,7 +1,7 @@
 <template>
   <view class="h-full flex flex-col overflow-hidden">
     <view
-      class="px-4 rounded-lg bg-white shadow-lg shadow-primary-100 mx-4 py-4 flex-none"
+      class="px-4 rounded-lg bg-white shadow-lg shadow-primary-100 mx-4 mt-4 py-4 flex-none"
     >
       <view class="h-6 flex items-center">
         <u-line-progress
