@@ -2,4 +2,3 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 pnpm uplog
-git add CHANGELOG.md
