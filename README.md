@@ -291,5 +291,5 @@ export default (router) => {
 
 > 如果该项目帮到你的话, 可以请我吃包辣条, 可以使我更有动力完善该项目
 
-<img src="src/assets/images/payment-alipay.jpg" alt="viarotel">
-<img src="src/assets/images/payment-weixin.jpg" alt="viarotel">
+<img src="src/assets/payment-alipay.jpg" alt="viarotel">
+<img src="src/assets/payment-weixin.jpg" alt="viarotel">
