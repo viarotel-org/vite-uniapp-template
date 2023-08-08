@@ -4,6 +4,8 @@
 
 🚀 The integrated template based on the best practice of UniPP driven by VITEJS
 
+[演示地址](https://vite-uniapp-template.netlify.app/)
+
 ## 特点
 
 - 💪 Assets: 提供了全局静态资源加载工具，无感切换加载本地静态资源/远程静态资源，解决小程序环境下包大小限制问题。

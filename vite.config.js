@@ -54,7 +54,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '^@': path.resolve(__dirname, './src/'),
-      '$uni-router': path.resolve(__dirname, './src/utils/uniapp-router-next/'),
+      '$uni-router': path.resolve(__dirname, './src/utils/uni-router/'),
     },
   },
   css: {

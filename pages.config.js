@@ -26,14 +26,21 @@ export default defineUniPages({
       path: 'pages/index/home/index',
       aliasPath: '/home',
       style: {
-        navigationBarTitleText: '首页',
+        navigationBarTitleText: '主页',
+      },
+    },
+    {
+      path: 'pages/index/example/index',
+      aliasPath: '/example',
+      style: {
+        navigationBarTitleText: '示例',
       },
     },
     {
       path: 'pages/index/personal/index',
       aliasPath: '/personal',
       style: {
-        navigationBarTitleText: '个人中心',
+        navigationBarTitleText: '我的',
       },
     },
     {
@@ -91,7 +98,7 @@ export default defineUniPages({
         iconPath: 'static/tabbar/tab-home.png',
         selectedIconPath: 'static/tabbar/tab-home-active.png',
         pagePath: 'pages/index/home/index',
-        text: '首页',
+        text: '主页',
       },
       {
         iconPath: 'static/tabbar/tab-personal.png',

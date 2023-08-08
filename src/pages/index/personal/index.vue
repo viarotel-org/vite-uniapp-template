@@ -1,7 +1,7 @@
 <template>
   <view class="h-full">
     <view
-      class="flex items-center bg-gradient-to-l to-primary-300 from-primary-500 px-4 h-[30vh]"
+      class="flex items-center bg-gradient-to-l to-primary-300 from-primary-500 px-4 h-45"
       @click="handleLogin"
     >
       <view class="overflow-hidden rounded-full w-20 h-20">

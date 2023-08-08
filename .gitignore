@@ -22,3 +22,4 @@ dist
 
 #user
 .hbuilderx
+pnpm-lock.yaml
