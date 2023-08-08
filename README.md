@@ -12,7 +12,7 @@
 - 📦 SubPackages: 符合心智模型的分包风格，合理的 pages 目录结构，与分包配置轻松实现功能分包。
 - 🛣 Router: 使用 uniapp-router-next，并通过优化封装，API 同 VueRouter 类似，扩展了拦截器、中间件、路由别名功能。
 - 📊 Store: 使用 Pinia 强力驱动，轻松实现应用状态管理。
-- ⚡️Request: 请求库使用 uni-network 完全基于 uniapp API 编写的高性能请求库 API 同 axios
+- ⚡️ Request: 请求库使用 uni-network 完全基于 uniapp API 编写的高性能请求库， API 同 axios。
 - 👇 Z-paging: 内置了高性能且易于使用的业务常用下拉分页组件模块，轻松实现下拉刷新、上拉加载等功能。
 - 💅 Unocss: 使用原子化 CSS 引擎，小程序环境下依然完美支持原子化的 class 命名书写规则。
 - 🎨 UI-libs: 预设了 uivew-plus 和 uni-ui 两者相辅相成，轻松满足绝大多数业务场景。
