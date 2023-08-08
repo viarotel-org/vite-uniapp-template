@@ -67,7 +67,7 @@
     "uni-vite-plugin-h5-prod-effect": "^1.0.1",
     "uniapp-router-next": "^1.1.6",
     "uview-plus": "^3.1.35",
-    "vue": "^3.3.4",
+    "vue": "3.2.47",
     "vue-i18n": "^9.1.9",
     "z-paging": "^2.5.8"
   },
@@ -80,7 +80,6 @@
     "@uni-helper/vite-plugin-uni-pages": "^0.2.6",
     "@unocss/transformer-directives": "^0.54.2",
     "@viarotel-org/eslint-config": "^0.5.8",
-    "eslint": "^8.42.0",
     "mini-types": "^0.1.7",
     "miniprogram-api-typings": "^3.10.0",
     "postcss": "^8.4.24",
