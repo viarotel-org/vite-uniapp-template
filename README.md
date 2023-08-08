@@ -140,10 +140,7 @@ export default (router) => {
     console.log('token', token)
     console.log('userId', userId)
 
-    if (from.fullPath === to.fullPath) {
-      next(false)
-    }
-    else if (token) {
+    if (token) {
       if (to.path === loginPath) {
         next(homePath)
       }
