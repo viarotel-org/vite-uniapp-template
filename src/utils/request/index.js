@@ -36,8 +36,6 @@ export default request({
         ? Object.fromEntries(configs.headers.entries())
         : configs.headers
 
-    headers['login-source'] = 'xc_wx'
-
     // 将 token 添加到请求头上
     const userStore = store.useUserStore()
     const token = userStore.token

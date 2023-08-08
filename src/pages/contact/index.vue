@@ -2,7 +2,7 @@
   <view class="h-full flex flex-col px-4 py-3 bg-gray-50">
     <view class="relative flex-none">
       <image
-        :src="$assets('/images/message/bg-tel.jpg')"
+        :src="$assets('/images/contact/bg-tel.jpg')"
         mode="widthFix"
         class="w-full"
       />

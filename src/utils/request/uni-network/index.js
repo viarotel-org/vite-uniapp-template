@@ -26,9 +26,10 @@ export default ({
       delete config.headers['content-type']
     }
     // 解决query无法传递数组的问题
-    config.paramsSerializer = params => qs.stringify(params, {
-      arrayFormat: 'repeat',
-    })
+    config.paramsSerializer = params =>
+      qs.stringify(params, {
+        arrayFormat: 'repeat',
+      })
 
     return onRequest({
       url: config.url,
@@ -67,14 +68,15 @@ export default ({
   }
 
   // 响应失败拦截
-  service.onResponseError = error => onResponseError({
-    dataKey: 'data',
-    response: {
-      status: 500,
-      statusText: error.message,
-    },
-    error,
-  })
+  service.onResponseError = error =>
+    onResponseError({
+      dataKey: 'data',
+      response: {
+        status: 500,
+        statusText: error.message,
+      },
+      error,
+    })
 
   service.interceptors.request.use(service.onRequest, service.onRequestError)
   service.interceptors.response.use(
@@ -148,11 +150,12 @@ export default ({
    * @param  useQuery 是否自动将 data 转为 FormData 格式
    * @returns {Promise}
    */
-  service.get = (url, params, { paramsKey = 'params', ...options } = {}) => service({
-    url,
-    method: 'GET',
-    [paramsKey]: params,
-    ...options,
-  })
+  service.get = (url, params, { paramsKey = 'params', ...options } = {}) =>
+    service({
+      url,
+      method: 'GET',
+      [paramsKey]: params,
+      ...options,
+    })
   return service
 }
