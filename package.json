@@ -1,13 +1,13 @@
 {
   "name": "vite-uniapp-template",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": {
     "name": "viarotel",
     "email": "viarotel@qq.com",
     "url": "https://viarotel.eu.org/"
   },
   "scripts": {
-    "uplog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "lint": "pnpm run lint:js",
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md --ignore-path .eslintignore --fix",
     "dev:app": "uni -p app",
