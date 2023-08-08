@@ -132,7 +132,7 @@ export default {
       const res = await this.$api.wxrealnameAuth(params)
       this.$loading(false)
 
-      if (res.code == '20000') {
+      if (res.successed) {
         this.handler({
           active: 3,
           params: this.formData,
@@ -166,7 +166,7 @@ export default {
         filePath,
       })
 
-      if (res.code == '20000') {
+      if (res.successed) {
         const data = `${getFileBaseURL()}/${res.data}`
         // console.log('data', data)
         this.formData[prop] = data

@@ -14,6 +14,7 @@ import {
   requestPath,
   useProxy,
 } from './src/configs/devServer.js'
+import { homePage } from './src/configs/index.js'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -22,7 +23,7 @@ export default defineConfig({
     useUnoCSS(),
     useUniPages({
       mergePages: false,
-      homePage: 'pages/index/home/index',
+      homePage,
     }),
     // @ts-expect-error
     useUni.default(),

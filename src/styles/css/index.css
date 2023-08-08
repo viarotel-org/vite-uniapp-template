@@ -2,5 +2,5 @@
 @import "./applet.css";
 
 page {
-  @apply border-t border-gray-100;
+  @apply border-t border-gray-200;
 }

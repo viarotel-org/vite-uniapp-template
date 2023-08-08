@@ -12,19 +12,8 @@ export default defineUniPages({
   },
   pages: [
     {
-      path: 'pages/login/phone/index',
-      aliasPath: '/login',
-      style: {
-        navigationBarTitleText: '',
-        navigationBarTextStyle: 'black',
-        navigationBarBackgroundColor: '#ffffff',
-      },
-    },
-    {
-      // 注意: 该字段是必须的用于标识那个是首页
-      type: 'home',
       path: 'pages/index/home/index',
-      aliasPath: '/home',
+      aliasPath: '/',
       style: {
         navigationBarTitleText: '主页',
       },
@@ -44,6 +33,15 @@ export default defineUniPages({
       },
     },
     {
+      path: 'pages/login/phone/index',
+      aliasPath: '/login',
+      style: {
+        navigationBarTitleText: '',
+        navigationBarTextStyle: 'black',
+        navigationBarBackgroundColor: '#ffffff',
+      },
+    },
+    {
       path: 'pages/errors/404/index',
       aliasPath: '/404',
       style: {
@@ -52,6 +50,21 @@ export default defineUniPages({
     },
   ],
   subPackages: [
+    {
+      root: 'pages/middleware',
+      pages: [
+        {
+          path: 'index',
+          aliasPath: '/middleware',
+          meta: {
+            middleware: ['realname'],
+          },
+          style: {
+            navigationBarTitleText: '路由中间件',
+          },
+        },
+      ],
+    },
     {
       root: 'pages/statement',
       pages: [
@@ -91,7 +104,7 @@ export default defineUniPages({
   ],
   tabBar: {
     color: '#999999',
-    selectedColor: '#2b9939',
+    selectedColor: '#018d71',
     backgroundColor: '#F8F8F8',
     list: [
       {
@@ -99,6 +112,12 @@ export default defineUniPages({
         selectedIconPath: 'static/tabbar/tab-home-active.png',
         pagePath: 'pages/index/home/index',
         text: '主页',
+      },
+      {
+        iconPath: 'static/tabbar/tab-example.png',
+        selectedIconPath: 'static/tabbar/tab-example-active.png',
+        pagePath: 'pages/index/example/index',
+        text: '示例',
       },
       {
         iconPath: 'static/tabbar/tab-personal.png',

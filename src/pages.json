@@ -9,21 +9,12 @@
   },
   "pages": [
     {
-      "type": "home",
       "path": "pages/index/home/index",
-      "aliasPath": "/home",
+      "aliasPath": "/",
       "style": {
         "navigationBarTitleText": "主页"
-      }
-    },
-    {
-      "path": "pages/login/phone/index",
-      "aliasPath": "/login",
-      "style": {
-        "navigationBarTitleText": "",
-        "navigationBarTextStyle": "black",
-        "navigationBarBackgroundColor": "#ffffff"
-      }
+      },
+      "type": "home"
     },
     {
       "path": "pages/index/example/index",
@@ -40,6 +31,15 @@
       }
     },
     {
+      "path": "pages/login/phone/index",
+      "aliasPath": "/login",
+      "style": {
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black",
+        "navigationBarBackgroundColor": "#ffffff"
+      }
+    },
+    {
       "path": "pages/errors/404/index",
       "aliasPath": "/404",
       "style": {
@@ -48,6 +48,23 @@
     }
   ],
   "subPackages": [
+    {
+      "root": "pages/middleware",
+      "pages": [
+        {
+          "path": "index",
+          "aliasPath": "/middleware",
+          "meta": {
+            "middleware": [
+              "realname"
+            ]
+          },
+          "style": {
+            "navigationBarTitleText": "路由中间件"
+          }
+        }
+      ]
+    },
     {
       "root": "pages/statement",
       "pages": [
@@ -87,7 +104,7 @@
   ],
   "tabBar": {
     "color": "#999999",
-    "selectedColor": "#2b9939",
+    "selectedColor": "#018d71",
     "backgroundColor": "#F8F8F8",
     "list": [
       {
@@ -95,6 +112,12 @@
         "selectedIconPath": "static/tabbar/tab-home-active.png",
         "pagePath": "pages/index/home/index",
         "text": "主页"
+      },
+      {
+        "iconPath": "static/tabbar/tab-example.png",
+        "selectedIconPath": "static/tabbar/tab-example-active.png",
+        "pagePath": "pages/index/example/index",
+        "text": "示例"
       },
       {
         "iconPath": "static/tabbar/tab-personal.png",

@@ -30,6 +30,9 @@ export const enterpriseInfo = {
   address: '河南省郑州市',
 }
 
+// 主页面路径
+export const homePage = 'pages/index/home/index'
+
 export default {
   appName,
   appBasePath,

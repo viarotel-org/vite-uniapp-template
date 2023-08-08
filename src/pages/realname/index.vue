@@ -6,8 +6,8 @@
       <view class="h-6 flex items-center">
         <u-line-progress
           v-bind="{
-            activeColor: '#f5252e',
-            inactiveColor: '#fef0f0',
+            activeColor: 'rgba(var(--color-primary-500), 1)',
+            inactiveColor: 'rgba(var(--color-primary-50), 1)',
             percentage: currentProgress.value,
           }"
         >

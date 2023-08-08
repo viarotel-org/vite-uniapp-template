@@ -12,11 +12,7 @@
           labelWidth: 90,
         }"
       >
-        <u-form-item
-          label="姓名"
-          prop="realName"
-          border-bottom
-        >
+        <u-form-item label="姓名" prop="realName" border-bottom>
           <u--input
             v-model="formData.realName"
             placeholder="请输入姓名"
@@ -25,11 +21,7 @@
             }"
           ></u--input>
         </u-form-item>
-        <u-form-item
-          label="身份证号"
-          prop="idcardNo"
-          border-bottom
-        >
+        <u-form-item label="身份证号" prop="idcardNo" border-bottom>
           <u--input
             v-model="formData.idcardNo"
             placeholder="请输入身份证号"
@@ -39,6 +31,9 @@
           ></u--input>
         </u-form-item>
       </u--form>
+      <view class="text-red-500 text-xs pt-4">
+        注意: 此处仅作演示，姓名和身份证可以不真实，但格式需正确
+      </view>
     </view>
     <view class="flex-none pb-4">
       <u-button
@@ -120,7 +115,7 @@ export default {
       this.$loading(true)
       const res = await this.$api.checkUserinfo(params)
       this.$loading(false)
-      if (res.code == '20000') {
+      if (res.successed) {
         const imported = res.data
         if (imported) {
           this.handleBind()
@@ -140,9 +135,10 @@ export default {
       this.$loading(true)
       const res = await this.$api.bindUserinfo(params)
       this.$loading(false)
-      if (res.code == '20000') {
+      if (res.successed) {
         const binded = res.data
         if (binded) {
+          await this.$toast('该用户信息已存在, 自动绑定成功')
           this.handler({
             active: 3,
             params: {

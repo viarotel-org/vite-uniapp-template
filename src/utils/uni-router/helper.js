@@ -35,9 +35,9 @@ export function routerModel(
 
   methodName = hasTabBar(pages, path) ? 'switchTab' : methodName
 
-  console.log('pathMap', pathMap)
-  console.log('path', path)
-  console.log('methodName', methodName)
+  // console.log('pathMap', pathMap)
+  // console.log('path', path)
+  // console.log('methodName', methodName)
 
   return router[methodName]({
     ...omit(options, 'path'),
@@ -128,7 +128,7 @@ export function resolvePages(pages, { addRoot = false } = {}) {
     })
   }
 
-  console.log('resolvePages.value', value)
+  // console.log('resolvePages.value', value)
 
   return value
 }
@@ -166,11 +166,11 @@ export function resolvePagePath(
   }, {})
 
   const value = {
-    '/': getRootPagePath(pages),
     ...pathMap,
+    '/': getRootPagePath(pages),
   }
 
-  console.log('resolvePagePath.value', value)
+  // console.log('resolvePagePath.value', value)
 
   return value
 }

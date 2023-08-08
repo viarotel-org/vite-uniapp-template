@@ -184,7 +184,7 @@ export default {
       }
 
       const res = await this.$api.phoneNumber(params)
-      if (res.code == '20000') {
+      if (res.successed) {
         this.formData.userPhone = res.data.phoneNumber
       }
     },

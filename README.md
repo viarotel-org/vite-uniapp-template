@@ -4,7 +4,7 @@
 
 🚀 The integrated template based on the best practice of UniPP driven by VITEJS
 
-[演示地址](https://vite-uniapp-template.netlify.app/)
+[查看演示](https://vite-uniapp-template.netlify.app/)
 
 ## 特点
 
@@ -79,7 +79,7 @@ app.config.globalProperties.$assets = useAssets
 const methods = {
   routerDemo() {
     this.$Router.push({
-      path: '/home',
+      path: '/login',
       query: {
         id: 'id',
       },

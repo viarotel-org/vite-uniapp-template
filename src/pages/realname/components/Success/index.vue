@@ -40,7 +40,8 @@ export default {
   },
   methods: {
     async handleSubmit() {
-      this.$Router.replace('/')
+      this.$store.user.userInfo.realStatus = 3
+      this.$Router.replaceAll('/')
     },
   },
 }

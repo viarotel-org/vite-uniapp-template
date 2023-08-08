@@ -1,8 +1,8 @@
 export default [
   {
     parentId: '/',
-    id: '/home',
-    path: '/home',
+    id: '/',
+    path: '/',
     meta: { title: '首页', icon: '' },
     children: [],
   },

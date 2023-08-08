@@ -63,7 +63,7 @@ export default {
   methods: {
     async getAreaData() {
       const res = await this.$api.wxdepartTree()
-      if (res.code == '20000') {
+      if (res.successed) {
         const data = res.data || []
         this.flatData = tree2List(data, {
           key: 'id',
