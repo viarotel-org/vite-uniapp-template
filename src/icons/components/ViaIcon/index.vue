@@ -1,5 +1,5 @@
 <template>
-  <i :class="['iconfont inline-block', deepClass, iconName]">
+  <i class="iconfont inline-block" :class="[deepClass, iconName]">
     <slot />
   </i>
 </template>

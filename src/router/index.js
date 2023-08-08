@@ -1,28 +1,20 @@
-import {
-  createRouter,
-  useRoute,
-  useRouter,
-  aliasTransformer,
-} from './core/index'
+import { createRouter } from '$uni-router'
 import pages from '@/pages.json'
-import permission from './permission'
 
-const nativeRouter = createRouter({
+console.log('pages', pages)
+
+const router = createRouter({
   pages,
+  redirect: [
+    {
+      path: '*',
+      redirect: () => {
+        return { path: '/404' }
+      },
+    },
+  ],
 })
 
-const router = aliasTransformer(nativeRouter)
-// console.log('router', router)
+console.log('router', router)
 
-permission(router)
-
-export default {
-  install(app) {
-    // 首字母改为大写以兼容H5端 避免命名冲突
-    app.config.globalProperties.$Router = router
-    app.config.globalProperties.$Route = () => useRoute()
-  },
-  useRoute,
-  useRouter,
-  ...router,
-}
+export default router

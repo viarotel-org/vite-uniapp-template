@@ -1,56 +1,52 @@
-import debounce from 'lodash/debounce'
-import router from '@/router'
-import store from '@/store'
-import { useToast, useDialog } from '@/utils/modals'
+export async function binaryParser(response, { dataKey = '_data' } = {}) {
+  return new Promise((resolve) => {
+  // console.log('response', response)
+    const data = response[dataKey]
+    let headers = response.headers
+    if (headers.toString() === '[object Headers]') {
+      headers = Object.fromEntries(headers.entries())
+    // console.log('headers', headers)
+    }
 
-/**
- * @description 操作登录
- */
-export const handleLogin = debounce(async (res = {}, type = 'dialog') => {
-  const userStore = store.useUserStore()
-  await userStore.logout()
-
-  switch (type) {
-    case 'dialog':
-      {
-        const result = await useDialog(
-          res.message || '登录状态已过期, 请重新登录!',
-          {
-            showCancelButton: true,
-            confirmButtonText: '重新登录',
-          },
-        )
-        if (!result) return
-      }
-      break
-    case 'toast':
-      await useToast(res.message || '登录状态已过期, 请重新登录!', {
-        type: 'error',
+    let resData = ''
+    let fileName
+    if (headers['content-disposition']) {
+      fileName = headers['content-disposition'].split(';')[1].split('=')[1]
+    }
+    const blob = data
+    if (!fileName) {
+      const errorData = new FileReader()
+      errorData.addEventListener('loadend', (data) => {
+        try {
+          resData = JSON.parse(data.target.result)
+        }
+        catch (e) {
+          resData = ''
+        }
+        resolve(resData)
       })
-      break
-  }
-
-  router.replaceAll({ path: '/pages/account/login/index' })
-}, 500)
-
-/**
- * @description 请求时输出 用于调试
- */
-export function requestConsoles(req) {
-  console.log('>>>>>>>>>> Request Start >>>>>>>>>>')
-  console.log('url: ', req.url)
-  console.log('data: ', req.data)
-  console.log('request: ', req)
-  console.log('>>>>>>>>>> Request End >>>>>>>>>>')
-}
-
-/**
- * @description 响应时输出 用于调试
- */
-export function responseConsoles(res) {
-  console.log('<<<<<<<<<< Response Start <<<<<<<<<<')
-  console.log('url: ', res.config.url)
-  console.log('data: ', res.data)
-  console.log('response: ', res)
-  console.log('<<<<<<<<<< Response End <<<<<<<<<<')
+      errorData.readAsText(blob)
+    }
+    else {
+      resData = {
+        fileName: window.decodeURIComponent(fileName),
+        blob: data,
+      }
+      const reader = new FileReader()
+      reader.readAsDataURL(blob)
+      reader.onload = (e) => {
+        const aEl = document.createElement('a')
+        aEl.download = window.decodeURIComponent(resData.fileName)
+        aEl.href = e.target.result
+        document.body.appendChild(aEl)
+        aEl.click()
+        document.body.removeChild(aEl)
+        resData = {
+          code: '0000',
+          message: '成功',
+        }
+        resolve(resData)
+      }
+    }
+  })
 }

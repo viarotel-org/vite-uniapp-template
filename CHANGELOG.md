@@ -1,13 +1,18 @@
-# Change Log
+# 2.0.0 (2023-08-08)
 
-## 0.0.3
 
-- Router 插件支持纯字符串路径跳转
 
-## 0.0.2
+# 2.0.0 (2023-08-08)
 
-- 对 app 端进行测试及适配
 
-## 0.0.1
+### Bug Fixes
 
-- init
+* :bug: bugfix ([2bf4391](https://github.com/viarotel-org/vite-uniapp-template/commit/2bf4391b96bd0b2e94acfcf7ee36a757d02808aa))
+
+
+### Performance Improvements
+
+* :memo: ([dd8dcf5](https://github.com/viarotel-org/vite-uniapp-template/commit/dd8dcf598dec5721e27c3e953535f33af1a627c1))
+
+
+

@@ -1,11 +1,12 @@
 <script>
 export default {
-  onLaunch() {
+  async onLaunch() {
     console.log('App Launch')
+
+    this.$store.app.getSystemInfo()
   },
-  onShow() {
+  async onShow() {
     console.log('App Show')
-    this.$store.userStore.getUserInfo()
   },
   onHide() {
     console.log('App Hide')
@@ -13,4 +14,6 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import "uview-plus/index.scss";
+</style>

@@ -15,7 +15,8 @@ export default {
     const json = window.localStorage.getItem(key)
     try {
       return JSON.parse(json)
-    } catch (error) {
+    }
+    catch (error) {
       return json
     }
   },

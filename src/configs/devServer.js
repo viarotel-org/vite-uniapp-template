@@ -1,9 +1,11 @@
 import {
-  useProxy,
-  requestURL as proxyURL,
+  appBasePath,
   proxyPath,
   proxyPort,
-  appBasePath,
+  requestURL as proxyURL,
+  requestFilePath,
+  requestPath,
+  useProxy,
 } from './index'
 
 export {
@@ -12,6 +14,8 @@ export {
   proxyPath,
   proxyPort,
   appBasePath,
+  requestPath,
+  requestFilePath,
 } from './index'
 
 export default {
@@ -20,4 +24,6 @@ export default {
   proxyPath,
   proxyPort,
   appBasePath,
+  requestPath,
+  requestFilePath,
 }

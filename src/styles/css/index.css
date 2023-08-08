@@ -1,0 +1,6 @@
+@import "./vars.css";
+@import "./applet.css";
+
+page {
+  @apply border-t border-gray-200;
+}

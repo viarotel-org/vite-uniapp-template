@@ -1,53 +1,45 @@
 <template>
   <view class="bg-white h-full overflow-hidden">
     <view class="mt-8">
-      <image
-        src="@/assets/images/logo.png"
-        alt=""
-        class="w-20 h-20 block mx-auto"
-      />
+      <image src="/static/logo.png" alt="" class="w-20 h-20 block mx-auto" />
       <view class="text-2xl text-center mt-4 font-bold">
-        {{ title }}
+        {{ appName }}
       </view>
     </view>
     <view class="px-4 mt-18">
-      <u-button
-        type="success"
-        shape="circle"
-        ripple
-        @click="handleLogin"
-      >
+      <u-button type="primary" shape="circle" ripple @click="handleLogin">
         <!-- open-type="getPhoneNumber" -->
         <!-- @getphonenumber="handleLogin" -->
         手机号快捷登录
       </u-button>
-      <view class="text-center mt-3">
-        <u-checkbox
-          v-model="agree"
-          class=""
-        >
+      <view class="text-center mt-4 flex items-center justify-center">
+        <checkbox :checked="agreed" class="">
+        </checkbox>
+        <text>
           我已阅读并同意
-          <span
+          <text
             class="text-primary active:text-primary-700"
             @click.stop="handleAgree"
-          >《产品服务协议》</span>
-        </u-checkbox>
+          >
+            《产品服务协议》
+          </text>
+        </text>
       </view>
     </view>
     <view class="absolute inset-x-0 bottom-0 text-center mb-4 text-gray-400">
-      {{ title }}
+      {{ appName }}
     </view>
   </view>
 </template>
 
 <script>
-import { title } from '@/configs/index'
+import { appName } from '@/configs/index'
 
 export default {
   data() {
     return {
-      title,
-      agree: false,
+      appName,
+      agreed: false,
       loginCode: '',
     }
   },
@@ -65,12 +57,12 @@ export default {
       })
     },
     handleAgree() {
-      this.$Router.push({ path: '' })
+      this.$Router.push({ path: '/pages/statement/index' })
     },
     async handleLogin({ detail = {} } = {}) {
       console.log('login.detail', detail)
 
-      if (!this.agree) {
+      if (!this.agreed) {
         try {
           await this.$dialog('是否已阅读并同意《产品服务协议》?', {
             showCancelButton: true,
@@ -78,8 +70,9 @@ export default {
             cancelButtonText: '取消',
           })
 
-          this.agree = true
-        } catch (error) {
+          this.agreed = true
+        }
+        catch (error) {
           console.log('error', error)
           return
         }
@@ -90,17 +83,28 @@ export default {
         code: this.loginCode,
         encryptedData: detail.encryptedData,
         iv: detail.iv,
-        mockData: {
-          token: 'mock-token',
-        },
       }
 
-      const res = await this.$req.mockRequest(params)
+      await this.$store.user.login(params)
+      await this.$toast('登录成功', { type: 'success' })
+      this.handleSuccess()
+    },
+    async handleSuccess() {
+      const user = this.$store.user
 
-      if (res.code === '0000') {
-        this.$store.userStore.setToken(res.data.token)
-        await this.$toast('登录成功', { type: 'success' })
-        this.$Router.push({ path: '/tab-0' })
+      try {
+        await user.getUserInfo()
+        const redirect = this.$Route.query.redirect
+        console.log('redirect', redirect)
+        if (redirect) {
+          this.$Router.replaceAll(JSON.parse(redirect))
+        }
+        else {
+          this.$Router.replaceAll('/')
+        }
+      }
+      catch (error) {
+        console.warn('error', error)
       }
     },
   },
