@@ -25,4 +25,4 @@ dist-ssr
 *.lock
 
 # user
-/src/assets/videos/home/banner-1.mp4
+pnpm-lock.yaml
