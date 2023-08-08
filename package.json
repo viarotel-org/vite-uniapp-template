@@ -7,8 +7,7 @@
     "url": "https://viarotel.eu.org/"
   },
   "scripts": {
-    "prepare": "husky install",
-    "uplog": "conventional-changelog -p angular -i CHANGELOG.md -s 0",
+    "uplog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "lint": "pnpm run lint:js",
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md --ignore-path .eslintignore --fix",
     "dev:app": "uni -p app",
@@ -87,7 +86,6 @@
     "@unocss/transformer-directives": "^0.54.2",
     "@viarotel-org/eslint-config": "^0.5.8",
     "conventional-changelog-cli": "^3.0.0",
-    "husky": "^8.0.0",
     "mini-types": "^0.1.7",
     "miniprogram-api-typings": "^3.10.0",
     "postcss": "^8.4.24",
