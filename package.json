@@ -8,7 +8,7 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "uplog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "uplog": "conventional-changelog -p angular -i CHANGELOG.md -s 0",
     "lint": "pnpm run lint:js",
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md --ignore-path .eslintignore --fix",
     "dev:app": "uni -p app",
