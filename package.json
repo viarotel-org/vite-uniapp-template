@@ -1,6 +1,5 @@
 {
   "name": "vite-uniapp-template",
-  "type": "module",
   "version": "2.0.0",
   "author": {
     "name": "viarotel",
@@ -100,6 +99,7 @@
     "simple-git-hooks": "^2.9.0",
     "unocss": "^0.54.2",
     "unocss-applet": "^0.5.3",
+    "unplugin-uni-router": "^1.1.6",
     "vite": "4.1.4",
     "vite-plugin-eslint": "^1.8.1"
   }

@@ -1,11 +1,13 @@
 import path from 'node:path'
-import useH5ProdEffectPlugin from 'uni-vite-plugin-h5-prod-effect'
 import { defineConfig } from 'vite'
 import useUni from '@dcloudio/vite-plugin-uni'
 import useEslint from 'vite-plugin-eslint'
 import useUnoCSS from 'unocss/vite'
 import useUniPages from '@uni-helper/vite-plugin-uni-pages'
+
+// import useH5ProdEffectPlugin from 'uni-vite-plugin-h5-prod-effect'
 import postcssConfig from './postcss.config.js'
+
 import {
   proxyPath,
   proxyPort,
@@ -25,9 +27,8 @@ export default defineConfig({
       mergePages: false,
       homePage,
     }),
-    // @ts-expect-error
-    useUni.default(),
-    useH5ProdEffectPlugin(),
+    useUni(),
+    // useH5ProdEffectPlugin(),
   ],
   server: {
     cors: true,
@@ -61,5 +62,8 @@ export default defineConfig({
   css: {
     // 修复外部 postcss.config.js 不被解析的问题
     postcss: postcssConfig,
+  },
+  build: {
+    minify: false,
   },
 })

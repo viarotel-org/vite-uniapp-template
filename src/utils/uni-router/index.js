@@ -19,10 +19,11 @@ export function createRouter({ pages, redirect = [], ...options } = {}) {
   console.log('createRouter.routes', routes)
 
   const router = _createRouter({
-    platform: process.env.UNI_PLATFORM,
     ...options,
+    platform: process.env.UNI_PLATFORM,
     pages,
     routes,
+    debug: true,
   })
 
   const alias = aliasTransformer(router, { addRoot: true })
