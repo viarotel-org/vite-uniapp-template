@@ -7,7 +7,7 @@
     "url": "https://viarotel.eu.org/"
   },
   "scripts": {
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "uplog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "lint": "pnpm run lint:js",
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md --ignore-path .eslintignore --fix",
     "dev:app": "uni -p app",
