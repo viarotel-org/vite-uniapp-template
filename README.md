@@ -278,7 +278,7 @@ export default (router) => {
 
 删除 pnpm-lock.yaml / yarn.lock / package-lock.json 文件后重新安装依赖
 
-### 获得支持
+### 获得帮助
 
 > 因为是开源项目 全靠爱发电 所以支持有限 更新节奏不固定
 
@@ -286,3 +286,10 @@ export default (router) => {
 - email: viarotel@qq.com
 - weixin: viarotel
 - qq: 523469508
+
+### 支持我
+
+> 如果该项目帮到你的话, 可以请我吃包辣条, 可以使我更有动力完善该项目
+
+<img src="src/assets/images/payment-alipay.jpg" alt="viarotel">
+<img src="src/assets/images/payment-weixin.jpg" alt="viarotel">
