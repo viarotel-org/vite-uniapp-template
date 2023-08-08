@@ -256,7 +256,7 @@ export default (router) => {
 }
 ```
 
-### 主要使用的框架和库
+### 主要使用的包
 
 - vitejs
 - uniapp
