@@ -101,5 +101,8 @@
     "unplugin-uni-router": "^1.1.6",
     "vite": "4.1.4",
     "vite-plugin-eslint": "^1.8.1"
+  },
+  "standard-version": {
+    "config": "./.versionrc.json"
   }
 }
