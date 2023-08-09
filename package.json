@@ -8,7 +8,7 @@
   },
   "scripts": {
     "release": "standard-version --preset angular",
-    "lint": "pnpm run lint:js",
+    "lint": "pnpm lint:js",
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md --ignore-path .eslintignore --fix",
     "dev:app": "uni -p app",
     "dev:app-android": "uni -p app-android",
