@@ -1,7 +1,6 @@
 import { isH5 } from '@uni-helper/uni-env'
 
 const isProduction = process.env.NODE_ENV === 'production'
-// const isDevelopment = process.env.NODE_ENV === 'development'
 
 export const appName = 'vite-uniapp-template'
 

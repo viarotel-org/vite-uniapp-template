@@ -38,7 +38,6 @@ export default {
     return {
       wechatImage,
       enterpriseInfo,
-      messageValue: '',
     }
   },
   computed: {},

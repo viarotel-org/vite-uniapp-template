@@ -1,7 +1,7 @@
-import uviewPlus from './uview-plus'
+import UviewPlus from './uview-plus'
 
 export default {
   install(app) {
-    app.use(uviewPlus)
+    app.use(UviewPlus)
   },
 }

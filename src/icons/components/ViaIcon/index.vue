@@ -19,7 +19,7 @@ export default {
     },
     deepClass: {
       type: [String, Object, Array],
-      default: '',
+      default: () => [],
     },
   },
   computed: {

@@ -5,7 +5,7 @@ console.log('pages', pages)
 
 const router = createRouter({
   pages,
-  redirect: [
+  addRoutes: [
     {
       path: '*',
       redirect: () => {
