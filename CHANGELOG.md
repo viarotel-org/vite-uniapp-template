@@ -3,6 +3,18 @@
 ## [2.0.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.0.0...v2.0.0) (2023-08-09)
 
 
+### Bug Fixes
+
+* 📝 修复路由文件缺失导致报错的问题 ([4d51094](https://github.com/viarotel-org/vite-uniapp-template/commit/4d5109473f16c24530b797cd9aa6e48f36d862e9))
+
+
+### Miscellaneous Chores
+
+* release 2.0.0 ([fe14011](https://github.com/viarotel-org/vite-uniapp-template/commit/fe140115e49372615b50a91a98f0728d3c9c02a6))
+
+## [2.0.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.0.0...v2.0.0) (2023-08-09)
+
+
 ### Features
 
 * ✨ 使用 semantic-release ([1efe42b](https://github.com/viarotel-org/vite-uniapp-template/commit/1efe42bb2897eea7dc00459aa1949ac5a2953b46))
