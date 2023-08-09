@@ -1,13 +1,12 @@
 {
   "name": "vite-uniapp-template",
-  "version": "2.3.7",
+  "version": "0.0.0-development",
   "author": {
     "name": "viarotel",
     "email": "viarotel@qq.com",
     "url": "https://viarotel.eu.org/"
   },
   "scripts": {
-    "release": "semantic-release",
     "lint": "pnpm lint:js",
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md --ignore-path .eslintignore --fix",
     "dev:app": "uni -p app",
@@ -93,14 +92,10 @@
     "postcss-remove-inline-comments": "^0.0.2",
     "postcss-scss": "^4.0.6",
     "sass": "^1.63.4",
-    "semantic-release": "^21.0.7",
     "unocss": "^0.54.2",
     "unocss-applet": "^0.5.3",
     "unplugin-uni-router": "^1.1.6",
     "vite": "4.1.4",
     "vite-plugin-eslint": "^1.8.1"
-  },
-  "standard-version": {
-    "config": "./.versionrc.json"
   }
 }
