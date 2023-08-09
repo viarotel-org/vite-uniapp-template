@@ -7,7 +7,7 @@
     "url": "https://viarotel.eu.org/"
   },
   "scripts": {
-    "release": "standard-version",
+    "release": "standard-version --preset angular",
     "lint": "pnpm run lint:js",
     "lint:js": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md --ignore-path .eslintignore --fix",
     "dev:app": "uni -p app",
