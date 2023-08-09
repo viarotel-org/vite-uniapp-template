@@ -1,8 +1,8 @@
 # vite-uniapp-template
 
-🚀 基于 vitejs 驱动的 uniapp 最佳实践的集成模板
+🚀 基于 vitejs 驱动的 uniapp 最佳实践集成模板
 
-🚀 The integrated template based on the best practice of UniPP driven by VITEJS
+🚀 The best practical integrated template based on VITEJS -driven Uniapp
 
 [查看演示](https://vite-uniapp-template.netlify.app/)
 
