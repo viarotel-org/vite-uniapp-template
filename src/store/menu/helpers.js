@@ -2,7 +2,6 @@ import { groupBy } from 'lodash-es'
 import { list2Tree, tree2List } from '@/utils/treeSimple'
 import { sortTreeByField } from '@/utils/tree'
 import { getUserMenus } from '@/api/user/index'
-import businessRoutes from '@/router/business.js'
 
 export async function getRemoteMenu(params) {
   let data = []
@@ -47,7 +46,7 @@ export function transformerMenu(data,
     2: permissionList = [],
   } = groupBy(data, menuType)
 
-  const rawRoutes = businessRoutes?.children || []
+  const rawRoutes = []
   const mapRoutes = rawRoutes.reduce((obj, item) => {
     obj[item.path] = item
     return obj
