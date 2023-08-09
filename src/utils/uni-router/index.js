@@ -7,8 +7,8 @@ export { useRouter, useRoute } from 'uniapp-router-next'
 
 export * from './helper.js'
 
-export function createRouter({ pages, redirect = [], ...options } = {}) {
-  const routes = [...resolvePages(pages, { addRoot: true }), ...redirect]
+export function createRouter({ pages, addRoutes = [], ...options } = {}) {
+  const routes = [...resolvePages(pages, { addRoot: true }), ...addRoutes]
   if (isH5) {
     routes.unshift({
       ...routes.find(item => item.path.includes(homePage)),
@@ -21,7 +21,6 @@ export function createRouter({ pages, redirect = [], ...options } = {}) {
   const router = _createRouter({
     ...options,
     platform: process.env.UNI_PLATFORM,
-    pages,
     routes,
     debug: true,
   })

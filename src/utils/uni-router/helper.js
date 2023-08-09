@@ -1,5 +1,6 @@
 import { cloneDeep, isArray, isString, omit } from 'lodash-es'
 import qs from 'qs'
+import pages from '@/pages.json'
 
 /**
  * 路由模型
@@ -11,8 +12,6 @@ export function routerModel(
   methodName,
   { pathKey = 'path', params, router, pathMap = {} } = {},
 ) {
-  const pages = router.options.pages || {}
-
   // console.log('params', params)
 
   let options
