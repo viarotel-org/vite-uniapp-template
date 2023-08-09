@@ -68,7 +68,6 @@
     "lodash-es": "^4.17.21",
     "pinia": "2.0.36",
     "qs": "^6.11.2",
-    "uni-vite-plugin-h5-prod-effect": "^1.0.1",
     "uniapp-router-next": "^1.1.6",
     "uview-plus": "^3.1.35",
     "vue": "3.2.47",
