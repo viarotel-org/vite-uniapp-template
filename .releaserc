@@ -1,8 +1,8 @@
 {
+  "branches": [
+    "semantic-release"
+  ],
   "release": {
-    "branches": [
-      "semantic-release"
-    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
