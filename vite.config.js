@@ -62,6 +62,6 @@ export default defineConfig({
     postcss: postcssConfig,
   },
   build: {
-    minify: false,
+    minify: true,
   },
 })
