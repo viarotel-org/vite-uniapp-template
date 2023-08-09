@@ -20,11 +20,6 @@ dist
 *.sln
 *.sw?
 
-<<<<<<< HEAD
-# user
-pnpm-lock.yaml
-=======
 #user
 .hbuilderx
 pnpm-lock.yaml
->>>>>>> next
