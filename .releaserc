@@ -3,12 +3,25 @@
     "semantic-release"
   ],
   "release": {
-    "extendPlugins": [
+    "preset": "angular",
+    "plugins": [
       "@semantic-release/commit-analyzer",
+      [
+        "@semantic-release/npm",
+        false
+      ],
+      [
+        "@semantic-release/github",
+        false
+      ],
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
       "@semantic-release/git",
       "@semantic-release/exec"
-    ]
+    ],
+    "verifyConditions": false,
+    "verifyRelease": false,
+    "prepare": false,
+    "publish": false
   }
 }
