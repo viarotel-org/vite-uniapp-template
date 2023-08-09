@@ -1,5 +1,3 @@
-import _camelCase from 'lodash/camelCase'
-import _kebabCase from 'lodash/kebabCase'
 import _get from 'lodash/get'
 
 /**
@@ -27,36 +25,6 @@ export function fuzzyQuery(list, keyWord, { keyName = '' } = {}) {
     }
   }
   return arr
-}
-
-/**
- * 根据传入的props创建局部可写的参数
- * @param {*} propNames
- * @returns
- */
-export function createVariableProps(propNames,
-  { prefix = 'scope', emitUpdate = true, setCallback = null } = {}) {
-  return {
-    data: propNames.reduce((obj, name) => {
-      obj[_camelCase(`temp-${name}`)] = null
-      return obj
-    }, {}),
-    computed: propNames.reduce((obj, name) => {
-      obj[_camelCase(`${prefix}-${name}`)] = {
-        get() {
-          return this[_camelCase(`temp-${name}`)] || this[name]
-        },
-        set(value) {
-          if (setCallback)
-            setCallback(value)
-          if (emitUpdate)
-            this.$emit(`update:${_kebabCase(name)}`, value)
-          this[_camelCase(`temp-${name}`)] = value
-        },
-      }
-      return obj
-    }, {}),
-  }
 }
 
 /**
