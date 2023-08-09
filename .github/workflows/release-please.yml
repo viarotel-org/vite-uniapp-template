@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - semantic-release
 
 permissions:
   contents: write
