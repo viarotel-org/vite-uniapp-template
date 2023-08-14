@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.0.0...v2.0.1) (2023-08-14)
+
+
+### Performance Improvements
+
+* 🔧 调整路由导出方式以简化路由中间件定义方式 ([d0f9015](https://github.com/viarotel-org/vite-uniapp-template/commit/d0f901526adeed8ab60898a18d5ade046f14ceeb))
+
 ## [2.0.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.0.0...v2.0.0) (2023-08-09)
 
 
