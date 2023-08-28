@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.0.1...v2.1.0) (2023-08-28)
+
+
+### Miscellaneous Chores
+
+* release 2.1.0 ([ccc4cb1](https://github.com/viarotel-org/vite-uniapp-template/commit/ccc4cb19295420b632f61ae4e5424809e55dc7b8))
+
 ## [2.0.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.0.0...v2.0.1) (2023-08-14)
 
 
