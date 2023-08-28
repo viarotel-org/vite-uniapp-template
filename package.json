@@ -81,7 +81,7 @@
     "@dcloudio/uni-stacktracey": "3.0.0-3081220230817001",
     "@dcloudio/vite-plugin-uni": "3.0.0-3081220230817001",
     "@uni-helper/vite-plugin-uni-pages": "^0.2.6",
-    "@unocss/transformer-directives": "^0.54.2",
+    "@unocss/transformer-directives": "^0.55.3",
     "@viarotel-org/eslint-config": "^0.5.8",
     "@vue/runtime-core": "^3.2.45",
     "mini-types": "^0.1.7",
@@ -92,8 +92,8 @@
     "postcss-remove-inline-comments": "^0.0.2",
     "postcss-scss": "^4.0.6",
     "sass": "^1.63.4",
-    "unocss": "^0.54.2",
-    "unocss-applet": "^0.5.3",
+    "unocss": "^0.55.3",
+    "unocss-applet": "^0.5.5",
     "vite": "4.1.4",
     "vite-plugin-eslint": "^1.8.1"
   }
