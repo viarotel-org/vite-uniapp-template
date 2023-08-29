@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { getDictList } from '@/api/base/index'
-import staticDict from '@/configs/dict/index'
+import * as staticDict from '@/configs/dict/index'
 
 export const useDictStore = defineStore({
   id: 'app-dict',

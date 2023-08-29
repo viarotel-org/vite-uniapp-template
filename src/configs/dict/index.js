@@ -12,7 +12,3 @@ export const approveStatus = [
     dictValue: 3,
   },
 ]
-
-export default {
-  approveStatus,
-}

@@ -3,7 +3,6 @@ import {
   requestFilePath,
   requestPath,
   requestURL,
-  useEncrypt,
   useProxy,
 } from './index'
 
@@ -43,12 +42,3 @@ export const responseSuccessCode = '20000'
 export const timeout = 60 * 1000
 // 是否开启加密
 export { useEncrypt } from './index'
-
-export default {
-  getBaseURL,
-  getFileBaseURL,
-  baseURL,
-  responseSuccessCode,
-  timeout,
-  useEncrypt,
-}

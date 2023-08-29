@@ -31,15 +31,3 @@ export const enterpriseInfo = {
 
 // 主页面路径
 export const homePage = 'pages/index/home/index'
-
-export default {
-  appName,
-  appBasePath,
-  requestURL,
-  requestPath,
-  requestFilePath,
-  useProxy,
-  proxyPath,
-  proxyPort,
-  useEncrypt,
-}
