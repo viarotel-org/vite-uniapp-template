@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.1.1...v2.2.0) (2023-08-29)
+
+
+### Features
+
+* 🚀 登录示例页面调整 ([a0c1688](https://github.com/viarotel-org/vite-uniapp-template/commit/a0c16881e36e836ee7d9215dfec4615e1984a2bb))
+
 ## [2.1.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.1.0...v2.1.1) (2023-08-29)
 
 
