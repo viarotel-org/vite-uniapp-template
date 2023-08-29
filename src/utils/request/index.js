@@ -6,7 +6,7 @@ import { useDialog, useToast } from '@/utils/modals/index.js'
 
 async function logout(message) {
   try {
-    console.log('logout', message)
+    // console.log('logout', message)
     await useDialog(message, {
       title: '提示',
       showCancelButton: true,
