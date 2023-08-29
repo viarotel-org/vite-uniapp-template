@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.1.0...v2.1.1) (2023-08-29)
+
+
+### Bug Fixes
+
+* bugfix ([9757722](https://github.com/viarotel-org/vite-uniapp-template/commit/97577229d7999f10a9efdcb3ef08efa8a3328cde))
+
+
+### Performance Improvements
+
+* 🚀 去除冗余的默认导出以降低生产包大小 ([88a529a](https://github.com/viarotel-org/vite-uniapp-template/commit/88a529a51541210c6a030fbb56ebc044173c0c28))
+
 ## [2.1.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.0.1...v2.1.0) (2023-08-28)
 
 
