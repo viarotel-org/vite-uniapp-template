@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    login
+    Main login page
   </div>
 </template>
 
