@@ -22,4 +22,7 @@ dist
 
 #user
 .hbuilderx
+uni-pages.d.ts
 pnpm-lock.yaml
+yarn.lock
+package-lock.json
