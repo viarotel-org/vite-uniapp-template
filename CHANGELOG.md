@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.2.0...v2.2.1) (2023-09-01)
+
+
+### Bug Fixes
+
+* 🔧 修复使用 yarn 作为包管理器时启动项目报错的问题 ([1778bb9](https://github.com/viarotel-org/vite-uniapp-template/commit/1778bb9c4b56e097ba5cadc1ae6e37fd89357ca8))
+
 ## [2.2.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.1.1...v2.2.0) (2023-08-29)
 
 
