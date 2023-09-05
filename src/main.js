@@ -1,13 +1,18 @@
 import { createSSRApp } from 'vue'
-import App from './App.vue'
+
 import 'virtual:uno.css'
-import './styles/css/index.css'
+import './styles/index'
+
+import App from './App.vue'
+
 import store from './store/index'
 import router from './router/index'
 import routerGuards from './router/guards/index.js'
+
 import api from './api/index'
 import plugins from './plugins'
 import mixins from './mixins/index.js'
+
 import ViaIcon from './icons/components/ViaIcon/index.vue'
 import { useDialog, useLoading, useToast } from './utils/modals/index.js'
 import _showDictLabel from './utils/showDictLabel.js'

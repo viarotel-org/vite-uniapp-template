@@ -4,6 +4,9 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 export const appName = 'vite-uniapp-template'
 
+// 项目主题色
+export const primaryColor = '#028d71'
+
 // 项目基础路径
 export const appBasePath = isProduction ? './' : './'
 // 请求地址

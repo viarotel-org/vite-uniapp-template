@@ -62,6 +62,7 @@
     "@uni-helper/uni-env": "^0.0.3",
     "@uni-helper/uni-network": "^0.16.1",
     "@uni-helper/uni-promises": "^0.2.0",
+    "@viarotel-org/unocss-preset-shades": "^0.7.0",
     "color": "^4.2.3",
     "dayjs": "^1.11.9",
     "js-cookie": "^3.0.5",
@@ -81,7 +82,7 @@
     "@dcloudio/uni-stacktracey": "3.0.0-3081220230817001",
     "@dcloudio/vite-plugin-uni": "3.0.0-3081220230817001",
     "@uni-helper/vite-plugin-uni-pages": "^0.2.6",
-    "@unocss/transformer-directives": "^0.55.3",
+    "@unocss/transformer-directives": "0.55.3",
     "@viarotel-org/eslint-config": "^0.5.10",
     "@vue/runtime-core": "^3.2.45",
     "eslint": "^8.48.0",
@@ -94,8 +95,8 @@
     "postcss-scss": "^4.0.6",
     "sass": "^1.63.4",
     "typescript": "^5.2.2",
-    "unocss": "^0.55.3",
-    "unocss-applet": "^0.5.5",
+    "unocss": "0.55.3",
+    "unocss-applet": "0.5.5",
     "vite": "4.1.4",
     "vite-plugin-eslint": "^1.8.1"
   }

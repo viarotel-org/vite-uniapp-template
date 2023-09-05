@@ -15,7 +15,7 @@
 - ⚡️ Request: 请求库使用 uni-network 完全基于 uniapp API 编写的高性能请求库， API 同 axios。
 - 👇 Z-paging: 内置了高性能且易于使用的业务常用下拉分页组件模块，轻松实现下拉刷新、上拉加载等功能。
 - 💅 Unocss: 使用原子化 CSS 引擎，小程序环境下依然完美支持原子化的 class 命名书写规则。
-- 🎨 UI-libs: 预设了 uivew-plus 和 uni-ui 两者相辅相成，轻松满足绝大多数业务场景。
+- 🎨 UI-libs: 预设了 uivew-plus 和 uni-ui 两者相辅相成，轻松满足绝大多数业务场景，并支持主题色定制功能。
 - 📝 NoTs: 只使用 JavaScript，在常规业务场景或人员水平差距过大情况下，TypeScript 并不会提升开发体验。
 
 ## 使用方法

@@ -1,16 +1,14 @@
 import { defineStore } from 'pinia'
-import { setThemeVariables } from './helpers'
 import storage from '@/utils/storages'
 import { getSiteConfig } from '@/api/base/index'
-
-// import { baseURL } from '@/configs/request'
+import { primaryColor } from '@/configs/index.js'
 
 export const useAppStore = defineStore({
   id: 'app',
   state() {
     return {
       themeConfig: storage.get('app/themeConfig') || {
-        primaryColor: 'rgba(2, 141, 113, 1)',
+        primaryColor,
       },
       siteInfo: {},
       systemInfo: {},
@@ -29,13 +27,6 @@ export const useAppStore = defineStore({
           },
         })
       })
-    },
-    setThemeConfig(data) {
-      if (data) {
-        this.themeConfig = data
-        storage.set('app/themeConfig', data)
-      }
-      setThemeVariables(this.primaryColor)
     },
     async getSiteConfig() {
       const res = await getSiteConfig()
