@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.2.1...v2.3.0) (2023-09-05)
+
+
+### Features
+
+* 🎨 主题色定制相关配置功能更新 ([bcadbfa](https://github.com/viarotel-org/vite-uniapp-template/commit/bcadbfaf583a283804bd1ebdd6b5846ae11f0fb0))
+
 ## [2.2.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.2.0...v2.2.1) (2023-09-01)
 
 
