@@ -188,7 +188,7 @@ export default (router) => {
 
 #### 使用基于路由的中间件
 
-> postcss.config.js 中
+> pages.config.js 中
 
 ```js
 // 使用名为 realname 的中间件
