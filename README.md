@@ -54,7 +54,7 @@ pnpm dev:mp-weixin
 3. 点击项目 /src 目录中的任意文件
 4. 点击编辑器上方点击运行选择需要运行的环境
 
-### 代码示例
+### 功能示例
 
 #### 静态资源处理
 
@@ -70,6 +70,20 @@ app.config.globalProperties.$assets = useAssets
 
 // template中使用
 //  <img :src="$assets('/temp.png')" />
+```
+
+#### 全局主题色定制
+
+> 由 [unocss-preset-shades](https://github.com/viarotel-org/packages/tree/main/packages/unocss-preset-shades#readme) 提供支持
+
+```html
+<!-- 设置文本色为主题色色调为 500 -->
+<div class="text-primary-500"></div>
+<!-- 设置背景色为主题色色调为 500 -->
+<div class="bg-primary-500"></div>
+<!-- 设置边框色为主题色色调为 500 -->
+<div class="border border-primary-500"></div>
+<!-- 更多使用方式请参阅 https://tailwindcss.com/docs -->
 ```
 
 #### 路由间功能跳转
