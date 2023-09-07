@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.3.0...v2.3.1) (2023-09-07)
+
+
+### Bug Fixes
+
+* 📝 修复文档描述错误 ([3325235](https://github.com/viarotel-org/vite-uniapp-template/commit/3325235dac5f0dac5301cbbafff111c1509548de))
+
 ## [2.3.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.2.1...v2.3.0) (2023-09-05)
 
 
