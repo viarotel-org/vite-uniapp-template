@@ -12,9 +12,9 @@ jobs:
         uses: Yikun/hub-mirror-action@master
         with:
           src: github/viarotel-org
-          dst: gitee/viarotel
+          dst: gitee/viarotel-org
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
-          src_account_type: org
-          dst_account_type: user
+          account_type: org
+          white_list: "vite-uniapp-template"
           force_update: true
