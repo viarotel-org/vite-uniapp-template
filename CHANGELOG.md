@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.2](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.3.1...v2.3.2) (2023-09-08)
+
+
+### Bug Fixes
+
+* 🔧 修复同步脚本错误的问题 ([73d802a](https://github.com/viarotel-org/vite-uniapp-template/commit/73d802abf100f853ae1c1f41a650090a483bfa3c))
+
 ## [2.3.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.3.0...v2.3.1) (2023-09-07)
 
 
