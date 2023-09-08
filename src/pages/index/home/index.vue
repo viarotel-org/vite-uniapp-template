@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import content from '../../../../README.md?raw'
+import content from '/README.md?raw'
 
 export default {
   data() {

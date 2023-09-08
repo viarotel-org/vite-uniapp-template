@@ -10,8 +10,8 @@
     <view class="p-4 bg-white mt-4 shadow-md rounded-md">
       <u-form label-width="200" border>
         <u-form-item label="邮箱">
-          <view class="" @click="handleCopy(enterpriseInfo.mail)">
-            {{ enterpriseInfo.mail }}
+          <view class="" @click="handleCopy(enterpriseInfo.email)">
+            {{ enterpriseInfo.email }}
             <via-icon name="fuzhi" class="text-gray-400"></via-icon>
           </view>
         </u-form-item>

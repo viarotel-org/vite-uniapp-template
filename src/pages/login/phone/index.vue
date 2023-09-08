@@ -26,19 +26,24 @@
         </text>
       </view>
     </view>
-    <view class="absolute inset-x-0 bottom-0 text-center mb-4 text-gray-400">
-      {{ appName }}
+    <view
+      class="absolute inset-x-0 bottom-0 text-center mb-4 text-gray-400 text-sm"
+    >
+      <view>Supported by {{ enterpriseInfo.name }} v{{ version }}</view>
     </view>
   </view>
 </template>
 
 <script>
-import { appName } from '@/configs/index'
+import { version } from '/package.json'
+import { appName, enterpriseInfo } from '@/configs/index'
 
 export default {
   data() {
     return {
       appName,
+      enterpriseInfo,
+      version,
       agreed: false,
       loginCode: '',
     }

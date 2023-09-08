@@ -16,7 +16,7 @@ export function createRouter({ pages, addRoutes = [], ...options } = {}) {
     })
   }
 
-  console.log('createRouter.routes', routes)
+  // console.log('createRouter.routes', routes)
 
   const router = _createRouter({
     ...options,

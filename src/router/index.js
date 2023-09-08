@@ -1,7 +1,7 @@
 import { createRouter } from '$uni-router'
 import pages from '@/pages.json'
 
-console.log('pages', pages)
+// console.log('pages', pages)
 
 const router = createRouter({
   pages,
@@ -15,6 +15,6 @@ const router = createRouter({
   ],
 })
 
-console.log('router', router)
+// console.log('router', router)
 
 export default router

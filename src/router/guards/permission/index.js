@@ -22,14 +22,14 @@ const permission = (router) => {
   })
 
   router.beforeEach((to, from, next) => {
-    console.log('permission.beforeEach.to', to)
-    console.log('permission.beforeEach.from', from)
+    // console.log('permission.beforeEach.to', to)
+    // console.log('permission.beforeEach.from', from)
 
     const token = userStore.token
     const userId = userStore.userId
 
-    console.log('token', token)
-    console.log('userId', userId)
+    // console.log('token', token)
+    // console.log('userId', userId)
 
     if (token) {
       if (to.path === loginPath) {

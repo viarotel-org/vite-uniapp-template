@@ -18,7 +18,7 @@ export const useProxy = isH5
 // 代理路径
 export const proxyPath = '/proxy'
 // 代理端口号
-export const proxyPort = 7788
+export const proxyPort = 1996
 // 是否开启加密
 export const useEncrypt = false
 // 是否使用远程导航菜单
@@ -26,9 +26,9 @@ export const useRemoteMenu = true
 
 // 企业信息
 export const enterpriseInfo = {
-  name: 'vite-uniapp-template',
+  name: 'Viarotel',
   wechat: 'viarotel',
-  mail: 'viarotel@qq.com',
+  email: 'viarotel@qq.com',
   address: '河南省郑州市',
 }
 
