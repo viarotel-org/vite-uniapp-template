@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.3](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.3.2...v2.3.3) (2023-09-08)
+
+
+### Bug Fixes
+
+* 📈 修复入口页面模块引用格式不统一的问题 ([bd72731](https://github.com/viarotel-org/vite-uniapp-template/commit/bd72731cf866940aa4a4e1d84795bc035be05b8c))
+
 ## [2.3.2](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.3.1...v2.3.2) (2023-09-08)
 
 
