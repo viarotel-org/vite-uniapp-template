@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.3.3...v2.4.0) (2023-09-08)
+
+
+### Features
+
+* 🚀 对部分页面样式进行改进并去除冗余的控制台输出 ([e73ba19](https://github.com/viarotel-org/vite-uniapp-template/commit/e73ba1933c594ecc5e8ad0317d6d35345f9e972f))
+
 ## [2.3.3](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.3.2...v2.3.3) (2023-09-08)
 
 
