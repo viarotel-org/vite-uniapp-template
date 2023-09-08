@@ -1,16 +1,16 @@
 import { createSSRApp } from 'vue'
 
 import 'virtual:uno.css'
-import './styles/index'
+import './styles/index.js'
 
 import App from './App.vue'
 
-import store from './store/index'
-import router from './router/index'
+import store from './store/index.js'
+import router from './router/index.js'
 import routerGuards from './router/guards/index.js'
 
-import api from './api/index'
-import plugins from './plugins'
+import api from './api/index.js'
+import plugins from './plugins/index.js'
 import mixins from './mixins/index.js'
 
 import ViaIcon from './icons/components/ViaIcon/index.vue'
@@ -19,8 +19,8 @@ import _showDictLabel from './utils/showDictLabel.js'
 
 // 为 remote 时使用远程静态资源 常用于小程序
 // 为 local 时使用本地静态资源
-// import { useAssets } from './utils/assets/remote'
-import { useAssets } from './utils/assets/local'
+// import { useAssets } from './utils/assets/remote.js'
+import { useAssets } from './utils/assets/local.js'
 
 export function createApp() {
   const app = createSSRApp(App)
