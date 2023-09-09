@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.5.2](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.5.1...v2.5.2) (2023-09-09)
+
+
+### Bug Fixes
+
+* 🔧 修复 uni-network 格式化参数的行为与 axios不一致的问题 ([00af3bf](https://github.com/viarotel-org/vite-uniapp-template/commit/00af3bfc50844ae45d5e860d86bf9aeabf3791d1))
+* 🔧 修复打包后由于方法名混淆导致路由中间件无法匹配触发的问题 ([37515aa](https://github.com/viarotel-org/vite-uniapp-template/commit/37515aa0f526ae3810a979a347cc997443061fe4))
+* 🔧 固定 qs 版本以解决不兼容微信小程序的问题 ([95f733e](https://github.com/viarotel-org/vite-uniapp-template/commit/95f733e8492e13688054739e6144b4fb39544696))
+
 ## [2.5.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.5.0...v2.5.1) (2023-09-09)
 
 
