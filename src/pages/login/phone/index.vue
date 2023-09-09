@@ -1,5 +1,5 @@
 <template>
-  <view class="bg-white h-full overflow-hidden">
+  <view class="bg-white h-full overflow-hidden pt-24">
     <view class="mt-8">
       <image src="/static/logo.png" alt="" class="w-20 h-20 block mx-auto" />
       <view class="text-2xl text-center mt-4 font-bold">

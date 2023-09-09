@@ -36,9 +36,7 @@ export default defineUniPages({
       path: 'pages/login/phone/index',
       aliasPath: '/login',
       style: {
-        navigationBarTitleText: '',
-        navigationBarTextStyle: 'black',
-        navigationBarBackgroundColor: '#ffffff',
+        navigationStyle: 'custom',
       },
     },
     {

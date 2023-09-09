@@ -34,9 +34,7 @@
       "path": "pages/login/phone/index",
       "aliasPath": "/login",
       "style": {
-        "navigationBarTitleText": "",
-        "navigationBarTextStyle": "black",
-        "navigationBarBackgroundColor": "#ffffff"
+        "navigationStyle": "custom"
       }
     },
     {
@@ -48,6 +46,18 @@
     }
   ],
   "subPackages": [
+    {
+      "root": "pages/webview",
+      "pages": [
+        {
+          "path": "index",
+          "aliasPath": "/webview",
+          "style": {
+            "navigationBarTitleText": "webview"
+          }
+        }
+      ]
+    },
     {
       "root": "pages/middleware",
       "pages": [
@@ -97,18 +107,6 @@
           "aliasPath": "/contact",
           "style": {
             "navigationBarTitleText": "联系我们"
-          }
-        }
-      ]
-    },
-    {
-      "root": "pages/webview",
-      "pages": [
-        {
-          "path": "index",
-          "aliasPath": "/webview",
-          "style": {
-            "navigationBarTitleText": "webview"
           }
         }
       ]
