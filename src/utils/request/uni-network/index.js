@@ -16,6 +16,11 @@ export default ({
     },
     timeout,
     xsrfHeaderName: 'token',
+    paramsSerializer: (params) => {
+      return Object.prototype.toString.call(params).includes('URLSearchParams')
+        ? params.toString()
+        : qs.stringify(params)
+    },
   })
 
   // 请求拦截
