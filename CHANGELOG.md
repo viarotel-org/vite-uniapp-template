@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.5.0...v2.5.1) (2023-09-09)
+
+
+### Bug Fixes
+
+* 🗑️ 去除登录页面冗余的空白顶栏 ([25bc3bd](https://github.com/viarotel-org/vite-uniapp-template/commit/25bc3bda88e8da69f8122e7b3e75422560f0b23e))
+
 ## [2.5.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.4.0...v2.5.0) (2023-09-09)
 
 
