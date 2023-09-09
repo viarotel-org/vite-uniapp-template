@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.4.0...v2.5.0) (2023-09-09)
+
+
+### Features
+
+* 🚀 添加跳转外部网页功能 ([8d062a9](https://github.com/viarotel-org/vite-uniapp-template/commit/8d062a9d86126980181fb6e9ab0ca289f93b8c66))
+
 ## [2.4.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.3.3...v2.4.0) (2023-09-08)
 
 
