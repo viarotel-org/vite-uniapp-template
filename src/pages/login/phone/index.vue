@@ -29,7 +29,16 @@
     <view
       class="absolute inset-x-0 bottom-0 text-center mb-4 text-gray-400 text-sm"
     >
-      <view>Supported by {{ enterpriseInfo.name }} v{{ version }}</view>
+      <view>
+        Supported by
+        <text
+          class="text-primary-500 underline active:text-primary-700"
+          @click="handleInfo"
+        >
+          {{ enterpriseInfo.name }}
+        </text>
+        v{{ version }}
+      </view>
     </view>
   </view>
 </template>
@@ -52,6 +61,15 @@ export default {
     this.getLoginCode()
   },
   methods: {
+    handleInfo() {
+      this.$Router.push({
+        path: '/webview',
+        query: {
+          title: 'viarotel',
+          src: 'https://viarotel.eu.org/',
+        },
+      })
+    },
     getLoginCode() {
       uni.login({
         provider: 'weixin', // 使用微信登录

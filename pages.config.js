@@ -51,6 +51,18 @@ export default defineUniPages({
   ],
   subPackages: [
     {
+      root: 'pages/webview',
+      pages: [
+        {
+          path: 'index',
+          aliasPath: '/webview',
+          style: {
+            navigationBarTitleText: 'webview',
+          },
+        },
+      ],
+    },
+    {
       root: 'pages/middleware',
       pages: [
         {

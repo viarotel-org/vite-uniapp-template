@@ -100,6 +100,18 @@
           }
         }
       ]
+    },
+    {
+      "root": "pages/webview",
+      "pages": [
+        {
+          "path": "index",
+          "aliasPath": "/webview",
+          "style": {
+            "navigationBarTitleText": "webview"
+          }
+        }
+      ]
     }
   ],
   "tabBar": {

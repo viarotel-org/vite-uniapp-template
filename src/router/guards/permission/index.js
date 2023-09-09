@@ -4,7 +4,7 @@ import store from '@/store/index.js'
 const homePath = '/pages/index/home/index'
 const loginPath = '/pages/login/phone/index'
 
-const whiteList = [loginPath, '/pages/statement/index']
+const whiteList = [loginPath, '/pages/statement/index', '/pages/webview/index']
 
 const permission = (router) => {
   const userStore = store.useUserStore()
