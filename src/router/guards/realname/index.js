@@ -5,8 +5,8 @@ const realname = (router) => {
   const userStore = store.useUserStore()
 
   router.beforeEach((to, from, next) => {
-    console.log('realname.beforeEach.to', to)
-    console.log('realname.beforeEach.from', from)
+    // console.log('realname.beforeEach.to', to)
+    // console.log('realname.beforeEach.from', from)
 
     const realStatus = userStore.userInfo.realStatus
 

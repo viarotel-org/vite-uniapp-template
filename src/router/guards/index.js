@@ -5,5 +5,5 @@ import { defineMiddleware } from '$uni-router/middleware'
 
 export default (app, router) => {
   permission(router, { app })
-  defineMiddleware(realname, { router, app })
+  defineMiddleware('realname', realname, { router, app })
 }
