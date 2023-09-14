@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.3](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.5.2...v2.5.3) (2023-09-14)
+
+
+### Bug Fixes
+
+* 🐛 修复小程序环境打包失败的问题 ([14c9645](https://github.com/viarotel-org/vite-uniapp-template/commit/14c9645d3c4b3abd248816087b3edd16e9973fc1))
+
 ## [2.5.2](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.5.1...v2.5.2) (2023-09-09)
 
 
