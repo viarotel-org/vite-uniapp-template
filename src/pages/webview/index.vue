@@ -1,5 +1,5 @@
 <template>
-  <web-view class="h-full" v-bind="viewProps" :src="viewProps.src"></web-view>
+  <web-view class="h-full" :src="viewProps.src"></web-view>
 </template>
 
 <script>
@@ -12,12 +12,12 @@ export default {
     }
   },
   onLoad(params) {
-    this.viewProps = params
     if (params.title) {
       uni.setNavigationBarTitle({
         title: params.title,
       })
     }
+    this.viewProps = params
   },
 }
 </script>

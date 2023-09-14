@@ -16,9 +16,7 @@
           <u-input
             :model-value="showValue"
             :placeholder="placeholder"
-            v-bind="{
-              border: 'none',
-            }"
+            border="none"
             readonly
           ></u-input>
         </view>

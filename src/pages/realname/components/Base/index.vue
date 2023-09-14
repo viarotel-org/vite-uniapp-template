@@ -8,9 +8,7 @@
         ref="uForm"
         label-position="left"
         :model="formData"
-        v-bind="{
-          labelWidth: 90,
-        }"
+        :label-width="90"
       >
         <u-form-item label="性别" prop="userSex" border-bottom>
           <u-radio-group
@@ -37,9 +35,7 @@
                   <u--input
                     :model-value="value"
                     placeholder="请选择户籍信息"
-                    v-bind="{
-                      border: 'none',
-                    }"
+                    border="none"
                     readonly
                   ></u--input>
                 </view>
@@ -54,9 +50,7 @@
           <u--input
             v-model="formData.realName"
             placeholder="请输入户主姓名"
-            v-bind="{
-              border: 'none',
-            }"
+            border="none"
           ></u--input>
         </u-form-item>
         <u-form-item label="手机号" prop="userPhone" border-bottom>
@@ -64,9 +58,7 @@
             <u--input
               v-model="formData.userPhone"
               placeholder="请输入手机号"
-              v-bind="{
-                border: 'none',
-              }"
+              border="none"
             ></u--input>
             <view class="flex-none pl-1">
               <u-button

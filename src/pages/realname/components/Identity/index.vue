@@ -15,18 +15,14 @@
           <u-input
             v-model="formData.realName"
             placeholder="请输入姓名"
-            v-bind="{
-              border: 'none',
-            }"
+            border="none"
           ></u-input>
         </u-form-item>
         <u-form-item label="身份证号" prop="idcardNo" :border-bottom="true">
           <u-input
             v-model="formData.idcardNo"
             placeholder="请输入身份证号"
-            v-bind="{
-              border: 'none',
-            }"
+            border="none"
           ></u-input>
         </u-form-item>
       </u-form>
