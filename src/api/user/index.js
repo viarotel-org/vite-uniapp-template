@@ -16,8 +16,6 @@ export const getUserInfo = data =>
     mockData: {
       id: 'mock-id',
       username: 'viarotel',
-      avatar:
-        'https://p3-passport.byteacctimg.com/img/user-avatar/4f7f539d0483d87bc270c87d88ff9a28~90x90.awebp',
       realStatus: '1',
     },
   })

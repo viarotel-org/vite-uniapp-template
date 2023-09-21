@@ -99,7 +99,7 @@ export default request({
 
     response.data = {
       ...data,
-      successed: data.code == responseSuccessCode,
+      success: data.code == responseSuccessCode,
     }
 
     return response

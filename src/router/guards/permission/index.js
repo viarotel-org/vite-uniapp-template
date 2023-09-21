@@ -46,7 +46,7 @@ const permission = (router) => {
           })
           .catch((error) => {
             console.warn(error)
-            userStore.logout({ silented: true })
+            userStore.logout({ silenced: true })
             next(loginRoute(to))
           })
       }

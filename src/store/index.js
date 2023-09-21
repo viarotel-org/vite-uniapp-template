@@ -1,14 +1,12 @@
-import { createPinia } from 'pinia'
+import * as Pinia from 'pinia'
 import { useAppStore } from './app/index.js'
 import { useMenuStore } from './menu/index.js'
 import { useUserStore } from './user/index.js'
 import { useDictStore } from './dict/index.js'
 
-const store = createPinia()
-
 export default {
   install(app) {
-    app.use(store)
+    app.use(Pinia.createPinia())
     app.config.globalProperties.$store = {
       app: useAppStore(),
       menu: useMenuStore(),
@@ -16,10 +14,12 @@ export default {
       dict: useDictStore(),
     }
 
-    app.config.globalProperties.$permission = key => useMenuStore().permission[key]
+    app.config.globalProperties.$permission = key =>
+      useMenuStore().permission[key]
   },
   useAppStore,
   useMenuStore,
   useUserStore,
   useDictStore,
+  Pinia,
 }

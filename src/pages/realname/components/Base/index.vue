@@ -176,7 +176,7 @@ export default {
       }
 
       const res = await this.$api.phoneNumber(params)
-      if (res.successed) {
+      if (res.success) {
         this.formData.userPhone = res.data.phoneNumber
       }
     },

@@ -30,7 +30,7 @@ export const useAppStore = defineStore({
     },
     async getSiteConfig() {
       const res = await getSiteConfig()
-      if (res.successed) {
+      if (res.success) {
         const { title } = res.data
         this.siteInfo = {
           appName: title,

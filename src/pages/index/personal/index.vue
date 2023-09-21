@@ -5,8 +5,9 @@
       @click="handleLogin"
     >
       <view class="overflow-hidden rounded-full w-20 h-20">
-        <image :src="userInfo.avatar" alt="" class="w-full h-full" />
+        <image :src="$assets('/avatar.gif')" alt="" class="w-full h-full" />
       </view>
+
       <view class="text-white text-xl ml-4">
         <view v-if="isLogin" class="">
           {{ userInfo.username }}
@@ -64,6 +65,7 @@ export default {
       return this.$store.user.userInfo
     },
   },
+  created() {},
   methods: {
     handleInfo(item) {
       this.$Router.push({

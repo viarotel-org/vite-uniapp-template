@@ -1,11 +1,11 @@
 import { createSSRApp } from 'vue'
 
 import 'virtual:uno.css'
-import './styles/index.js'
 
 import App from './App.vue'
 
 import store from './store/index.js'
+
 import router from './router/index.js'
 import routerGuards from './router/guards/index.js'
 
@@ -26,8 +26,10 @@ export function createApp() {
   const app = createSSRApp(App)
 
   app.use(store)
+
   app.use(router)
   app.use(routerGuards, router)
+
   app.use(api)
   app.use(plugins)
   app.use(mixins)
@@ -44,5 +46,6 @@ export function createApp() {
 
   return {
     app,
+    Pinia: store.Pinia,
   }
 }

@@ -58,7 +58,7 @@ export default {
       })
       console.log('uploadAvatar.res', res)
 
-      if (res.successed) {
+      if (res.success) {
         const data = `${getFileBaseURL()}/${res.data}`
         this.showValue = data
         this.submitAvatar()
@@ -70,7 +70,7 @@ export default {
       }
 
       const res = await this.$api.userHeadimg(params)
-      if (res.successed) {
+      if (res.success) {
         await this.$toast('头像设置成功')
       }
     },

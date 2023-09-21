@@ -110,7 +110,7 @@ export default {
       this.$loading(true)
       const res = await this.$api.checkUserinfo(params)
       this.$loading(false)
-      if (res.successed) {
+      if (res.success) {
         const imported = res.data
         if (imported) {
           this.handleBind()
@@ -130,7 +130,7 @@ export default {
       this.$loading(true)
       const res = await this.$api.bindUserinfo(params)
       this.$loading(false)
-      if (res.successed) {
+      if (res.success) {
         const binded = res.data
         if (binded) {
           await this.$toast('该用户信息已存在, 自动绑定成功')

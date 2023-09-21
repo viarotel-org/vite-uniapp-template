@@ -11,7 +11,7 @@ export function mock({ mockData = {}, delay = 500 } = {}) {
     setTimeout(() => {
       resolve({
         code: responseSuccessCode,
-        successed: true,
+        success: true,
         data: mockData,
       })
     }, delay)

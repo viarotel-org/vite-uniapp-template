@@ -58,7 +58,7 @@ export default {
     }
   },
   onShow() {
-    this.getLoginCode()
+    // this.getLoginCode()
   },
   methods: {
     handleInfo() {

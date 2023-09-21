@@ -20,7 +20,7 @@ export const useDictStore = defineStore({
       }
       else {
         const { code, data } = await getDictList(this.dictModel[key] || key)
-        if (successed) {
+        if (success) {
           tempData = data.map(item => ({
             ...item,
             label: item.dictLabel,

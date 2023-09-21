@@ -6,8 +6,7 @@ import router from '@/router'
 
 // import storage from '@/utils/storages'
 
-export const useUserStore = defineStore({
-  id: 'app-user',
+export const useUserStore = defineStore('app-user', {
   state() {
     return {
       userInfo: {},
@@ -31,7 +30,7 @@ export const useUserStore = defineStore({
       const res = await userLogin({ jsCode: code })
       console.log('login.res', res)
 
-      if (!res.successed) {
+      if (!res.success) {
         throw new Error('自动登录失败')
       }
 
@@ -53,7 +52,7 @@ export const useUserStore = defineStore({
     async getUserInfo({ params = {}, ...options } = {}) {
       const res = await getUserInfo(params, options)
 
-      if (!res?.successed) {
+      if (!res?.success) {
         throw new Error('获取用户信息失败')
       }
 
@@ -71,12 +70,12 @@ export const useUserStore = defineStore({
 
       return this.userInfo
     },
-    logout({ silented = false, redirect = null } = {}) {
+    logout({ silenced = false, redirect = null } = {}) {
       this.removeToken()
       this.userInfo = {}
       this.resumeInfo = {}
 
-      if (!silented) {
+      if (!silenced) {
         router.replaceAll({
           force: true,
           path: '/login',
