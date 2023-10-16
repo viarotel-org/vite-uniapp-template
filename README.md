@@ -302,7 +302,7 @@ export default (router) => {
 
 ### 支持项目
 
-> 如果该项目帮到你的话，可以请我吃包辣条，可以使我更有动力完善该项目
+> 如果该项目帮到你的话，可以请我喝杯咖啡，让我更有精神完善该项目😛
 
 <div style="display:flex;">
   <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/79dcbc40246743e2b6870419e88e0392~tplv-k3u1fbpfcp-watermark.image?" alt="payment-weixin" style="width: 45%;">
