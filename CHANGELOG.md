@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.5](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.5.4...v2.5.5) (2023-10-18)
+
+
+### Bug Fixes
+
+* 🚀 修复在 app 端环境下路由插件系统使用异常的问题 ([894ca30](https://github.com/viarotel-org/vite-uniapp-template/commit/894ca308d236fce5846e8348590cfbe1c01838c6))
+
 ## [2.5.4](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.5.3...v2.5.4) (2023-09-21)
 
 
