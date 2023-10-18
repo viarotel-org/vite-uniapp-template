@@ -8,8 +8,6 @@
     </view>
     <view class="px-4 mt-18">
       <u-button type="primary" shape="circle" ripple @click="handleLogin">
-        <!-- open-type="getPhoneNumber" -->
-        <!-- @getphonenumber="handleLogin" -->
         手机号快捷登录
       </u-button>
       <view class="text-center mt-4 flex items-center justify-center">
@@ -54,12 +52,9 @@ export default {
       enterpriseInfo,
       version,
       agreed: false,
-      loginCode: '',
     }
   },
-  onShow() {
-    // this.getLoginCode()
-  },
+  onShow() {},
   methods: {
     handleInfo() {
       this.$Router.push({
@@ -70,21 +65,10 @@ export default {
         },
       })
     },
-    getLoginCode() {
-      uni.login({
-        provider: 'weixin', // 使用微信登录
-        success: (res) => {
-          console.log('handleBeforeLogin.res', res)
-          this.loginCode = res.code
-        },
-      })
-    },
     handleAgree() {
       this.$Router.push({ path: '/pages/statement/index' })
     },
-    async handleLogin({ detail = {} } = {}) {
-      console.log('login.detail', detail)
-
+    async handleLogin() {
       if (!this.agreed) {
         try {
           await this.$dialog('是否已阅读并同意《产品服务协议》?', {
@@ -101,12 +85,7 @@ export default {
         }
       }
 
-      const params = {
-        ...detail,
-        code: this.loginCode,
-        encryptedData: detail.encryptedData,
-        iv: detail.iv,
-      }
+      const params = {}
 
       await this.$store.user.login(params)
       await this.$toast('登录成功', { type: 'success' })

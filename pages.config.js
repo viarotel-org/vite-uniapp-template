@@ -143,17 +143,13 @@ export default defineUniPages({
     navigationBarBackgroundColor: '#ffffff',
     backgroundColor: '#f8f8f8',
   },
-  condition: {
-    current: 0,
-    list: [
-      {
-        name: 'pages/contact/index',
-        path: 'pages/contact/index',
-      },
-      {
-        name: 'pages/realname/index',
-        path: 'pages/realname/index',
-      },
-    ],
-  },
+  // condition: {
+  //   current: 0,
+  //   list: [
+  //     {
+  //       name: 'pages/contact/index',
+  //       path: 'pages/contact/index',
+  //     },
+  //   ],
+  // },
 })
