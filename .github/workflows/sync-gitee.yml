@@ -1,8 +1,8 @@
-name: Sync To Gitee
+name: sync-gitee
 
 on:
   workflow_run:
-    workflows: ['release']
+    workflows: ['release-please']
     types:
       - completed
 
