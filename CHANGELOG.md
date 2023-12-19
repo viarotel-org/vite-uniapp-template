@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.6.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.5.5...v2.6.0) (2023-12-19)
+
+
+### Features
+
+* ✨ 采用新的 uv-ui 作为UI框架并更新依赖版本 ([44f5e98](https://github.com/viarotel-org/vite-uniapp-template/commit/44f5e988dec3bb31e124b643f7e500c60dffa111))
+
+
+### Performance Improvements
+
+* 📝 更新 Eslint 配置 ([5a2a92a](https://github.com/viarotel-org/vite-uniapp-template/commit/5a2a92a8f03fe4daae60b9a1ef9c2dca60fe0608))
+
 ## [2.5.5](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.5.4...v2.5.5) (2023-10-18)
 
 
