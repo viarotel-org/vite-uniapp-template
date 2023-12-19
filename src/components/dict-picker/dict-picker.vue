@@ -13,17 +13,17 @@
     >
       <view class="flex items-center w-full">
         <view class="flex-1 w-0">
-          <u-input
+          <uv-input
             :model-value="showValue"
             :placeholder="placeholder"
             border="none"
             readonly
-          ></u-input>
+          ></uv-input>
         </view>
         <view class="flex-none">
-          <u-icon
+          <uv-icon
             name="arrow-right"
-          ></u-icon>
+          ></uv-icon>
         </view>
       </view>
     </slot>

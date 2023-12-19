@@ -21,7 +21,7 @@
       <view
         v-for="(item, index) of listModel"
         :key="index"
-        class="flex items-center py-4 px-4 border-b border-gray-200 bg-white"
+        class="flex items-center py-4 px-4 border-b border-gray-200 bg-white active:bg-gray-200"
         @click="handleInfo(item)"
       >
         <view class="w-10 flex-none truncate text-primary-500 text-2xl">
@@ -36,9 +36,9 @@
       </view>
     </view>
     <view v-if="isLogin" class="mt-8 px-4">
-      <u-button type="success" plain ripple @click="handleLogout">
+      <uv-button ripple @click="handleLogout">
         退出登录
-      </u-button>
+      </uv-button>
     </view>
   </view>
 </template>

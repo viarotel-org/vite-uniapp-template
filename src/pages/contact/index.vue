@@ -8,23 +8,23 @@
       />
     </view>
     <view class="p-4 bg-white mt-4 shadow-md rounded-md">
-      <u-form label-width="200" border>
-        <u-form-item label="邮箱">
+      <uv-form label-width="200" border>
+        <uv-form-item label="邮箱">
           <view class="" @click="handleCopy(enterpriseInfo.email)">
             {{ enterpriseInfo.email }}
             <via-icon name="fuzhi" class="text-gray-400"></via-icon>
           </view>
-        </u-form-item>
-        <u-form-item label="微信号">
+        </uv-form-item>
+        <uv-form-item label="微信号">
           <view class="" @click="handleCopy(enterpriseInfo.wechat)">
             {{ enterpriseInfo.wechat }}
             <via-icon name="fuzhi" class="text-gray-400"></via-icon>
           </view>
-        </u-form-item>
-        <u-form-item label="微信二维码">
+        </uv-form-item>
+        <uv-form-item label="微信二维码">
           <image :src="wechatImage" alt="" class="w-25 h-25" />
-        </u-form-item>
-      </u-form>
+        </uv-form-item>
+      </uv-form>
     </view>
   </view>
 </template>

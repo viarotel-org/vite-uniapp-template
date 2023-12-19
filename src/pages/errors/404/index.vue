@@ -1,7 +1,7 @@
 <template>
   <view class="h-full flex items-center justify-center -mt-12">
-    <u-empty mode="page" text="404">
-    </u-empty>
+    <uv-empty mode="page" text="404">
+    </uv-empty>
   </view>
 </template>
 

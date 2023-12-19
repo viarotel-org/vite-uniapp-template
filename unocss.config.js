@@ -1,12 +1,13 @@
 import { defineConfig } from 'unocss'
 import transformerDirectives from '@unocss/transformer-directives'
-import { presetApplet, presetRemRpx, transformerApplet } from 'unocss-applet'
+import { presetApplet, presetRemRpx } from 'unocss-applet'
 import { presetShades } from '@viarotel-org/unocss-preset-shades'
+import presetWind from '@unocss/preset-wind'
 import { primaryColor } from './src/configs/index.js'
 
 const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp-') || false
 
-const appletPreset = presetApplet({ enable: isApplet })
+const preset = isApplet ? presetApplet() : presetWind()
 
 export default defineConfig({
   shortcuts: {
@@ -17,16 +18,14 @@ export default defineConfig({
   },
   theme: {
     colors: {
-      gray: appletPreset?.theme?.colors?.neutral,
+      gray: preset?.theme?.colors?.neutral,
     },
   },
   presets: [
-    appletPreset,
+    preset,
+    // @ts-expect-error
     presetShades(primaryColor),
-    presetRemRpx({ enable: isApplet }),
+    presetRemRpx(),
   ],
-  transformers: [
-    transformerApplet({ enable: isApplet }),
-    transformerDirectives(),
-  ],
+  transformers: [transformerDirectives()],
 })

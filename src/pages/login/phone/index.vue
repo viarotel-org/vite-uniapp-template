@@ -7,9 +7,9 @@
       </view>
     </view>
     <view class="px-4 mt-18">
-      <u-button type="primary" shape="circle" ripple @click="handleLogin">
+      <uv-button type="primary" shape="circle" ripple @click="handleLogin">
         手机号快捷登录
-      </u-button>
+      </uv-button>
       <view class="text-center mt-4 flex items-center justify-center">
         <checkbox :checked="agreed" class="">
         </checkbox>

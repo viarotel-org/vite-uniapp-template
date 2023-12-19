@@ -51,14 +51,14 @@
       </view>
     </view>
     <view class="flex-none pb-4">
-      <u-button
+      <uv-button
         type="primary"
         size="large"
         shape="circle"
         text="确定"
         @click="handleSubmit"
       >
-      </u-button>
+      </uv-button>
     </view>
   </view>
 </template>

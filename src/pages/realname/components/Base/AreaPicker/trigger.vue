@@ -7,7 +7,7 @@
       <slot :value="joinValue" />
     </view>
     <!-- :default-index="defaultIndex" -->
-    <u-picker
+    <uv-picker
       ref="uPicker"
       v-bind="$attrs"
       :show="show"
@@ -18,7 +18,7 @@
       @confirm="onConfirm"
       @change="onChange"
       @close="onClose"
-    ></u-picker>
+    ></uv-picker>
   </view>
 </template>
 

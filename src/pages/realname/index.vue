@@ -4,7 +4,7 @@
       class="px-4 rounded-lg bg-white shadow-lg shadow-primary-100 mx-4 mt-4 py-4 flex-none"
     >
       <view class="h-6 flex items-center">
-        <u-line-progress
+        <uv-line-progress
           v-bind="{
             activeColor: 'rgba(var(--color-primary-500), 1)',
             inactiveColor: 'rgba(var(--color-primary-50), 1)',
@@ -16,7 +16,7 @@
           >
             <view class="w-3 h-3 bg-primary-500 rounded-full flex-none"></view>
           </view>
-        </u-line-progress>
+        </uv-line-progress>
       </view>
       <view class="flex items-center justify-between text-sm">
         <view class="">
@@ -129,7 +129,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-:deep(.u-line-progress) {
+:deep(.uv-line-progress) {
   @apply !overflow-visible;
 }
 </style>

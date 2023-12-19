@@ -4,14 +4,14 @@
       个人基本信息
     </view>
     <view class="flex-1 h-0">
-      <u--form
+      <uv-form
         ref="uForm"
         label-position="left"
         :model="formData"
         :label-width="90"
       >
-        <u-form-item label="性别" prop="userSex" border-bottom>
-          <u-radio-group
+        <uv-form-item label="性别" prop="userSex" border-bottom>
+          <uv-radio-group
             v-model="formData.userSex"
             placement="row"
             v-bind="{
@@ -20,48 +20,48 @@
             disabled
           >
             <view>
-              <u-radio label="男" :name="1"></u-radio>
+              <uv-radio label="男" :name="1"></uv-radio>
             </view>
             <view class="pl-4">
-              <u-radio label="女" :name="2"></u-radio>
+              <uv-radio label="女" :name="2"></uv-radio>
             </view>
-          </u-radio-group>
-        </u-form-item>
-        <u-form-item label="户籍信息" prop="nativePlace" border-bottom>
+          </uv-radio-group>
+        </uv-form-item>
+        <uv-form-item label="户籍信息" prop="nativePlace" border-bottom>
           <AreaPickerTrigger v-model="formData.nativePlace">
             <template #default="{ value }">
               <view class="flex items-center w-full">
                 <view class="flex-1 w-0">
-                  <u--input
+                  <uv-input
                     :model-value="value"
                     placeholder="请选择户籍信息"
                     border="none"
                     readonly
-                  ></u--input>
+                  ></uv-input>
                 </view>
                 <view class="flex-none">
-                  <u-icon name="arrow-right"></u-icon>
+                  <uv-icon name="arrow-right"></uv-icon>
                 </view>
               </view>
             </template>
           </AreaPickerTrigger>
-        </u-form-item>
-        <u-form-item label="户主" prop="realName" border-bottom>
-          <u--input
+        </uv-form-item>
+        <uv-form-item label="户主" prop="realName" border-bottom>
+          <uv-input
             v-model="formData.realName"
             placeholder="请输入户主姓名"
             border="none"
-          ></u--input>
-        </u-form-item>
-        <u-form-item label="手机号" prop="userPhone" border-bottom>
+          ></uv-input>
+        </uv-form-item>
+        <uv-form-item label="手机号" prop="userPhone" border-bottom>
           <view class="flex">
-            <u--input
+            <uv-input
               v-model="formData.userPhone"
               placeholder="请输入手机号"
               border="none"
-            ></u--input>
+            ></uv-input>
             <view class="flex-none pl-1">
-              <u-button
+              <uv-button
                 type="primary"
                 size="small"
                 open-type="getPhoneNumber"
@@ -69,20 +69,20 @@
                 @getphonenumber="getPhoneNumber"
               >
                 获取手机号
-              </u-button>
+              </uv-button>
             </view>
           </view>
-        </u-form-item>
-      </u--form>
+        </uv-form-item>
+      </uv-form>
     </view>
     <view class="flex-none pb-4">
-      <u-button
+      <uv-button
         type="primary"
         text="确定"
         shape="circle"
         size="large"
         @click="handleSubmit"
-      ></u-button>
+      ></uv-button>
     </view>
   </view>
 </template>

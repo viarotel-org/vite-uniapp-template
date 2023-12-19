@@ -15,6 +15,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./styles/css/index.css";
-@import "uview-plus/index.scss";
+// @import "uview-plus/index.scss";
+@import './styles/css/index.css';
+@import '@climblee/uv-ui/index.scss';
 </style>

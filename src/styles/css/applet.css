@@ -1,58 +1,16 @@
-page,
-view,
-text,
-scroll-view,
-swiper,
-swiper-item,
-cover-view,
-cover-image,
-icon,
-rich-text,
-progress,
-button,
-checkbox,
-form,
-input,
-label,
-radio,
-slider,
-switch,
-textarea,
-navigator,
-audio,
-camera,
-image,
-video,
-uni-base,
-::before,
-::after {
-  box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: theme("colors.gray.200");
-}
+@import '@unocss-applet/reset/uni-app/tailwind-compat.css';
+@import '@unocss-applet/reset/uni-app/button-after.css';
 
 page {
   height: 100%;
-  background-color: theme("colors.gray.50");
-}
-
-button {
-  background-color: transparent;
-  border-radius: 0rpx;
-  padding: 0rpx;
-  margin: 0rpx;
-  display: inline-block;
-  line-height: 1;
-  font-size: 1rem;
-}
-
-button::after {
-  border: none;
 }
 
 navigator {
   display: inline-block;
+}
+
+button {
+  background-color: transparent;
 }
 
 .pt-topbar {

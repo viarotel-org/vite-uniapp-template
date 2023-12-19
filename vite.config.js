@@ -63,5 +63,9 @@ export default defineConfig({
   },
   build: {
     // minify: false,
+    // TODO 解决 Windows 下开发模式控制台提示崩溃的问题
+    watch: {
+      exclude: ['node_modules/**', '/__uno.css'],
+    },
   },
 })

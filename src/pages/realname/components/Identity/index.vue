@@ -4,40 +4,40 @@
       个人身份信息
     </view>
     <view class="flex-1 h-0">
-      <u-form
+      <uv-form
         ref="uForm"
         :model="formData"
         :label-width="90"
         :border-bottom="true"
         label-position="left"
       >
-        <u-form-item label="姓名" prop="realName" :border-bottom="true">
-          <u-input
+        <uv-form-item label="姓名" prop="realName" :border-bottom="true">
+          <uv-input
             v-model="formData.realName"
             placeholder="请输入姓名"
             border="none"
-          ></u-input>
-        </u-form-item>
-        <u-form-item label="身份证号" prop="idcardNo" :border-bottom="true">
-          <u-input
+          ></uv-input>
+        </uv-form-item>
+        <uv-form-item label="身份证号" prop="idcardNo" :border-bottom="true">
+          <uv-input
             v-model="formData.idcardNo"
             placeholder="请输入身份证号"
             border="none"
-          ></u-input>
-        </u-form-item>
-      </u-form>
+          ></uv-input>
+        </uv-form-item>
+      </uv-form>
       <view class="text-red-500 text-xs pt-4">
         注意: 此处仅作演示，姓名和身份证可以不真实，但格式需正确
       </view>
     </view>
     <view class="flex-none pb-4">
-      <u-button
+      <uv-button
         type="primary"
         text="确定"
         shape="circle"
         size="large"
         @click="handleSubmit"
-      ></u-button>
+      ></uv-button>
     </view>
   </view>
 </template>
