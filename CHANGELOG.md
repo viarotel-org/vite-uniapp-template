@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.6.0...v2.6.1) (2023-12-20)
+
+
+### Bug Fixes
+
+* 🐛 修复打包完成后无法自动停止终端的问题 ([e19b491](https://github.com/viarotel-org/vite-uniapp-template/commit/e19b491fa34baee4796df787681698c7676eac7c))
+
 ## [2.6.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.5.5...v2.6.0) (2023-12-19)
 
 
