@@ -15,7 +15,10 @@ import {
   requestPath,
   useProxy,
 } from './src/configs/devServer.js'
+
 import { homePage } from './src/configs/index.js'
+
+const isDevelopment = process.env.NODE_ENV === 'development'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -64,8 +67,12 @@ export default defineConfig({
   build: {
     // minify: false,
     // TODO 解决 Windows 下开发模式控制台提示崩溃的问题
-    watch: {
-      exclude: ['node_modules/**', '/__uno.css'],
-    },
+    ...(isDevelopment
+      ? {
+          watch: {
+            exclude: ['node_modules/**', '/__uno.css'],
+          },
+        }
+      : {}),
   },
 })
