@@ -84,6 +84,73 @@ app.config.globalProperties.$assets = useAssets
 <!-- 更多使用方式请参阅 https://tailwindcss.com/docs -->
 ```
 
+#### 请求后端数据
+
+> 详细使用请参阅 [uni-network](https://github.com/uni-helper/uni-network)
+
+```js
+import request from '@/utils/request/index.js'
+
+// GET
+request.get(
+  '/mock',
+  { id: 'mock-id' },
+  {
+    /* more-options */
+  }
+)
+
+// POST
+request.post(
+  '/mock',
+  { id: 'mock-id' },
+  {
+    /* more-options */
+  }
+)
+
+// Upload
+request.upload({
+  url: '/mock',
+  dataType: 'json',
+  headers: {
+    'content-type': 'multipart/form-data',
+  },
+})
+
+// Common
+request({
+  method: 'post',
+  url: '/mock',
+  data: {
+    id: 'mock-id',
+  },
+  headers: {
+    'content-type': 'application/json',
+  },
+})
+
+// 扩展方法
+
+// 继承于 request.post，请求头默认添加 'Content-Type': 'multipart/form-data'
+request.form(
+  '/mock',
+  { id: 'mock-id' },
+  {
+    /* more-options */
+  }
+)
+
+// 继承于 request.post，请求头默认添加 'Content-Type': 'application/x-www-form-urlencoded'
+request.query(
+  '/mock',
+  { id: 'mock-id' },
+  {
+    /* more-options */
+  }
+)
+```
+
 #### 路由间功能跳转
 
 ```js

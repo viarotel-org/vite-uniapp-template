@@ -84,10 +84,7 @@ export default ({
     })
 
   service.interceptors.request.use(service.onRequest, service.onRequestError)
-  service.interceptors.response.use(
-    service.onResponse,
-    service.onResponseError,
-  )
+  service.interceptors.response.use(service.onResponse, service.onResponseError)
 
   /**
    * 以表单形式提交数据
