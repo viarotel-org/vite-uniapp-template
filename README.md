@@ -96,7 +96,7 @@ request.get(
   '/mock',
   { id: 'mock-id' },
   {
-    /* more-options */
+    /* More option */
   }
 )
 
@@ -105,7 +105,7 @@ request.post(
   '/mock',
   { id: 'mock-id' },
   {
-    /* more-options */
+    /* More option */
   }
 )
 
@@ -137,7 +137,7 @@ request.form(
   '/mock',
   { id: 'mock-id' },
   {
-    /* more-options */
+    /* More option */
   }
 )
 
@@ -146,7 +146,7 @@ request.query(
   '/mock',
   { id: 'mock-id' },
   {
-    /* more-options */
+    /* More option */
   }
 )
 ```
