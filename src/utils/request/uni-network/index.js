@@ -1,4 +1,4 @@
-import qs from 'qs'
+import qs from 'query-string'
 import uniNetwork from './core/index'
 import { baseURL, timeout } from '@/configs/request'
 
@@ -33,7 +33,7 @@ export default ({
     // 解决query无法传递数组的问题
     config.paramsSerializer = params =>
       qs.stringify(params, {
-        arrayFormat: 'repeat',
+        arrayFormat: 'bracket',
       })
 
     return onRequest({

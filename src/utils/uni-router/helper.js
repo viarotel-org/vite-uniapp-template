@@ -1,5 +1,5 @@
 import { cloneDeep, isArray, isString, omit } from 'lodash-es'
-import qs from 'qs'
+import qs from 'query-string'
 import pages from '@/pages.json'
 
 /**
