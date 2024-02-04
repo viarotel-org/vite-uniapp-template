@@ -3,15 +3,16 @@ import { mock } from '../base/index.js'
 /**
  * @description 用户登录
  */
-export const userLogin = data =>
-  mock({ ...data, mockData: { token: 'mock-token' } })
+export function userLogin(data) {
+  return mock({ ...data, mockData: { token: 'mock-token' } })
+}
 
 /**
  * @description 获取当前登录用户信息
  * @param realStatus 1-未实名 2-实名中 3--已经实名 4-实名失败
  */
-export const getUserInfo = data =>
-  mock({
+export function getUserInfo(data) {
+  return mock({
     ...data,
     mockData: {
       id: 'mock-id',
@@ -19,6 +20,7 @@ export const getUserInfo = data =>
       realStatus: '1',
     },
   })
+}
 
 /**
  * @description 获取当前登录用户菜单

@@ -4,13 +4,11 @@ import * as dictData from '@/configs/dict/index.js'
 /**
  * @description 回显数据字典
  */
-export function showDictLabel(data,
-  value,
-  {
-    labelKey = 'dictLabel',
-    valueKey = 'dictValue',
-    childrenKey = 'children',
-  } = {}) {
+export function showDictLabel(data, value, {
+  labelKey = 'dictLabel',
+  valueKey = 'dictValue',
+  childrenKey = 'children',
+} = {}) {
   const actions = []
   for (let index = 0; index < data.length; index++) {
     const item = data[index]

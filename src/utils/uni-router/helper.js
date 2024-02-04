@@ -49,7 +49,6 @@ export function routerModel(
  * 检查指定的页面路径是否为 tabbar类型
  * @param {*} pages 页面配置
  * @param {*} path 页面路径
- * @returns
  */
 export function hasTabBar(pages, path) {
   const list = pages?.tabBar?.list || []
@@ -62,7 +61,7 @@ export function hasTabBar(pages, path) {
 }
 
 /**
- * 将uniapp路由跳转方式 转换为VueRouer方式
+ * 将uniapp路由跳转方式 转换为VueRouter方式
  * @param {object} router
  * @returns {object}
  */
@@ -137,7 +136,7 @@ export function resolvePages(pages, { addRoot = false } = {}) {
  * @param {*} pages 页面配置
  * @returns
  */
-export const getRootPagePath = (pages) => {
+export function getRootPagePath(pages) {
   pages = isArray(pages) ? pages : pages?.pages || []
   const value = pages.find(item => item.type === 'home')?.path || ''
   return value
@@ -156,9 +155,9 @@ export function resolvePagePath(
   const pathMap = pathList.reduce((obj, item) => {
     const path = item.path
 
-    if (item[shortcutName]) {
+    if (item[shortcutName])
       obj[item[shortcutName]] = path
-    }
+
     obj[path] = path
 
     return obj

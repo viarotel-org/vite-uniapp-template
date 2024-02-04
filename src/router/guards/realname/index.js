@@ -1,7 +1,7 @@
 import store from '@/store/index.js'
 import { useDialog, useToast } from '@/utils/modals'
 
-const realname = (router) => {
+function realname(router) {
   const userStore = store.useUserStore()
 
   router.beforeEach((to, from, next) => {

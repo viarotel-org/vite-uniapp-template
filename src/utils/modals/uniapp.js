@@ -23,7 +23,7 @@ export function useDialog(
       ...moreOptions,
       success({ cancel }) {
         if (cancel) {
-          reject({ type: 'cancel' })
+          reject(new Error('cancel'))
         }
 
         resolve({ type: 'confirm' })

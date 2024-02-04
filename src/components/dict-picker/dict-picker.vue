@@ -72,8 +72,8 @@ export default {
     showValue() {
       return (
         this.modelValue?.[this.labelKey]
-        || this.$showDictLabel(this.scopedOptions, this.modelValue)
-        || ''
+          || this.$showDictLabel(this.scopedOptions, this.modelValue)
+          || ''
       )
     },
   },

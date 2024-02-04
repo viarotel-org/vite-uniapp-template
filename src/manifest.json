@@ -5,6 +5,9 @@
   "versionName": "2.0.0",
   "versionCode": "100",
   "transformPx": false,
+  "uniStatistics": {
+    "enable": false
+  },
   "app-plus": {
     "usingComponents": true,
     "nvueStyleCompiler": "uni-app",
@@ -62,9 +65,6 @@
   },
   "mp-toutiao": {
     "usingComponents": true
-  },
-  "uniStatistics": {
-    "enable": false
   },
   "vueVersion": "3"
 }

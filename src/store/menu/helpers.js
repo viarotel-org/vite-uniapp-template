@@ -17,19 +17,18 @@ export async function getRemoteMenu(params) {
   return data
 }
 
-export function transformerMenu(data,
-  {
-    pathKey = 'menuHref',
-    titleKey = 'menuName',
-    iconKey = 'menuIcon',
-    menuType = 'menuType',
-    menuSort = 'menuSort',
-    idKey = 'id',
-    parentKey = 'parentId',
-    childrenKey = 'children',
-    permissionKey = 'permission',
-    isTree = false,
-  } = {}) {
+export function transformerMenu(data, {
+  pathKey = 'menuHref',
+  titleKey = 'menuName',
+  iconKey = 'menuIcon',
+  menuType = 'menuType',
+  menuSort = 'menuSort',
+  idKey = 'id',
+  parentKey = 'parentId',
+  childrenKey = 'children',
+  permissionKey = 'permission',
+  isTree = false,
+} = {}) {
   if (isTree) {
     data = tree2List(data, {
       key: idKey,

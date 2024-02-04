@@ -13,7 +13,7 @@ export function sleep(time = 1000) {
 /**
  * 使用indexof方法实现模糊查询
  * @param  {Array}  list     进行查询的数组
- * @param  {String} keyWord  查询的关键词
+ * @param  {string} keyWord  查询的关键词
  * @return {Array}           查询的结果
  */
 export function fuzzyQuery(list, keyWord, { keyName = '' } = {}) {
@@ -30,8 +30,8 @@ export function fuzzyQuery(list, keyWord, { keyName = '' } = {}) {
 /**
  * 解构对象属性为可响应的计算属性
  * @param  values 为对象时 对象的值作为计算属性的替换键名
- * @param {String} sourcePath 默认值为 '$Route.query'
- * @returns {Object} Computeds
+ * @param {string} sourcePath 默认值为 '$Route.query'
+ * @returns {object} Computeds
  */
 export function mapComputed(keys = [], sourcePath = '$Route.query') {
   const arr = Array.isArray(keys)

@@ -10,8 +10,8 @@ function sortData(data, sortFun) {
 
 /**
  * 生成排序函数
- * @param {String}  sortField  排序字段
- * @param { Boolean} asc       是否正序
+ * @param {string}  sortField  排序字段
+ * @param {boolean} asc       是否正序
  * @returns {Function}  排序函数
  */
 function generateSortFn(sortField, asc) {
@@ -114,7 +114,6 @@ export function arrayTreePathData(id, data) {
  * 对树进行排序(通过自定义函数)
  * @param {Array}  treeData  树
  * @param {Function}  sortFun  排序函数
- * @returns {Array}
  */
 export const sortTreeByFunction = function (treeData, sortFun) {
   sortData(treeData, sortFun)
@@ -131,8 +130,8 @@ export const sortTreeByFunction = function (treeData, sortFun) {
 /**
  * 对树进行排序(通过字段)
  * @param {Array}  treeData  树
- * @param {String}  sortField  排序字段
- * @param { Boolean} asc       是否正序
+ * @param {string}  sortField  排序字段
+ * @param {boolean} asc       是否正序
  * @returns {Array} 排序树
  */
 export const sortTreeByField = function (treeData, sortField, asc = true) {
@@ -161,7 +160,7 @@ export const treeFinalToArray = function (treeData) {
 /**
  * 树转化数组
  * @param {Array}  treeData  树
- * @param {String}  childsKey  树
+ * @param {string}  childsKey  树
  * @returns {Array} 数组
  */
 export const treeToArray = function (treeData = [], childsKey = 'children') {
@@ -178,8 +177,8 @@ export const treeToArray = function (treeData = [], childsKey = 'children') {
 
 /**
  * 树对象转化数组
- * @param {Object}  treeObject  树
- * @param {String}  childKey  树
+ * @param {object}  treeObject  树
+ * @param {string}  childKey  树
  * @returns {Array} 数组
  */
 export const treeObjToArray = function (

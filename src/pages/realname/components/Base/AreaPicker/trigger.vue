@@ -49,10 +49,10 @@ export default {
       return this.modelValue
         .map(
           item => item?.deptName
-            || this.$showDictLabel(this.flatData, item, {
-              labelKey: this.labelKey,
-              valueKey: this.valueKey,
-            }),
+          || this.$showDictLabel(this.flatData, item, {
+            labelKey: this.labelKey,
+            valueKey: this.valueKey,
+          }),
         )
         .join('-')
     },

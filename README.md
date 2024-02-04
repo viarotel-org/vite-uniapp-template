@@ -58,7 +58,7 @@ pnpm dev:app-android
 
 ```js
 // 使用远程静态资源
-import { useAssets } from './utils/assets/remote'
+// import { useAssets } from './utils/assets/remote'
 
 // 使用本地静态资源
 import { useAssets } from './utils/assets/local'

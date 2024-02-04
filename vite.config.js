@@ -1,7 +1,6 @@
 import path from 'node:path'
 import { defineConfig } from 'vite'
 import useUni from '@dcloudio/vite-plugin-uni'
-import useEslint from 'vite-plugin-eslint'
 import useUnoCSS from 'unocss/vite'
 import useUniPages from '@uni-helper/vite-plugin-uni-pages'
 
@@ -23,7 +22,6 @@ const isDevelopment = process.env.NODE_ENV === 'development'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    useEslint(),
     useUnoCSS(),
     useUniPages({
       mergePages: false,

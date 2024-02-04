@@ -6,7 +6,7 @@ const loginPath = '/pages/login/phone/index'
 
 const whiteList = [loginPath, '/pages/statement/index', '/pages/webview/index']
 
-const permission = (router) => {
+function permission(router) {
   const userStore = store.useUserStore()
 
   const loginRoute = to => ({

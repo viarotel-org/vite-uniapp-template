@@ -53,8 +53,8 @@ export const getSiteConfig = () => mock({ mockData: {} })
 /**
  * @desc 上传文件
  */
-export const uploadFile = params =>
-  request.upload({
+export function uploadFile(params) {
+  return request.upload({
     url: '/file/upload',
     dataType: 'json',
     headers: {
@@ -62,3 +62,4 @@ export const uploadFile = params =>
     },
     ...(params || {}),
   })
+}
