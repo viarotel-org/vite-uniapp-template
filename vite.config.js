@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import useUni from '@dcloudio/vite-plugin-uni'
 import useUnoCSS from 'unocss/vite'
 import useUniPages from '@uni-helper/vite-plugin-uni-pages'
-
+import useRemoveConsole from 'vite-plugin-remove-console'
 import postcssConfig from './postcss.config.js'
 
 import {
@@ -27,6 +27,7 @@ export default defineConfig({
       mergePages: false,
       homePage,
     }),
+    useRemoveConsole(),
     useUni(),
   ],
   server: {
@@ -59,12 +60,11 @@ export default defineConfig({
     },
   },
   css: {
-    // 修复外部 postcss.config.js 不被解析的问题
+    /** 解决外部 postcss.config.js 不被解析的问题 */
     postcss: postcssConfig,
   },
   build: {
-    // minify: false,
-    // TODO 解决 Windows 下开发模式控制台提示崩溃的问题
+    /** 解决 Windows 下开发模式控制台提示崩溃的问题 */
     ...(isDevelopment
       ? {
           watch: {
@@ -72,5 +72,6 @@ export default defineConfig({
           },
         }
       : {}),
+    // minify: false,
   },
 })

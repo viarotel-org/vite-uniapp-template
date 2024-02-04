@@ -8,7 +8,7 @@
       />
     </view>
     <view class="p-4 bg-white mt-4 shadow-md rounded-md">
-      <uv-form label-width="200" border>
+      <uv-form label-width="200" :border-bottom="false">
         <uv-form-item label="邮箱">
           <view class="" @click="handleCopy(enterpriseInfo.email)">
             {{ enterpriseInfo.email }}
