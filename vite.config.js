@@ -18,6 +18,7 @@ import {
 import { homePage } from './src/configs/index.js'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
+const isProduction = process.env.NODE_ENV === 'production'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -27,8 +28,8 @@ export default defineConfig({
       mergePages: false,
       homePage,
     }),
-    useRemoveConsole(),
     useUni(),
+    ...isProduction ? [useRemoveConsole()] : [],
   ],
   server: {
     cors: true,
