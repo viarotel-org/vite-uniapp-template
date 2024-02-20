@@ -23,5 +23,6 @@ export default defineConfig({
     'inset-x-center': 'absolute left-1/2 transform -translate-x-1/2',
     'inset-y-center': 'absolute top-1/2 transform -translate-y-1/2',
     'h-safe-bottom': 'h-[constant(safe-area-inset-bottom)] h-[env(safe-area-inset-bottom)]',
+    'h-safe-top': 'h-[var(--status-bar-height)]',
   },
 })

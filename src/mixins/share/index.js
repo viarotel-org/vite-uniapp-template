@@ -1,4 +1,4 @@
-import { appName } from '@/configs/index'
+import { appName, homePage } from '@/configs/index'
 
 export default {
   data() {
@@ -10,7 +10,7 @@ export default {
   onShareAppMessage() {
     return {
       title: appName,
-      path: '/pages/index/index',
+      path: homePage,
       ...this.shareAppMessageProps,
     }
   },

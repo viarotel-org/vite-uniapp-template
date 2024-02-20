@@ -12,11 +12,3 @@ navigator {
 button {
   background-color: transparent;
 }
-
-.pt-topbar {
-  padding-top: var(--status-bar-height);
-}
-
-.mt-topbar {
-  margin-top: var(--status-bar-height);
-}
