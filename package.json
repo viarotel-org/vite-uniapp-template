@@ -88,7 +88,7 @@
     "@uni-helper/eslint-config": "^0.0.6",
     "@uni-helper/unocss-preset-uni": "^0.2.7",
     "@uni-helper/vite-plugin-uni-pages": "^0.2.14",
-    "@unocss/transformer-directives": "0.58.0",
+    "@unocss/transformer-directives": "0.58.5",
     "@viarotel-org/unocss-preset-shades": "^0.7.4",
     "@vue/runtime-core": "^3.4.15",
     "eslint": "^8.54.0",
@@ -101,7 +101,7 @@
     "postcss-scss": "^4.0.6",
     "sass": "^1.63.4",
     "typescript": "5.1.6",
-    "unocss": "0.58.0",
+    "unocss": "0.58.5",
     "vite": "4.0.3",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-remove-console": "^2.2.0"
