@@ -7,10 +7,7 @@
     @change="onChange"
     @cancel="onCancel"
   >
-    <slot
-      :show-value="showValue"
-      :value="modelValue"
-    >
+    <slot :show-value="showValue" :value="modelValue">
       <view class="flex items-center w-full">
         <view class="flex-1 w-0">
           <uv-input
@@ -21,9 +18,7 @@
           ></uv-input>
         </view>
         <view class="flex-none">
-          <uv-icon
-            name="arrow-right"
-          ></uv-icon>
+          <uv-icon name="arrow-right"></uv-icon>
         </view>
       </view>
     </slot>
@@ -72,8 +67,8 @@ export default {
     showValue() {
       return (
         this.modelValue?.[this.labelKey]
-          || this.$showDictLabel(this.scopedOptions, this.modelValue)
-          || ''
+        || this.$showDictLabel(this.scopedOptions, this.modelValue)
+        || ''
       )
     },
   },

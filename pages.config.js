@@ -119,20 +119,20 @@ export default defineUniPages({
     backgroundColor: '#F8F8F8',
     list: [
       {
-        iconPath: 'static/tabbar/tab-home.png',
-        selectedIconPath: 'static/tabbar/tab-home-active.png',
+        iconPath: 'static/tabbar/home.png',
+        selectedIconPath: 'static/tabbar/home-active.png',
         pagePath: 'pages/index/home/index',
         text: '主页',
       },
       {
-        iconPath: 'static/tabbar/tab-example.png',
-        selectedIconPath: 'static/tabbar/tab-example-active.png',
+        iconPath: 'static/tabbar/example.png',
+        selectedIconPath: 'static/tabbar/example-active.png',
         pagePath: 'pages/index/example/index',
         text: '示例',
       },
       {
-        iconPath: 'static/tabbar/tab-personal.png',
-        selectedIconPath: 'static/tabbar/tab-personal-active.png',
+        iconPath: 'static/tabbar/personal.png',
+        selectedIconPath: 'static/tabbar/personal-active.png',
         pagePath: 'pages/index/personal/index',
         text: '我的',
       },

@@ -1,5 +1,5 @@
 import { isH5 } from '@uni-helper/uni-env'
-import { createRouter as _createRouter } from 'uniapp-router-next'
+import { createRouter as createRouterRaw } from 'uniapp-router-next'
 import { aliasTransformer, resolvePages } from './helper.js'
 import { homePage } from '@/configs/index.js'
 
@@ -18,7 +18,7 @@ export function createRouter({ pages, addRoutes = [], ...options } = {}) {
 
   // console.log('createRouter.routes', routes)
 
-  const router = _createRouter({
+  const router = createRouterRaw({
     ...options,
     platform: process.env.UNI_PLATFORM,
     routes,

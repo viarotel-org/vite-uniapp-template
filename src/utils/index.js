@@ -31,13 +31,13 @@ export function fuzzyQuery(list, keyWord, { keyName = '' } = {}) {
  * 解构对象属性为可响应的计算属性
  * @param  values 为对象时 对象的值作为计算属性的替换键名
  * @param {string} sourcePath 默认值为 '$Route.query'
- * @returns {object} Computeds
+ * @returns {object} Computed List
  */
 export function mapComputed(keys = [], sourcePath = '$Route.query') {
   const arr = Array.isArray(keys)
     ? keys.map(name => [name, name])
     : Object.entries(keys)
-  const computeds = arr.reduce((obj, [name, replaceName]) => {
+  const computedList = arr.reduce((obj, [name, replaceName]) => {
     if (!replaceName)
       replaceName = name
     const formatPath = [...sourcePath.split('.'), name].join('.')
@@ -46,7 +46,7 @@ export function mapComputed(keys = [], sourcePath = '$Route.query') {
     }
     return obj
   }, {})
-  return computeds
+  return computedList
 }
 
 /**
