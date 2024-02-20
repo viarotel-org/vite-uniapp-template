@@ -13,7 +13,7 @@ import {
   requestFilePath,
   requestPath,
   useProxy,
-} from './src/configs/devServer.js'
+} from './src/configs/server.js'
 
 import { homePage } from './src/configs/index.js'
 
