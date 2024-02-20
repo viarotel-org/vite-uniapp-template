@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.7.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.6.1...v2.7.0) (2024-02-20)
+
+
+### Features
+
+* ✨ 启用新的 Eslint 配置 ([8dfeef3](https://github.com/viarotel-org/vite-uniapp-template/commit/8dfeef3095f7b8b01e5c867ab471239ec7990692))
+
+
+### Bug Fixes
+
+* 🐛 修复插件导致的编译错误 ([8b37bce](https://github.com/viarotel-org/vite-uniapp-template/commit/8b37bce8f66900c5c2ee6923ae0362aeb495cb4f))
+
+
+### Performance Improvements
+
+* ♻️ 启用 query-string  减小构建大小 并更新依赖版本 ([74de17a](https://github.com/viarotel-org/vite-uniapp-template/commit/74de17a256cd153fe4cd92687329bd850e2dfe85))
+* ♻️ 性能优化及依赖更新 ([1eccb37](https://github.com/viarotel-org/vite-uniapp-template/commit/1eccb3771205695d73c9add6f7a2377bd88ba74f))
+* ♻️ 文件结构及代码逻辑优化 ([3b66faf](https://github.com/viarotel-org/vite-uniapp-template/commit/3b66faf7fa49b5bce4855db07591dc87f2f4c62f))
+* ✨ 使用 @uni-helper/unocss-preset-uni ([705c794](https://github.com/viarotel-org/vite-uniapp-template/commit/705c794dd8daa74814e7614ad1c6d56847e392be))
+* 💄 更新属性名称 ([8698f52](https://github.com/viarotel-org/vite-uniapp-template/commit/8698f5233835d12ba3af09d24bb1295224c5def3))
+* 💄 更新服务器配置文件名 ([07500b5](https://github.com/viarotel-org/vite-uniapp-template/commit/07500b5d862364f57973ba997f25896b313c1629))
+* 📦️ 更新 unocss 版本 ([6839026](https://github.com/viarotel-org/vite-uniapp-template/commit/68390269e1c570debdf9e8810c8c6b9958cd38a2))
+
 ## [2.6.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.6.0...v2.6.1) (2023-12-20)
 
 
