@@ -1,12 +1,12 @@
 <template>
-  <web-view class="h-full" :src="viewProps.src"></web-view>
+  <web-view class="h-full" :src="webviewProps.src"></web-view>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      viewProps: {
+      webviewProps: {
         src: '',
       },
     }
@@ -17,7 +17,7 @@ export default {
         title: params.title,
       })
     }
-    this.viewProps = params
+    this.webviewProps = params
   },
 }
 </script>
