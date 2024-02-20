@@ -1,26 +1,18 @@
 import { defineConfig } from 'unocss'
 import transformerDirectives from '@unocss/transformer-directives'
-import { presetApplet, presetRemRpx } from 'unocss-applet'
 import { presetShades } from '@viarotel-org/unocss-preset-shades'
-import presetWind from '@unocss/preset-wind'
+import { presetUni } from '@uni-helper/unocss-preset-uni'
 import { primaryColor } from './src/configs/index.js'
 
-const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp-') ?? false
-
-const presetMain = isApplet ? presetApplet() : presetWind()
+const presetMain = presetUni({ attributify: false })
 
 const presets = [
   presetMain,
   presetShades(primaryColor),
-  presetRemRpx(),
 ]
 
 export default defineConfig({
-  theme: {
-    colors: {
-      gray: presetMain?.theme?.colors?.neutral,
-    },
-  },
+  theme: {},
   // @ts-ignore
   presets,
   transformers: [transformerDirectives()],

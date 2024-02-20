@@ -86,7 +86,7 @@
     "@dcloudio/uni-stacktracey": "3.0.0-3090920231225001",
     "@dcloudio/vite-plugin-uni": "3.0.0-3090920231225001",
     "@uni-helper/eslint-config": "^0.0.6",
-    "@uni-helper/unocss-preset-uni": "^0.2.6",
+    "@uni-helper/unocss-preset-uni": "^0.2.7",
     "@uni-helper/vite-plugin-uni-pages": "^0.2.14",
     "@unocss/transformer-directives": "0.58.0",
     "@viarotel-org/unocss-preset-shades": "^0.7.4",
