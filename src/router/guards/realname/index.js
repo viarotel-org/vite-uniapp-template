@@ -1,7 +1,7 @@
 import store from '@/store/index.js'
 import { useDialog, useToast } from '@/utils/modals'
 
-function realname(router) {
+export default (router) => {
   const userStore = store.useUserStore()
 
   router.beforeEach((to, from, next) => {
@@ -45,5 +45,3 @@ function realname(router) {
   })
   // router.afterEach(() => {})
 }
-
-export default realname

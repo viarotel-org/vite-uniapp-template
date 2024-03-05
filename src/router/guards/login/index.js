@@ -6,7 +6,7 @@ const loginPath = '/pages/login/phone/index'
 
 const whiteList = [loginPath, '/pages/statement/index', '/pages/webview/index']
 
-function permission(router) {
+export default (router) => {
   const userStore = store.useUserStore()
 
   const loginRoute = to => ({
@@ -61,5 +61,3 @@ function permission(router) {
 
   // router.afterEach(() => {})
 }
-
-export default permission

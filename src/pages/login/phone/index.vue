@@ -44,6 +44,7 @@
 <script>
 import { version } from '/package.json'
 import { appName, enterpriseInfo } from '@/configs/index'
+import coderJSON from '@/utils/coderJSON.js'
 
 export default {
   data() {
@@ -96,10 +97,12 @@ export default {
 
       try {
         await user.getUserInfo()
-        const redirect = this.$Route.query.redirect
-        console.log('redirect', redirect)
-        if (redirect) {
-          this.$Router.replaceAll(JSON.parse(redirect))
+
+        if (this.$Route.query.redirect) {
+          const redirect = coderJSON.parse(this.$Route.query.redirect)
+          // console.log('redirect', redirect)
+
+          this.$Router.replaceAll(redirect)
         }
         else {
           this.$Router.replaceAll('/')
