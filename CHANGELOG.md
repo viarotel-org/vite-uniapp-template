@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.3](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.7.2...v2.7.3) (2024-03-06)
+
+
+### Bug Fixes
+
+* 🐛 去除阶段模式环境变量 ([00e71c8](https://github.com/viarotel-org/vite-uniapp-template/commit/00e71c8731053a568b01c507950da51cb5c1f10e))
+
 ## [2.7.2](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.7.1...v2.7.2) (2024-03-06)
 
 
