@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.7.2](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.7.1...v2.7.2) (2024-03-06)
+
+
+### Performance Improvements
+
+* ♻️ 使用环境变量实现接口域名切换 ([b571d42](https://github.com/viarotel-org/vite-uniapp-template/commit/b571d422e431f905872c65c27e72228613f0546c))
+* ♻️ 更新用户目录名称 ([c2b7f5e](https://github.com/viarotel-org/vite-uniapp-template/commit/c2b7f5ee57d1717408434f07f1f9fadd504a4f3b))
+
 ## [2.7.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.7.0...v2.7.1) (2024-03-05)
 
 
