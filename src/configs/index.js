@@ -10,7 +10,7 @@ export const primaryColor = '#028d71'
 // 项目基础路径
 export const appBasePath = isProduction ? './' : './'
 // 请求地址
-export const requestURL = ''
+export const requestURL = () => process.env.VITE_APP_API_URL
 export const requestPath = '/api'
 export const requestFilePath = '/file'
 // 是否开启代理

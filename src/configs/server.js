@@ -1,6 +1,5 @@
 export {
   useProxy,
-  requestURL as proxyURL,
   proxyPath,
   proxyPort,
   appBasePath,

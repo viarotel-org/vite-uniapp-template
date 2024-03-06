@@ -15,7 +15,7 @@ export function getBaseURL() {
     tempURL = isDevelopment ? proxyPath : window.location.origin + requestPath
   }
   else {
-    tempURL = requestURL + requestPath
+    tempURL = requestURL() + requestPath
   }
   return tempURL
 }
@@ -29,7 +29,7 @@ export function getFileBaseURL() {
       : window.location.origin + requestFilePath
   }
   else {
-    tempURL = requestURL + requestFilePath
+    tempURL = requestURL() + requestFilePath
   }
   return tempURL
 }
