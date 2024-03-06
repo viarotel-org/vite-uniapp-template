@@ -258,8 +258,8 @@ export default (router) => {
 ```js
 // 使用名为 realname 的中间件
 const pageConfig = {
-  path: '/pages/personal/index',
-  aliasPath: '/personal',
+  path: '/pages/user/index',
+  aliasPath: '/user',
   meta: {
     middleware: ['realname'],
   },

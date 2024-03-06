@@ -27,8 +27,8 @@ export default defineUniPages({
       },
     },
     {
-      path: 'pages/index/personal/index',
-      aliasPath: '/personal',
+      path: 'pages/index/user/index',
+      aliasPath: '/user',
       style: {
         navigationBarTitleText: '我的',
       },
@@ -131,9 +131,9 @@ export default defineUniPages({
         text: '示例',
       },
       {
-        iconPath: 'static/tabbar/personal.png',
-        selectedIconPath: 'static/tabbar/personal-active.png',
-        pagePath: 'pages/index/personal/index',
+        iconPath: 'static/tabbar/user.png',
+        selectedIconPath: 'static/tabbar/user-active.png',
+        pagePath: 'pages/index/user/index',
         text: '我的',
       },
     ],
