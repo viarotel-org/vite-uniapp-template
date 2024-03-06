@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.7.0...v2.7.1) (2024-03-05)
+
+
+### Bug Fixes
+
+* 🐛 修复 app 端登录问题 ([b5b03b1](https://github.com/viarotel-org/vite-uniapp-template/commit/b5b03b172f3e64a24aba18f86b605d08edb7ca6a))
+
 ## [2.7.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.6.1...v2.7.0) (2024-02-20)
 
 
