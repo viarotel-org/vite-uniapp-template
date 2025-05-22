@@ -1,0 +1,4 @@
+:root,
+page {
+  --wot-color-theme: rgba(var(--primary-color-500), 1);
+}

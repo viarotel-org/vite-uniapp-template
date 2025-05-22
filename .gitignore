@@ -1,28 +1,4 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
+# node
 node_modules
-.DS_Store
 dist
-*.local
-
-# Editor directories and files
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-#user
-.hbuilderx
-uni-pages.d.ts
-pnpm-lock.yaml
-yarn.lock
-package-lock.json
+*.ts

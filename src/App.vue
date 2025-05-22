@@ -1,11 +1,9 @@
 <script>
 export default {
-  async onLaunch() {
+  onLaunch() {
     console.log('App Launch')
-
-    this.$store.app.getSystemInfo()
   },
-  async onShow() {
+  onShow() {
     console.log('App Show')
   },
   onHide() {
@@ -14,8 +12,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-// @import "uview-plus/index.scss";
-@import './styles/css/index.css';
-@import '@climblee/uv-ui/index.scss';
+<style>
+/*每个页面公共css */
 </style>

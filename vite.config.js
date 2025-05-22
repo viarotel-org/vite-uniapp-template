@@ -1,94 +1,23 @@
 import path from 'node:path'
-import { defineConfig, loadEnv } from 'vite'
-import useUni from '@dcloudio/vite-plugin-uni'
-import useUnoCSS from 'unocss/vite'
-import useUniPages from '@uni-helper/vite-plugin-uni-pages'
-import useRemoveConsole from 'vite-plugin-remove-console'
-import postcssConfig from './postcss.config.js'
 
-import {
-  proxyPath,
-  proxyPort,
-  requestFilePath,
-  requestPath,
-  useProxy,
-} from './src/configs/server.js'
+import { defineConfig } from 'vite'
 
-import { homePage } from './src/configs/index.js'
+import { loadMapEnv } from './helpers/loadMapEnv/index.js'
 
-const isDevelopment = process.env.NODE_ENV === 'development'
-const isProduction = process.env.NODE_ENV === 'production'
+import plugins from './vite.config.plugins.js'
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '')
-
-  const proxyURL = env.VITE_APP_API_URL
-
-  const viteEnvKeys = Object.keys(env).filter(key => key.startsWith('VITE_'))
-
-  const define = {
-    ...viteEnvKeys.reduce((config, variable) => {
-      config[`process.env.${variable}`] = JSON.stringify(env[variable])
-      return config
-    }, {}),
-  }
+  const env = loadMapEnv(mode)
 
   return {
-    plugins: [
-      useUnoCSS(),
-      useUniPages({
-        mergePages: false,
-        homePage,
-      }),
-      useUni(),
-      ...(isProduction ? [useRemoveConsole()] : []),
-    ],
-    server: {
-      cors: true,
-      host: true,
-      port: proxyPort,
-      proxy: {
-        ...(useProxy && proxyURL
-          ? {
-              [`^${proxyPath}`]: {
-                target: `${proxyURL}${requestPath}`,
-                changeOrigin: true,
-                rewrite: path =>
-                  path.replace(new RegExp(`^${proxyPath}`), ''),
-              },
-              // 解决开发环境上传图片无法直接显示的问题
-              [`^${requestFilePath}`]: {
-                target: `${proxyURL}${requestFilePath}`,
-                changeOrigin: true,
-                rewrite: path =>
-                  path.replace(new RegExp(`^${requestFilePath}`), ''),
-              },
-            }
-          : {}),
-      },
-    },
     resolve: {
       alias: {
-        '^@': path.resolve(__dirname, './src/'),
-        '$uni-router': path.resolve(__dirname, './src/utils/uni-router/'),
+        '@': path.join(process.cwd(), './src'),
       },
     },
-    css: {
-      /** 解决外部 postcss.config.js 不被解析的问题 */
-      postcss: postcssConfig,
+    define: {
+      'process.env': env,
     },
-    build: {
-      /** 解决 Windows 下开发模式控制台提示崩溃的问题 */
-      ...(isDevelopment
-        ? {
-            watch: {
-              exclude: ['node_modules/**', '/__uno.css'],
-            },
-          }
-        : {}),
-      // minify: false,
-    },
-    define,
+    plugins: plugins({ env }),
   }
 })

@@ -1,20 +1,11 @@
-import { createRouter } from '$uni-router'
-import pages from '@/pages.json'
+import { createRouter } from 'uni-mini-router'
+import pagesJsonToRoutes from 'uni-parse-pages'
+import pagesJson from '../pages.json'
 
-// console.log('pages', pages)
+const routes = pagesJsonToRoutes(pagesJson)
 
 const router = createRouter({
-  pages,
-  addRoutes: [
-    {
-      path: '*',
-      redirect: () => {
-        return { path: '/404' }
-      },
-    },
-  ],
+  routes: [...routes],
 })
-
-// console.log('router', router)
 
 export default router

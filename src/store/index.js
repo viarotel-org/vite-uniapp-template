@@ -1,25 +1,15 @@
-import * as Pinia from 'pinia'
-import { useAppStore } from './app/index.js'
-import { useMenuStore } from './menu/index.js'
-import { useUserStore } from './user/index.js'
-import { useDictStore } from './dict/index.js'
+import { createPinia } from 'pinia'
+import { createPersistedState } from 'pinia-plugin-persistedstate'
 
-export default {
-  install(app) {
-    app.use(Pinia.createPinia())
-    app.config.globalProperties.$store = {
-      app: useAppStore(),
-      menu: useMenuStore(),
-      user: useUserStore(),
-      dict: useDictStore(),
-    }
+const store = createPinia()
 
-    app.config.globalProperties.$permission = key =>
-      useMenuStore().permission[key]
-  },
-  useAppStore,
-  useMenuStore,
-  useUserStore,
-  useDictStore,
-  Pinia,
-}
+store.use(
+  createPersistedState({
+    storage: {
+      getItem: uni.getStorageSync,
+      setItem: uni.setStorageSync,
+    },
+  }),
+)
+
+export default store

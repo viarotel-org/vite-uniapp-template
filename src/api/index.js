@@ -1,17 +1,9 @@
-import * as base from './base/index.js'
-import * as user from './user/index.js'
-import * as home from './home/index.js'
-import * as realname from './realname/index.js'
+import AdapterUniapp from '@alova/adapter-uniapp'
+import { createAlova } from 'alova'
 
-const api = {
-  ...base,
-  ...user,
-  ...home,
-  ...realname,
-}
+const alova = createAlova({
+  baseURL: process.env.VITE_API_BASE,
+  ...AdapterUniapp(),
+})
 
-export default {
-  install(app) {
-    app.config.globalProperties.$api = api
-  },
-}
+export default alova

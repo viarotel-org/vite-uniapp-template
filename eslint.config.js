@@ -1,35 +1,30 @@
-const uni = require('@uni-helper/eslint-config')
+import { createRequire } from 'node:module'
+import antfu from '@antfu/eslint-config'
 
-module.exports = uni({
-  typescript: false,
-  ignores: [
-    'src/uni_modules',
-    'node_modules',
-    'dist',
-    'public',
-    'index.html',
-  ],
+const require = createRequire(import.meta.url)
+
+const autoImport = require('./.eslintrc-auto-import.json')
+
+export default antfu({
+  unocss: true,
+  formatters: {
+    css: true,
+    html: true,
+    markdown: 'prettier',
+  },
 }, {
   languageOptions: {
     globals: {
       uni: 'readonly',
-      wx: 'readonly',
+      ...autoImport.globals,
     },
   },
   rules: {
-    'jsdoc/check-param-names': 'off',
-    'jsdoc/check-types': 'off',
-    'jsdoc/require-returns-description': 'off',
-
     'node/prefer-global/process': 'off',
 
-    'no-console': 'off',
-    'curly': 'off',
-    'eqeqeq': 'off',
-
     'unused-imports/no-unused-vars': 'off',
+    'no-console': 'off',
 
     'vue/html-self-closing': 'off',
-    'vue/block-order': 'off',
   },
 })
