@@ -1,8 +1,8 @@
 {
-  "name": "国铁智能眼镜辅助",
-  "appid": "__UNI__B9817FC",
+  "name": "vite-uniapp-template",
+  "appid": "",
   "description": "",
-  "versionName": "0.0.2",
+  "versionName": "0.0.1",
   "versionCode": "100",
   "transformPx": false,
   /* 5+App特有相关 */
@@ -103,7 +103,5 @@
     "enable": false
   },
   "vueVersion": "3",
-  "h5": {
-    "title": "国铁智能眼镜辅助系统"
-  }
+  "h5": {}
 }
