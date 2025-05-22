@@ -271,9 +271,9 @@ const pageConfig = {
 > router/guards/index.js 中
 
 ```js
+import { defineMiddleware } from '$uni-router/middleware'
 // 使用 defineMiddleware 定义并包装为中间件
 import realname from './realname/index.js'
-import { defineMiddleware } from '$uni-router/middleware'
 
 export default (app, router) => {
   // 使用 defineMiddleware 定义了路由中间件
