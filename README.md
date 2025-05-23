@@ -354,22 +354,22 @@ export default (router) => {
 
 删除 pnpm-lock.yaml / yarn.lock / package-lock.json 文件后重新安装依赖
 
-### 获得帮助
+## 获得帮助
 
-> 因为是开源项目 全靠爱发电 所以支持有限 更新节奏不固定
->
-> 注意：非 BUG 或计划外的需求，有偿处理；至于金额，根据问题难易程度，你觉得帮助了多少，看着给吧（维护这些项目已经耗费了大量精力，还要免费花时间解答问题就说不过去了吧...所以白嫖的一律不通过。）
+因为是开源项目 全靠爱发电 所以支持有限 更新节奏不固定
 
-- issues: [issues](https://github.com/viarotel-org/vite-uniapp-template/issues)
-- email: viarotel@qq.com
-- weixin: viarotel
-- qq: 523469508
+- [常见问题](https://escrcpy.viarotel.eu.org/zhHans/help/escrcpy)
+- [反馈问题](https://github.com/viarotel-org/escrcpy/issues)
+- [联系邮箱](viarotel@qq.com)
 
-### 支持项目
+## 捐赠项目
 
-> 如果该项目帮到你的话，可以请我喝杯咖啡，让我更有精神完善该项目 😛
+如果该项目帮到你的话，可以请我喝杯咖啡，让我更有精神完善该项目 😛
 
 <div style="display:flex;">
-  <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/79dcbc40246743e2b6870419e88e0392~tplv-k3u1fbpfcp-watermark.image?" alt="payment-weixin" style="width: 30%;">
-  <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1e5e69b83dd746deade95afd4a6864ec~tplv-k3u1fbpfcp-watermark.image?" alt="payment-alipay" style="width: 30%;">
+  <img src="https://cdn.jsdelivr.net/gh/viarotel-org/escrcpy@main/src/assets/sponsor/viarotel-wepay.png" alt="viarotel-wepay" width="30%">
+  <img src="https://cdn.jsdelivr.net/gh/viarotel-org/escrcpy@main/src/assets/sponsor/viarotel-alipay.png" alt="viarotel-alipay" width="30%">
+  <a href="https://www.paypal.com/paypalme/viarotel" target="_blank" rel="noopener noreferrer" width="30%">
+    <img src="https://cdn.jsdelivr.net/gh/viarotel-org/escrcpy@main/src/assets/sponsor/viarotel-paypal.png" alt="viarotel-paypal" width="100%">
+  </a>
 </div>

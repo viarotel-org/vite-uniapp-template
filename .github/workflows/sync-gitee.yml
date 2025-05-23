@@ -1,0 +1,22 @@
+name: sync-gitee
+
+on:
+  workflow_run:
+    workflows: [release-please]
+    types:
+      - completed
+
+jobs:
+  sync-to-gitee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: gitee-mirror-action
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/viarotel-org
+          dst: gitee/viarotel-org
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          account_type: org
+          white_list: vite-uniapp-template
+          force_update: true
