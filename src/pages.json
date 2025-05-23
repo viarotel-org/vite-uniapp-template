@@ -2,7 +2,8 @@
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue"
+      "^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue",
+      "^(?!z-paging-refresh|z-paging-load-more)z-paging(.*)": "z-paging/components/z-paging$1/z-paging$1.vue"
     }
   },
   "pages": [
@@ -14,12 +15,49 @@
       "type": "home"
     },
     {
+      "path": "pages/example/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/user/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/login/index",
       "style": {
         "navigationStyle": "custom"
       }
     }
   ],
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#018d71",
+    "backgroundColor": "#F8F8F8",
+    "list": [
+      {
+        "iconPath": "static/images/tabbar/home.png",
+        "selectedIconPath": "static/images/tabbar/home-active.png",
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      },
+      {
+        "iconPath": "static/images/tabbar/example.png",
+        "selectedIconPath": "static/images/tabbar/example-active.png",
+        "pagePath": "pages/example/index",
+        "text": "示例"
+      },
+      {
+        "iconPath": "static/images/tabbar/user.png",
+        "selectedIconPath": "static/images/tabbar/user-active.png",
+        "pagePath": "pages/user/index",
+        "text": "我的"
+      }
+    ]
+  },
   "globalStyle": {
     "navigationBarTitleText": "uni-app"
   },
