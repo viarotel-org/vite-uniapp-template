@@ -20,7 +20,7 @@ export default defineUniPages({
       },
     },
     {
-      path: 'pages/example/index',
+      path: 'pages/index/example/index',
       aliasPath: '/example',
       name: 'example',
       style: {
@@ -29,7 +29,7 @@ export default defineUniPages({
       },
     },
     {
-      path: 'pages/user/index',
+      path: 'pages/index/user/index',
       aliasPath: '/user',
       name: 'user',
       style: {
@@ -117,13 +117,13 @@ export default defineUniPages({
       {
         iconPath: 'static/images/tabbar/example.png',
         selectedIconPath: 'static/images/tabbar/example-active.png',
-        pagePath: 'pages/example/index',
+        pagePath: 'pages/index/example/index',
         text: '示例',
       },
       {
         iconPath: 'static/images/tabbar/user.png',
         selectedIconPath: 'static/images/tabbar/user-active.png',
-        pagePath: 'pages/user/index',
+        pagePath: 'pages/index/user/index',
         text: '我的',
       },
     ],

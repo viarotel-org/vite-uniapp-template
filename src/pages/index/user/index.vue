@@ -23,8 +23,7 @@ const systemItems = computed(() => [
   },
 ])
 
-function handleMenuItemClick(item, $Router) {
-  console.log('$Router', $Router)
+function handleMenuItemClick(item) {
   router.push({
     path: item.path,
     query: item.query || {},
@@ -119,7 +118,7 @@ async function handleLogout() {
           index !== systemItems.length - 1 ? 'border-b border-gray-100' : '',
         ]"
         hover-class="bg-gray-50"
-        @click="handleMenuItemClick(item, $Router)"
+        @click="handleMenuItemClick(item)"
       >
         <view class="w-10 flex flex-none items-center justify-center text-gray-500">
           <view class="size-6 text-primary-500" :class="item.icon"></view>
