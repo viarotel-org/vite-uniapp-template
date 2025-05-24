@@ -109,6 +109,13 @@
     "watch": true,
     "watchEffect": true,
     "watchPostEffect": true,
-    "watchSyncEffect": true
+    "watchSyncEffect": true,
+    "useWebview": true,
+    "useParse": true,
+    "store": true,
+    "useUserStore": true,
+    "useParseStore": true,
+    "createRouter": true,
+    "addRouterMethodAlias": true
   }
 }

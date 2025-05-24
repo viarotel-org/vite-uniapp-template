@@ -12,6 +12,9 @@ export default antfu({
     html: true,
     markdown: 'prettier',
   },
+  ignores: [
+    '**/uni_modules',
+  ],
 }, {
   languageOptions: {
     globals: {

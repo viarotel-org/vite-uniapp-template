@@ -1,13 +1,18 @@
-import vitePluginUni from '@dcloudio/vite-plugin-uni'
+import useUni from '@dcloudio/vite-plugin-uni'
 
 import useUniPages from '@uni-helper/vite-plugin-uni-pages'
 import useUnoCSS from 'unocss/vite'
 import useAutoImport from 'unplugin-auto-import/vite'
+import useUniRouter from 'unplugin-uni-router/dist/vite.js'
 
-import useAssetPathResolver from './helpers/vitePluginAssetPathResolver/index.js'
+import useAssetPathResolver from './helpers/vite-plugin-asset-path-resolver/index.js'
 
-// @ts-ignore
-const useUni = vitePluginUni?.default || vitePluginUni
+/**
+ * 解决插件不支持标准 ES 模块的问题
+ */
+function resolvePlugin(module, options) {
+  return (module?.default || module)(options)
+}
 
 function plugins({ env }) {
   return [
@@ -19,22 +24,24 @@ function plugins({ env }) {
       dts: false,
       mergePages: false,
     }),
-    useUni(),
+    resolvePlugin(useUni),
+    resolvePlugin(useUniRouter),
     useUnoCSS(),
     useAutoImport({
       imports: [
         'vue',
         'uni-app',
         'pinia',
-        {
-          from: 'uni-mini-router',
-          imports: ['useRouter', 'useRoute'],
-        },
       ],
       eslintrc: {
         enabled: true,
         globalsPropValue: true,
       },
+      dirs: [
+        './src/hooks/**',
+        './src/store/**',
+        './helpers/uni-router/index.js',
+      ],
     }),
   ]
 }

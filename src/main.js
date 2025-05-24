@@ -8,6 +8,7 @@ import store from './store'
 
 import 'uno.css'
 import '@unocss-applet/reset/uni-app/tailwind-compat.css'
+import '@unocss-applet/reset/uni-app/button-after.css'
 import './styles/index.js'
 
 export function createApp() {

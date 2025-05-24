@@ -1,6 +1,6 @@
+import presetIcons from '@unocss/preset-icons'
 import transformerDirectives from '@unocss/transformer-directives'
 import { presetShades } from '@viarotel-org/unocss-preset-shades'
-
 import { defineConfig } from 'unocss'
 
 import {
@@ -14,6 +14,7 @@ import { primaryColor } from './src/settings/index.js'
 const presets = []
 const transformers = []
 
+presets.push(presetIcons())
 presets.push(presetApplet())
 presets.push(presetRemRpx({ mode: 'rpx2rem' }))
 presets.push(presetShades(primaryColor))

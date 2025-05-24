@@ -1,11 +1,13 @@
-import { createRouter } from 'uni-mini-router'
-import pagesJsonToRoutes from 'uni-parse-pages'
-import pagesJson from '../pages.json'
+import { createRouter } from '$uni-router'
 
-const routes = pagesJsonToRoutes(pagesJson)
+import routes from 'uni-router-routes'
+
+import permission from '@/permission/index.js'
 
 const router = createRouter({
   routes: [...routes],
 })
+
+permission(router)
 
 export default router

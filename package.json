@@ -6,7 +6,9 @@
   "author": {
     "name": "viarotel",
     "email": "viarotel@qq.com",
-    "url": "https://viarotel.eu.org/"
+    "url": "https://viarotel.eu.org/",
+    "wechat": "viarotel",
+    "address": "河南省郑州市"
   },
   "scripts": {
     "lint": "eslint",
@@ -46,6 +48,7 @@
   },
   "dependencies": {
     "@alova/adapter-uniapp": "^2.0.11",
+    "@alova/mock": "^2.0.14",
     "@alova/shared": "^1.1.2",
     "@dcloudio/uni-app": "3.0.0-4060520250512001",
     "@dcloudio/uni-app-harmony": "3.0.0-4060520250512001",
@@ -63,9 +66,12 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-4060520250512001",
     "@dcloudio/uni-mp-xhs": "3.0.0-4060520250512001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4060520250512001",
+    "@uni-helper/uni-promises": "^0.2.1",
     "alova": "^3.2.11",
+    "es-toolkit": "^1.38.0",
     "pinia": "2.0.36",
     "pinia-plugin-persistedstate": "4.3.0",
+    "uniapp-router-next": "^1.2.7",
     "vue": "3.4.21",
     "vue-i18n": "9.1.9",
     "wot-design-uni": "1.9.1",
@@ -78,20 +84,25 @@
     "@dcloudio/uni-cli-shared": "3.0.0-4060520250512001",
     "@dcloudio/uni-stacktracey": "3.0.0-4060520250512001",
     "@dcloudio/vite-plugin-uni": "3.0.0-4060520250512001",
+    "@iconify-json/carbon": "^1.2.8",
     "@uni-helper/vite-plugin-uni-pages": "^0.2.28",
     "@unocss-applet/reset": "0.10.0",
     "@unocss/eslint-plugin": "66.1.0-beta.8",
+    "@unocss/preset-icons": "^66.1.2",
     "@unocss/transformer-directives": "66.1.0-beta.8",
     "@viarotel-org/unocss-preset-shades": "^0.8.2",
     "@vue/runtime-core": "3.4.21",
     "eslint": "9.27.0",
     "eslint-plugin-format": "1.0.1",
+    "postcss-nested": "^7.0.2",
+    "postcss-remove-inline-comments": "^0.0.2",
+    "postcss-scss": "^4.0.9",
     "sass": "1.59.3",
-    "uni-mini-router": "0.1.6",
     "uni-parse-pages": "0.0.1",
     "unocss": "66.1.0-beta.8",
     "unocss-applet": "0.10.0",
     "unplugin-auto-import": "19.2.0",
+    "unplugin-uni-router": "^1.2.7",
     "vite": "5.2.8"
   }
 }
