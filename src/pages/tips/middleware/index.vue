@@ -14,7 +14,7 @@ const resultInfo = ref({
     <view class="flex flex-1 flex-col items-center justify-center px-6 py-8">
       <view class="success-icon-container mb-8">
         <view class="relative">
-          <view class="h-32 w-32 flex items-center justify-center rounded-full from-green-400 to-green-600 bg-gradient-to-br shadow-lg">
+          <view class="h-32 w-32 flex items-center justify-center rounded-full bg-green-500 shadow-lg">
             <view class="i-carbon-checkmark size-16 animate-bounce text-white"></view>
           </view>
 

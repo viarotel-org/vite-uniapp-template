@@ -169,6 +169,7 @@ export default defineUniPages({
   globalStyle: {
     navigationBarTitleText: appName,
     navigationBarBackgroundColor: '#FFFFFF',
+    navigationBarTextStyle: 'black',
     backgroundColor: '#F8F8F8',
   },
 })

@@ -169,6 +169,7 @@
   "globalStyle": {
     "navigationBarTitleText": "vite-uniapp-template",
     "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
     "backgroundColor": "#F8F8F8"
   }
 }

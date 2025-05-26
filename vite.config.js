@@ -19,7 +19,8 @@ export default defineConfig(({ mode }) => {
       alias: {
         '@': path.resolve('./src'),
         '@root': path.resolve('./'),
-        '$uni-router': path.resolve('./helpers/uni-router/index.js'),
+        '$uni-router': path.resolve('./helpers/uni-router'),
+        '$unocss-preset-shades': path.resolve('./helpers/unocss-preset-shades'),
       },
     },
     css: {

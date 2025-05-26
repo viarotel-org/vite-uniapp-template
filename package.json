@@ -66,6 +66,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-4060520250512001",
     "@dcloudio/uni-mp-xhs": "3.0.0-4060520250512001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4060520250512001",
+    "@uni-helper/uni-env": "^0.1.7",
     "@uni-helper/uni-promises": "0.2.1",
     "alova": "3.2.11",
     "color": "5.0.0",

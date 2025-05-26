@@ -78,10 +78,12 @@ async function handleLogout() {
     <view
       class="relative overflow-hidden"
     >
-      <view class="absolute inset-0 from-primary-400 to-primary-600 bg-gradient-to-br"></view>
+      <view class="absolute inset-0 bg-primary-500"></view>
 
       <view class="absolute h-42 w-42 rounded-full bg-white opacity-10 -right-10 -top-10"></view>
       <view class="absolute bottom-0 right-20 h-20 w-20 rounded-full bg-white opacity-10"></view>
+
+      <view class="h-safe-top"></view>
 
       <view
         class="relative flex items-center px-6 pb-12 pt-12"

@@ -1,4 +1,6 @@
 <script setup>
+import { isMp } from '@uni-helper/uni-env'
+
 const tabModel = [
   {
     label: '实用技巧',
@@ -21,7 +23,6 @@ const tabModel = [
     ],
   },
 ]
-
 const tabIndex = ref(0)
 
 function onTabClick(index) {
@@ -32,14 +33,16 @@ const activeTabItem = computed(() => tabModel[tabIndex.value].children)
 </script>
 
 <template>
-  <view class="">
-    <view class="flex bg-white px-3 py-2">
+  <view class="h-full flex flex-col overflow-hidden">
+    <view v-if="isMp" class="h-safe-top mt-4 flex-none"></view>
+
+    <view class="flex flex-none bg-white px-3 py-2 pr-[var(--safe-right)]">
       <view v-for="(item, index) of tabModel" :key="index" class="h-10 w-0 flex flex-1 items-center justify-center rounded-lg" :class="[tabIndex === index ? 'bg-primary-50 text-primary-600 font-bold' : '']" @click="onTabClick(index)">
         {{ item.label }}
       </view>
     </view>
 
-    <view class="mx-3 mt-3 overflow-hidden rounded-xl shadow-sm">
+    <view class="mx-3 mt-3 h-0 flex-1 overflow-auto overflow-hidden rounded-xl shadow-sm">
       <view
         v-for="(item, index) of activeTabItem"
         :key="index"
@@ -48,7 +51,7 @@ const activeTabItem = computed(() => tabModel[tabIndex.value].children)
           index !== activeTabItem.length - 1 ? 'border-b border-gray-100' : '',
         ]"
         hover-class="bg-gray-50"
-        @click="$router.push(item.path)"
+        @click="$Router.push(item.path)"
       >
         <view class="w-10 flex flex-none items-center justify-center text-gray-500">
           <view class="size-6 text-primary-500" :class="item.icon"></view>

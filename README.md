@@ -73,6 +73,7 @@ pnpm dev:app-android
 # 转换过程: ~@/assets/images/logo.png -> /src/assets/images/logo.png
 VITE_ASSETS_MODE=local
 ```
+
 - **加载远程静态资源：**
 
 ```bash

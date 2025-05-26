@@ -65,6 +65,9 @@ importers:
       '@dcloudio/uni-quickapp-webview':
         specifier: 3.0.0-4060520250512001
         version: 3.0.0-4060520250512001(@nuxt/kit@3.17.3)(@vueuse/core@9.13.0(vue@3.4.21(typescript@5.8.3)))(postcss@8.5.3)(rollup@4.41.0)(vue@3.4.21(typescript@5.8.3))
+      '@uni-helper/uni-env':
+        specifier: ^0.1.7
+        version: 0.1.7
       '@uni-helper/uni-promises':
         specifier: 0.2.1
         version: 0.2.1(typescript@5.8.3)(vue@3.4.21(typescript@5.8.3))

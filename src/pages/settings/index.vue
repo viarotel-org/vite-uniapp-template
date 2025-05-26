@@ -1,6 +1,6 @@
 <script setup>
+import { updateShades } from '$unocss-preset-shades'
 import { version } from '@root/package.json'
-import { updateShades } from '@viarotel-org/unocss-preset-shades/dist/helpers.mjs'
 
 const appStore = useAppStore()
 
@@ -38,7 +38,7 @@ const autoLockOptions = {
 }
 
 const currentThemeColor = computed(() => appStore.primaryColor)
-const currentThemeText = computed(() => appStore.currentThemeInfo.value?.name || '经典蓝')
+const currentThemeText = computed(() => appStore.currentThemeInfo?.name || '默认')
 const fontSizeText = computed(() => fontSizes[settings.value.fontSize] || '中')
 const autoLockText = computed(() => autoLockOptions[settings.value.autoLock] || '5分钟')
 

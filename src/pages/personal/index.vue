@@ -80,7 +80,7 @@ function showToast(title, icon = 'success') {
 <template>
   <view class="profile-edit-page h-full flex flex-col bg-gray-50">
     <view class="header-section relative">
-      <view class="relative h-40 overflow-hidden from-primary-400 to-primary-600 bg-gradient-to-br">
+      <view class="relative h-40 overflow-hidden bg-primary-400">
         <view class="absolute h-32 w-32 rounded-full bg-white opacity-10 -right-8 -top-8"></view>
         <view class="absolute bottom-4 right-16 h-16 w-16 rounded-full bg-white opacity-10"></view>
       </view>
