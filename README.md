@@ -1,368 +1,219 @@
-# vite-uniapp-template
+# Vite Uniapp Template
 
-🚀 基于 vitejs 驱动的 uniapp 最佳实践集成模板 [查看演示](https://vite-uniapp-template.netlify.app/)
+🚀 **一款由 Vite 驱动的 uniapp 最佳实践集成模板。** [查看演示](https://vite-uniapp-template.netlify.app/)
 
-## 特点
+该模板为您的 uniapp 项目提供了一个强大的起点，集成了现代化工具和精心设计的约定，以简化开发流程。
 
-- 💪 Assets: 提供了全局静态资源加载工具，无感切换加载本地静态资源/远程静态资源，解决小程序环境下包大小限制问题。
-- 📦 SubPackages: 符合心智模型的分包风格，合理的 pages 目录结构，与分包配置轻松实现功能分包。
-- 🛣 Router: 使用 [uniapp-router-next](https://gitee.com/wen-jason/uni-router/tree/main/packages/uniapp-router-next)，并通过优化封装，API 同 VueRouter 类似，扩展了拦截器、中间件、路由别名功能。
-- 📊 Store: 使用 [Pinia](https://pinia.vuejs.org/zh/) 强力驱动，轻松实现应用状态管理。
-- ⚡️ Request: 请求库使用 [uni-network](https://github.com/uni-helper/uni-network) 完全基于 uniapp API 编写的高性能请求库， API 同 axios。
-- 👇 Z-paging: 内置了高性能且易于使用的业务常用下拉分页组件模块，轻松实现下拉刷新、上拉加载等功能。
-- 💅 Unocss: 使用原子化 CSS 引擎，小程序环境下依然完美支持原子化的 class 命名书写规则。
-- 🎨 UI-libs: 预设了 [uv-ui](https://www.uvui.cn/) 和 [uni-ui](https://uniapp.dcloud.net.cn/component/uniui/uni-ui.html) 两者相辅相成，轻松满足绝大多数业务场景，并支持主题色定制功能。
-- 📝 NoTs: 只使用 JavaScript，在常规业务场景或人员水平差距过大情况下，TypeScript 并不会提升开发体验。
+## 核心特性
 
-## 使用方法
+- 💪 **优化的资源管理**: 无缝切换本地与远程静态资源。这对于克服小程序包大小限制至关重要。
+- 📦 **智能分包**: 清晰直观的 `pages` 目录结构，结合便捷的配置，轻松实现基于功能的分包。
+- 🛣 **类 VueRouter 路由**: 使用 `uniapp-router-next` 并进行了增强，如拦截器、中间件和路由别名，提供熟悉的 API 体验。
+- 📊 **Pinia 状态管理**: 借助 Pinia 实现强大且直观的应用状态管理。
+- ⚡️ **现代化请求工作流**: 采用 Alova，一个下一代请求库，简化数据获取流程。
+- 👇 **内置 Z-Paging**: 集成了高性能、易用的下拉分页组件，轻松实现下拉刷新和上拉加载更多等功能。
+- 💅 **Unocss 原子化 CSS**: 使用原子化 CSS 类名书写规范，即使在小程序环境下也完美支持。
+- 🎨 **轻量级 UI 与主题化**: 集成 `wot-design-uni`，提供更轻量的 UI，满足绝大多数业务场景，并支持主题定制。
+- 📝 **专注 JavaScript**: 使用 JavaScript 构建，在常规业务场景或团队技能水平差异较大时，确保更平滑的开发体验。
 
-### 克隆项目
+## 快速上手
+
+### 1. 克隆项目
 
 ```shell
-git clone https://github.com/viarotel/vite-uniapp-template.git
+git clone [https://github.com/viarotel/vite-uniapp-template.git](https://github.com/viarotel/vite-uniapp-template.git)
+cd vite-uniapp-template
 ```
 
-### 安装项目依赖
+### 2\. 安装依赖
 
-> 打开并进入克隆的项目根目录下执行以下命令
-> 以下命令推荐 使用 pnpm 进行操作 不过你依然可以使用 npm/yarn
+推荐使用 `pnpm`。当然，也可以使用 `npm` 或 `yarn`。
 
 ```shell
 pnpm install
 ```
 
-### 运行项目
+> **注意：** 如果遇到安装问题，尝试删除 `pnpm-lock.yaml`、`yarn.lock` 或 `package-lock.json` 文件后重新安装依赖。
 
-#### 任意编辑器直接运行本项目
+### 3\. 运行项目
+
+#### 使用代码编辑器 (例如 VS Code)
+
+在项目根目录下执行以下命令：
 
 ```shell
-# h5端
+# H5 平台
 pnpm dev:h5
-# 微信小程序端
+
+# 微信小程序
 pnpm dev:mp-weixin
-# 安卓端
+
+# Android App
 pnpm dev:app-android
-#... 更多端请参阅 package.json/script
+
+# 更多平台请参阅 package.json 中的 `scripts` 部分。
 ```
 
-#### 在 HBuilder 中运行本项目
+#### 使用 HBuilderX
 
-1. 将项目拖动到 HBuilder 中
-2. 使用 pnpm install 安装好依赖
-3. 点击项目 /src 目录中的任意文件
-4. 点击编辑器上方点击运行选择需要运行的环境
+- 将项目文件夹拖拽到 HBuilderX 中。
+- 确保已安装依赖 (如果尚未安装，请在项目根目录运行 `pnpm install`)。
+- 点击项目 `/src` 目录下的任意文件。
+- 在 HBuilderX 菜单中，导航至“运行”并选择您的目标运行环境。
 
-### 功能示例
+## 功能示例
 
-#### 静态资源处理
+### 静态资源处理
 
-```js
-// 使用远程静态资源
-// import { useAssets } from './utils/assets/remote'
+通过 `.env` 文件配置静态资源的加载方式：
 
-// 使用本地静态资源
-import { useAssets } from './utils/assets/local'
+- **加载本地静态资源：**
+  ```bash
+  VITE_ASSETS_MODE=local
+  ```
+- **加载远程静态资源：**
+  ```bash
+  VITE_ASSETS_MODE=remote
+  ```
 
-// 全局挂载
-app.config.globalProperties.$assets = useAssets
+### 全局主题定制
 
-// template中使用
-//  <img :src="$assets('/temp.png')" />
-```
-
-#### 全局主题色定制
-
-> 由 [unocss-preset-shades](https://github.com/viarotel-org/packages/tree/main/packages/unocss-preset-shades#readme) 提供支持
+由 `unocss-preset-shades` 提供支持。轻松应用您的主题颜色：
 
 ```html
-<!-- 设置文本色为主题色色调为 500 -->
 <div class="text-primary-500"></div>
-<!-- 设置背景色为主题色色调为 500 -->
+
 <div class="bg-primary-500"></div>
-<!-- 设置边框色为主题色色调为 500 -->
+
 <div class="border border-primary-500"></div>
-<!-- 更多使用方式请参阅 https://tailwindcss.com/docs -->
 ```
 
-#### 请求后端数据
+### 页面导航
 
-> 详细使用请参阅 [uni-network](https://github.com/uni-helper/uni-network)
+与 Vue Router 类似，您可以通过编程方式进行导航：
 
-```js
-import request from '@/utils/request/index.js'
+- **在模板中：**
 
-// GET
-request.get(
-  '/mock',
-  { id: 'mock-id' },
-  {
-    /* More option */
-  }
-)
-
-// POST
-request.post(
-  '/mock',
-  { id: 'mock-id' },
-  {
-    /* More option */
-  }
-)
-
-// Upload
-request.upload({
-  url: '/mock',
-  dataType: 'json',
-  headers: {
-    'content-type': 'multipart/form-data',
-  },
-})
-
-// Common
-request({
-  method: 'post',
-  url: '/mock',
-  data: {
-    id: 'mock-id',
-  },
-  headers: {
-    'content-type': 'application/json',
-  },
-})
-
-// 扩展方法
-
-// 继承于 request.post，请求头默认添加 'Content-Type': 'multipart/form-data'
-request.form(
-  '/mock',
-  { id: 'mock-id' },
-  {
-    /* More option */
-  }
-)
-
-// 继承于 request.post，请求头默认添加 'Content-Type': 'application/x-www-form-urlencoded'
-request.query(
-  '/mock',
-  { id: 'mock-id' },
-  {
-    /* More option */
-  }
-)
-```
-
-#### 路由间功能跳转
-
-```js
-// 跳转页面
-const methods = {
-  routerDemo() {
-    this.$Router.push({
-      path: '/login',
-      query: {
-        id: 'id',
-      },
-    })
-    // 获取页面参数
-    this.$Route.query.id
-
-    // 关闭当前页面跳转到某个页面
-    this.$Router.replace('/login')
-    // 关闭所有打开的页面跳转到某个页面
-    this.$Router.replaceAll('/login')
-  },
-}
-
-// 为路由设置别名
-// pages.config.js 中
-const aliasConfig = {
-  path: 'pages/login/index',
-  // 通过添加 aliasPath 字段
-  aliasPath: '/login',
-}
-```
-
-#### 使用路由守卫
-
-> 位于 router/guards 中
-
-```js
-import store from '@/store/index.js'
-
-const homePath = '/pages/index/index'
-const loginPath = '/pages/login/index'
-
-const whiteList = [loginPath]
-
-export default (router) => {
-  const userStore = store.useUserStore()
-
-  const loginRoute = to => ({
-    path: loginPath,
-    navType: 'reLaunch',
-    force: true,
+  ```javascript
+  // 跳转到登录页并携带查询参数
+  this.$Router.push({
+    path: '/login',
     query: {
-      redirect: {
-        path: to.path,
-        query: to.query,
-      },
+      id: 'someId',
     },
   })
 
-  router.beforeEach((to, from, next) => {
-    // console.log('permission.beforeEach.to', to)
-    // console.log('permission.beforeEach.from', from)
+  // 获取路由参数
+  const userId = this.$Route.query.id
 
-    const token = userStore.token
-    const userId = userStore.userId
+  // 替换当前页面
+  this.$Router.replace('/dashboard')
 
-    console.log('token', token)
-    console.log('userId', userId)
+  // 关闭所有页面并跳转
+  this.$Router.replaceAll('/home')
+  ```
 
-    if (token) {
-      if (to.path === loginPath) {
-        next(homePath)
-      }
-      else if (userId) {
-        next()
-      }
-      else {
-        userStore
-          .getUserInfo()
-          .then(() => {
-            next()
-          })
-          .catch((error) => {
-            console.warn(error)
-            userStore.logout({ silenced: true })
-            next(loginRoute(to))
-          })
-      }
-    }
-    else if (whiteList.includes(to.path)) {
-      next()
-    }
-    else {
-      next(loginRoute(to))
-    }
-  })
+- **在脚本中 (支持自动导入)：**
 
-  router.afterEach(() => {})
-}
+  ```javascript
+  // 已预置自动导入该部分可省略
+  // import { useRoute, useRouter } from '$uni-router'
+
+  const router = useRouter()
+  const route = useRoute()
+
+  router.push('/settings')
+  console.log(route.query)
+  ```
+
+- **路由别名 (`pages.config.js`)：**
+
+  ```javascript
+  const aliasConfig = {
+    path: 'pages/login/index', // 实际路径
+    aliasPath: '/login', // 别名
+  }
+  ```
+
+### 路由守卫
+
+实现导航守卫以处理权限验证等逻辑：
+
+```javascript
+// 示例: src/permission.js
+router.beforeEach((to, from, next) => {
+  // 在此编写你的逻辑 (例如：检查用户是否已认证)
+  // if (to.path === '/profile' && !isAuthenticated) {
+  //   next('/login');
+  // } else {
+  //   next();
+  // }
+  next() // 默认继续导航
+})
+
+router.afterEach((to, from) => {
+  // 导航后逻辑
+})
 ```
 
-#### 使用基于路由的中间件
+> 具体实现请参阅 `src/permission` 目录。
 
-> pages.config.js 中
+### 路由中间件
 
-```js
-// 使用名为 realname 的中间件
-const pageConfig = {
-  path: '/pages/user/index',
-  aliasPath: '/user',
-  meta: {
-    middleware: ['realname'],
-  },
-}
-```
+对特定路由应用中间件以实现精细化控制。
 
-定义中间件
+- **使用中间件 (`pages.config.js`)：**
 
-> router/guards/index.js 中
+  ```javascript
+  // 对用户页面应用 'test' 中间件
+  const pageConfig = {
+    path: '/pages/user/index',
+    aliasPath: '/user',
+    meta: {
+      middleware: ['test'],
+    },
+  }
+  ```
 
-```js
-import { defineMiddleware } from '$uni-router/middleware'
-// 使用 defineMiddleware 定义并包装为中间件
-import realname from './realname/index.js'
+- **定义中间件：**
+  中间件代码结构与路由守卫基本一致，但仅拦截在其声明的路由中配置的中间件。
 
-export default (app, router) => {
-  // 使用 defineMiddleware 定义了路由中间件
-  defineMiddleware(realname, { router, app })
-}
-```
+  ```javascript
+  // 示例: src/middleware/index.js (或类似路径)
+  import { defineMiddleware } from '$uni-router' // 或你配置的路径别名
+  import testMiddlewareLogic from './test/index.js' // 你的实际中间件逻辑
 
-编写路由中间件代码
+  export default (app, router) => {
+    defineMiddleware('test', testMiddlewareLogic, { router, app })
+  }
+  ```
 
-> router/guards/realname/index.js 中
+## 核心依赖
 
-```js
-import store from '@/store/index.js'
-import { useDialog, useToast } from '@/utils/modals'
+此模板集成了以下关键库：
 
-export default (router) => {
-  const userStore = store.useUserStore()
+- **Vite**: 下一代前端构建工具。
+- **Uniapp**: 用于构建跨平台应用的框架。
+- **Pinia**: Vue 的直观状态管理库。
+- **Wot Design Uni**: 轻量级 UI 组件库。
+- **Alova**: 轻量级的请求策略库。 (根据特性描述，替换了 `@uni-helper/uni-network`)
+- **Uniapp Router Next**: 类 VueRouter 的 Uniapp 路由库。
+- **Z-Paging**: 高性能分页组件。
+- **UnoCSS**: 即时按需原子化 CSS 引擎 (包括 `unocss-applet`)。
 
-  router.beforeEach((to, from, next) => {
-    console.log('realname.beforeEach.to', to)
-    console.log('realname.beforeEach.from', from)
+## 常见问题
 
-    const realStatus = userStore.userInfo.realStatus
+- **依赖安装/启动失败**:
+  如果遇到问题，尝试删除 `pnpm-lock.yaml`、`yarn.lock` 或 `package-lock.json` 文件，然后重新运行安装命令 (例如 `pnpm install`)。
 
-    switch (realStatus) {
-      case 3:
-        next()
-        break
-      case 2:
-        useToast('实名审核中, 请稍后再试').then(() => {
-          next(false)
-        })
-        break
-      case 4:
-        useDialog(`${userStore.userInfo.auditResult || '提交的实名信息不符'}`, {
-          title: '实名失败',
-          showCancelButton: true,
-          confirmText: '重新认证',
-        })
-          .then(() => {
-            next({ path: '/pages/realname/index' })
-          })
-          .catch(() => {
-            next(false)
-          })
-        break
-      default:
-        useDialog('请先进行实名认证', { showCancelButton: true })
-          .then(() => {
-            next({ path: '/pages/realname/index' })
-          })
-          .catch(() => {
-            next(false)
-          })
-        break
-    }
-  })
-  // router.afterEach(() => {})
-}
-```
+## 获取支持
 
-### 主要使用的包
+这是一个依靠热爱驱动的开源项目，因此支持会根据时间情况提供，更新节奏可能不固定。
 
-- vitejs
-- uniapp
-- pinia
-- uview-plus
-- uni-ui
-- @uni-helper/uni-network
-- uniapp-router-next
-- z-paging
-- unocss
-- unocss-applet
+- **项目问题与反馈**: [在 GitHub 上提交 Issue](https://www.google.com/search?q=https://github.com/viarotel/vite-uniapp-template/issues) _(已修正链接)_
+- **联系方式**: viarotel@qq.com
 
-### 常见问题
-
-#### 无法正常安装依赖/无法启动
-
-删除 pnpm-lock.yaml / yarn.lock / package-lock.json 文件后重新安装依赖
-
-## 获得帮助
-
-因为是开源项目 全靠爱发电 所以支持有限 更新节奏不固定
-
-- [常见问题](https://escrcpy.viarotel.eu.org/zhHans/help/escrcpy)
-- [反馈问题](https://github.com/viarotel-org/escrcpy/issues)
-- [联系邮箱](viarotel@qq.com)
-
-## 捐赠项目
+## 支持本项目
 
 如果该项目帮到你的话，可以请我喝杯咖啡，让我更有精神完善该项目 😛
 
