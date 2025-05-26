@@ -1,12 +1,12 @@
 import presetIcons from '@unocss/preset-icons'
 import transformerDirectives from '@unocss/transformer-directives'
-import { presetShades } from './helpers/unocss-preset-shades/index.js'
 import { defineConfig } from 'unocss'
-
 import {
   presetApplet,
   presetRemRpx,
 } from 'unocss-applet'
+
+import { presetShades } from './helpers/unocss-preset-shades/index.js'
 
 import { primaryColor } from './src/settings/index.js'
 

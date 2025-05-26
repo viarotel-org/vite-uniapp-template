@@ -2,7 +2,6 @@
 import content from '/README.md?raw'
 
 const appStore = useAppStore()
-
 </script>
 
 <template>

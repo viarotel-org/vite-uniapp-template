@@ -84,7 +84,7 @@ function selectThemeColor() {
     itemList: items,
     success: (res) => {
       const colorKeys = Object.keys(appStore.themeModel)
-      
+
       appStore.currentTheme = colorKeys[res.tapIndex]
 
       // #ifndef MP
@@ -579,7 +579,7 @@ loadSettings()
 
     <view class="mt-4">
       <button
-        class="w-full py-2 flex items-center justify-center rounded-lg bg-primary-400 text-white font-medium transition-colors duration-200 active:bg-primary-600"
+        class="w-full flex items-center justify-center rounded-lg bg-primary-400 py-2 text-white font-medium transition-colors duration-200 active:bg-primary-600"
         hover-class="bg-primary-600"
         @click="resetSettings"
       >

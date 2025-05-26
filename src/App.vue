@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@unocss-applet/reset/uni-app/button-after.css";
-@import "@unocss-applet/reset/uni-app/tailwind-compat.css";
-@import "./styles/css/index.css";
+@import '@unocss-applet/reset/uni-app/button-after.css';
+@import '@unocss-applet/reset/uni-app/tailwind-compat.css';
+@import './styles/css/index.css';
 </style>

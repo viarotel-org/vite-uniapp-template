@@ -1,4 +1,5 @@
-:root, page {
+:root,
+page {
   svg {
     @apply inline;
   }

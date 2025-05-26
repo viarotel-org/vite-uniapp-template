@@ -7,7 +7,6 @@ const resultInfo = ref({
   shareable: false,
   footerTip: '',
 })
-
 </script>
 
 <template>

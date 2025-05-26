@@ -78,7 +78,7 @@ function onProjectClick() {
     </view>
 
     <view class="mt-18 px-4">
-      <button class="py-2 bg-primary-500 text-gray-50" @click="onLoginClick">
+      <button class="bg-primary-500 py-2 text-gray-50" @click="onLoginClick">
         手机号快捷登录
       </button>
 
