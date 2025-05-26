@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute()
 
-const webviewProps = computed(() => route.query)
+const webViewProps = computed(() => route.query)
 
 uni.showLoading({
   title: '加载中',
@@ -16,5 +16,5 @@ function hideLoading() {
 </script>
 
 <template>
-  <web-view v-bind="webviewProps" @load="hideLoading" @error="hideLoading"></web-view>
+  <web-view :src="webViewProps.src" @load="hideLoading" @error="hideLoading"></web-view>
 </template>

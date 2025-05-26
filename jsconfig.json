@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@root": ["*"],
+      "$uni-router": ["helpers/uni-router/index.js"]
     }
   },
   "exclude": ["node_modules", "dist", "dist-electron", "dist-release"],

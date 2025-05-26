@@ -1,10 +1,12 @@
 <script setup>
-import { primaryColor } from '@/settings/index.js'
 import content from '/README.md?raw'
+
+const appStore = useAppStore()
+
 </script>
 
 <template>
   <view class="h-full overflow-auto">
-    <zero-markdown-view :markdown="content" :theme-color="primaryColor" />
+    <zero-markdown-view :key="appStore.primaryColor" :markdown="content" :theme-color="appStore.primaryColor" />
   </view>
 </template>

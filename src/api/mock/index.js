@@ -1,17 +1,19 @@
 import { createAlovaMockAdapter, defineMock } from '@alova/mock'
 import adapterFetch from 'alova/fetch'
+import avatarUrl from '~@/assets/images/avatar.gif'
 import { extraInfo } from '@/settings/index.js'
 
-function mockRequestAdapter () {
+function mockRequestAdapter() {
   const userMock = defineMock({
     '/user/info': {
       data: {
         ...extraInfo,
         userId: 1,
         username: extraInfo.name,
+        avatar: avatarUrl,
       },
-      code: 200
-    }
+      code: 200,
+    },
   })
 
   return createAlovaMockAdapter([userMock], {
@@ -19,11 +21,11 @@ function mockRequestAdapter () {
     enable: true,
     delay: 1000,
     mockRequestLogger: true,
-    onMockResponse: async response => {
+    onMockResponse: async (response) => {
       return {
-        response: response.body
+        response: response.body,
       }
-    }
+    },
   })
 }
 

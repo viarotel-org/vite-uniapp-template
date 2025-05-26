@@ -1,25 +1,24 @@
 <script setup>
-
 const tabModel = [
   {
-    label:'业务场景',
+    label: '实用技巧',
     children: [
       {
-        icon: 'i-carbon-customer-service',
-        text: '实名认证',
-        path: '/pages/realname/index',
+        icon: 'i-carbon-router',
+        text: '路由中间件',
+        path: '/pages/tips/middleware/index',
       },
-    ]
+    ],
   },
   {
-    label:'实用技巧',
+    label: '业务模板',
     children: [
       {
-        icon: 'i-carbon-customer-service',
-        text: '技巧-1',
-        path: '/pages/contact/index',
+        icon: 'i-carbon-list',
+        text: '通用列表',
+        path: '/pages/template/paging/index',
       },
-    ]
+    ],
   },
 ]
 
@@ -29,13 +28,13 @@ function onTabClick(index) {
   tabIndex.value = index
 }
 
-const activeTabItem = computed(()=> tabModel[tabIndex.value].children)
+const activeTabItem = computed(() => tabModel[tabIndex.value].children)
 </script>
 
 <template>
   <view class="">
     <view class="flex bg-white px-3 py-2">
-      <view v-for="(item,index) of tabModel" :key="index" class="flex-1 w-0 flex items-center justify-center h-10 rounded-lg" :class="[tabIndex === index ? 'bg-primary-50 text-primary-600 font-bold' : '']" @click="onTabClick(index)">
+      <view v-for="(item, index) of tabModel" :key="index" class="h-10 w-0 flex flex-1 items-center justify-center rounded-lg" :class="[tabIndex === index ? 'bg-primary-50 text-primary-600 font-bold' : '']" @click="onTabClick(index)">
         {{ item.label }}
       </view>
     </view>
@@ -54,7 +53,7 @@ const activeTabItem = computed(()=> tabModel[tabIndex.value].children)
         <view class="w-10 flex flex-none items-center justify-center text-gray-500">
           <view class="size-6 text-primary-500" :class="item.icon"></view>
         </view>
-  
+
         <view class="flex-1 text-gray-700 font-medium">
           {{ item.text }}
         </view>

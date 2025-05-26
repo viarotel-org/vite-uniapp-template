@@ -9,7 +9,7 @@
   "pages": [
     {
       "path": "pages/index/index",
-      "aliasPath": "/",
+      "aliasPath": "/index",
       "name": "index",
       "style": {
         "navigationStyle": "custom",
@@ -47,28 +47,68 @@
   ],
   "subPackages": [
     {
-      "root": "pages/webview",
+      "root": "pages/common",
       "pages": [
         {
-          "path": "index",
-          "aliasPath": "/webview",
-          "name": "webview",
+          "path": "web-view/index",
+          "aliasPath": "/web-view",
+          "name": "web-view",
           "style": {
-            "navigationBarTitleText": "webview",
+            "navigationBarTitleText": "web-view",
             "transparentTitle": "auto"
+          }
+        },
+        {
+          "path": "rich-view/index",
+          "aliasPath": "/rich-view",
+          "name": "rich-view",
+          "style": {
+            "navigationBarTitleText": "rich-view"
           }
         }
       ]
     },
     {
-      "root": "pages/parse",
+      "root": "pages/tips",
+      "pages": [
+        {
+          "path": "middleware/index",
+          "aliasPath": "/tips-middleware",
+          "name": "tips-middleware",
+          "meta": {
+            "middleware": [
+              "test"
+            ]
+          },
+          "style": {
+            "navigationBarTitleText": "中间件"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/template",
+      "pages": [
+        {
+          "path": "paging/index",
+          "aliasPath": "/template-paging",
+          "name": "template-paging",
+          "style": {
+            "navigationBarTitleText": "通用列表"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/personal",
       "pages": [
         {
           "path": "index",
-          "aliasPath": "/parse",
-          "name": "parse",
+          "aliasPath": "/personal",
+          "name": "personal",
           "style": {
-            "navigationBarTitleText": "parse"
+            "navigationBarTitleText": "个人资料",
+            "transparentTitle": "auto"
           }
         }
       ]

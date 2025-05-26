@@ -1,5 +1,5 @@
 <script setup>
-import wechatImage from '~@assets/images/contact/image-wechat.png'
+import wechatImage from '~@assets/images/contact/image-wechat.png?url'
 import { extraInfo } from '@/settings/index.js'
 
 // 复制文本到剪贴板

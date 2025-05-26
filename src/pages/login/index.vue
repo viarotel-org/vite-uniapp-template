@@ -8,10 +8,8 @@ const userStore = useUserStore()
 
 const router = useRouter()
 
-console.log('router', router)
-
-const webview = useWebview()
-const parse = useParse()
+const webView = useWebView()
+const richView = useRichView()
 
 const agreed = ref(false)
 
@@ -39,7 +37,7 @@ async function onLoginClick() {
 }
 
 function onAgreementClick() {
-  parse.open({
+  richView.open({
     title: '产品服务协议',
     content: `
       <div class="">
@@ -64,7 +62,7 @@ function onAgreementClick() {
 }
 
 function onProjectClick() {
-  webview.open({
+  webView.open({
     src: extraInfo.url,
   })
 }
@@ -80,7 +78,7 @@ function onProjectClick() {
     </view>
 
     <view class="mt-18 px-4">
-      <button class="bg-primary-500 text-gray-50" @click="onLoginClick">
+      <button class="py-2 bg-primary-500 text-gray-50" @click="onLoginClick">
         手机号快捷登录
       </button>
 

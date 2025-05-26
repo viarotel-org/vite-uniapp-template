@@ -2,15 +2,15 @@ export default function login(router) {
   const homePath = '/pages/index/index'
   const loginPath = '/pages/login/index'
 
-  const whiteList = [loginPath, '/pages/parse/index', '/pages/webview/index']
+  const whiteList = [loginPath, '/pages/common/rich-view/index', '/pages/common/web-view/index']
 
   router.beforeEach((to, from, next) => {
     const userStore = useUserStore()
     const token = userStore.token
     const userId = userStore.userId
 
-    // console.log('token', token)
-    // console.log('userId', userId)
+    console.log('token', token)
+    console.log('userId', userId)
 
     if (token) {
       if (to.path === loginPath) {

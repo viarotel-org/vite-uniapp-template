@@ -1,9 +1,9 @@
-export function useWebview() {
+export function useWebView() {
   const router = useRouter()
 
   function open(props) {
     router.push({
-      path: '/pages/webview/index',
+      path: '/web-view',
       query: props,
     })
   }
@@ -13,4 +13,4 @@ export function useWebview() {
   }
 }
 
-export default useWebview
+export default useWebView

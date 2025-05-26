@@ -116,6 +116,11 @@
     "useUserStore": true,
     "useParseStore": true,
     "createRouter": true,
-    "addRouterMethodAlias": true
+    "addRouterMethodAlias": true,
+    "defineMiddleware": true,
+    "useRichViewStore": true,
+    "useRichView": true,
+    "useWebView": true,
+    "useAppStore": true
   }
 }

@@ -1,0 +1,9 @@
+:root, page {
+  svg {
+    @apply inline;
+  }
+
+  button {
+    @apply leading-inherit;
+  }
+}

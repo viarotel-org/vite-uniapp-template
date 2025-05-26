@@ -12,9 +12,13 @@ export default defineConfig(({ mode }) => {
   const env = loadMapEnv(mode)
 
   return {
+    server: {
+      port: 1045,
+    },
     resolve: {
       alias: {
         '@': path.resolve('./src'),
+        '@root': path.resolve('./'),
         '$uni-router': path.resolve('./helpers/uni-router/index.js'),
       },
     },

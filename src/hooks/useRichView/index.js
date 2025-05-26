@@ -1,14 +1,14 @@
 import { omit } from 'es-toolkit'
 
-export function useParse() {
+export function useRichView() {
   const router = useRouter()
-  const parseStore = useParseStore()
+  const richViewStore = useRichViewStore()
 
   function open(props) {
-    parseStore.content = props.content
+    richViewStore.content = props.content
 
     router.push({
-      path: '/pages/parse/index',
+      path: '/rich-view',
       query: omit(props, ['content']),
     })
   }
@@ -18,4 +18,4 @@ export function useParse() {
   }
 }
 
-export default useParse
+export default useRichView

@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 
-export const useParseStore = defineStore(
-  'parse',
+export const useRichViewStore = defineStore(
+  'rich-view',
   () => {
     const content = ref('')
 
