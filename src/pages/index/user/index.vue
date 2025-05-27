@@ -108,7 +108,7 @@ async function handleLogout() {
           </view>
         </view>
 
-        <view class="flex items-center text-white/70">
+        <view v-if="isLogin" class="flex items-center text-white/70">
           <view>编辑个人资料</view>
           <view class="i-carbon-chevron-right size-6"></view>
         </view>

@@ -1,5 +1,4 @@
 <script setup>
-import { updateShades } from '$unocss-preset-shades'
 import { version } from '@root/package.json'
 
 const appStore = useAppStore()
@@ -86,10 +85,6 @@ function selectThemeColor() {
       const colorKeys = Object.keys(appStore.themeModel)
 
       appStore.currentTheme = colorKeys[res.tapIndex]
-
-      // #ifndef MP
-      updateShades(appStore.primaryColor)
-      // #endif
 
       showToast('主题已更换')
     },
@@ -220,6 +215,10 @@ loadSettings()
 
 <template>
   <view class="p-4">
+    <view class="pb-4 text-center text-gray-500">
+      以下部分内容仅为组件演示，暂无实际功能。
+    </view>
+
     <view class="settings-card">
       <view class="card-header">
         <view class="i-carbon-paint-brush text-lg text-primary-500"></view>

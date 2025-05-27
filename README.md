@@ -6,15 +6,15 @@
 
 ## 核心特性
 
-- 💪 **优化的资源管理**: 无缝切换本地与远程静态资源。这对于克服小程序包大小限制至关重要。
-- 📦 **智能分包**: 清晰直观的 `pages` 目录结构，结合便捷的配置，轻松实现基于功能的分包。
-- 🛣 **类 VueRouter 路由**: 使用 [uniapp-router-next](https://www.npmjs.com/package/uniapp-router-next) 并进行了增强，如拦截器、中间件和路由别名，提供熟悉的 API 体验。
-- 📊 **Pinia 状态管理**: 借助 [Pinia](https://pinia.vuejs.org/) 实现强大且直观的应用状态管理。
-- ⚡️ **现代化请求工作流**: 采用 [Alova](https://alova.js.org/)，一个下一代请求库，简化数据获取流程。
-- 👇 **内置 Z-Paging**: 集成了高性能、易用的下拉分页组件，轻松实现下拉刷新和上拉加载更多等功能。
-- 💅 **Unocss 原子化 CSS**: 使用原子化 CSS 类名书写规范，即使在小程序环境下也完美支持。
-- 🎨 **轻量级 UI 与主题化**: 集成 [wot-design-uni](https://netlify.wot-design-uni.cn/)，提供更轻量的 UI，满足绝大多数业务场景，并支持主题定制。
-- 📝 **专注 JavaScript**: 使用 JavaScript 构建，在常规业务场景或团队技能水平差异较大时，确保更平滑的开发体验。
+- 💪 优化的资源管理: 无缝切换本地与远程静态资源。这对于克服小程序包大小限制至关重要。
+- 📦 智能分包: 清晰直观的 pages 目录结构，结合便捷的配置，轻松实现基于功能的分包。
+- 🛣 类 VueRouter 路由: 使用 [uniapp-router-next](https://www.npmjs.com/package/uniapp-router-next) 并进行了增强，如拦截器、中间件和路由别名，提供熟悉的 API 体验。
+- 📊 Pinia 状态管理: 借助 [Pinia](https://pinia.vuejs.org/) 实现强大且直观的应用状态管理。
+- ⚡️ 现代化请求工作流: 采用 [Alova](https://alova.js.org/)，一个下一代请求库，简化数据获取流程。
+- 👇 内置 Z-Paging: 集成了高性能、易用的下拉分页组件，轻松实现下拉刷新和上拉加载更多等功能。
+- 💅 Unocss 原子化 CSS: 使用原子化 CSS 类名书写规范，即使在小程序环境下也完美支持。
+- 🎨 轻量级 UI 与主题化: 集成 [wot-design-uni](https://netlify.wot-design-uni.cn/)，提供更轻量的 UI，满足绝大多数业务场景，并支持主题定制。
+- 📝 专注 JavaScript: 使用 JavaScript 构建，在常规业务场景或团队技能水平差异较大时，确保更平滑的开发体验。
 
 ## 快速上手
 
