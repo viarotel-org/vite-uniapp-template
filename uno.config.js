@@ -3,18 +3,18 @@ import presetIcons from '@unocss/preset-icons'
 import transformerDirectives from '@unocss/transformer-directives'
 import { defineConfig } from 'unocss'
 
+import { isMp } from '@uni-helper/uni-env'
+
 import { presetShades } from './helpers/unocss-preset-shades/index.js'
 
 import { primaryColor } from './src/settings/index.js'
-
-const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp-') ?? false
 
 const presets = []
 const transformers = []
 
 presets.push(presetIcons())
 presets.push(presetUni({ attributify: false }))
-presets.push(presetShades(primaryColor, { root: isApplet ? 'page' : ':root' }))
+presets.push(presetShades(primaryColor, { root: isMp ? 'page' : ':root' }))
 
 transformers.push(transformerDirectives())
 

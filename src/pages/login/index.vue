@@ -120,13 +120,13 @@ function onProjectClick() {
 
         <view class="space-y-6">
           <button
-            class="relative w-full overflow-hidden rounded-2xl from-primary-500 to-primary-400 bg-gradient-to-r px-6 py-4 text-white font-semibold shadow-lg transition-all duration-200 active:scale-98 disabled:cursor-not-allowed disabled:opacity-70"
+            class="relative w-full overflow-hidden rounded-2xl from-primary-500 to-primary-400 bg-gradient-to-r px-6 py-4 !text-white font-semibold shadow-lg transition-all duration-200 active:scale-98 disabled:cursor-not-allowed disabled:opacity-70"
             :class="{ 'shadow-xl': !isLoading }"
             :disabled="isLoading"
             @click="onLoginClick"
           >
             <view class="flex items-center justify-center space-x-3">
-              <view v-if="isLoading" class="i-carbon-loading h-5 w-5 animate-spin"></view>
+              <view v-if="isLoading" class="i-carbon-fade h-5 w-5 animate-spin bg-white"></view>
               <view v-else class="i-carbon-phone h-5 w-5"></view>
               <text>{{ isLoading ? '登录中...' : '手机号快捷登录' }}</text>
             </view>
