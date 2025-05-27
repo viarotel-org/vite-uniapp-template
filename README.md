@@ -21,7 +21,7 @@
 ### 1. 克隆项目
 
 ```shell
-git clone [https://github.com/viarotel/vite-uniapp-template.git](https://github.com/viarotel/vite-uniapp-template.git)
+git clone https://github.com/viarotel-org/vite-uniapp-template.git
 cd vite-uniapp-template
 ```
 
@@ -145,7 +145,7 @@ VITE_ASSETS_MODE=remote
 实现导航守卫以处理权限验证等逻辑：
 
 ```javascript
-// 示例: src/permission.js
+// 示例: src/permission/login/index.js
 router.beforeEach((to, from, next) => {
   // 在此编写你的逻辑 (例如：检查用户是否已认证)
   // if (to.path === '/profile' && !isAuthenticated) {
@@ -184,32 +184,21 @@ router.afterEach((to, from) => {
   中间件代码结构与路由守卫基本一致，但仅拦截在其声明的路由中配置的中间件。
 
   ```javascript
-  // 示例: src/middleware/index.js (或类似路径)
-  import { defineMiddleware } from '$uni-router' // 或你配置的路径别名
-  import testMiddlewareLogic from './test/index.js' // 你的实际中间件逻辑
+  // 示例: src/permission/test/index.js
+  import { defineMiddleware } from '$uni-router'
+  import testMiddlewareLogic from './test/index.js'
 
   export default (app, router) => {
     defineMiddleware('test', testMiddlewareLogic, { router, app })
   }
   ```
 
-## 核心依赖
-
-此模板集成了以下关键库：
-
-- **Vite**: 下一代前端构建工具。
-- **Uniapp**: 用于构建跨平台应用的框架。
-- **Pinia**: Vue 的直观状态管理库。
-- **Wot Design Uni**: 轻量级 UI 组件库。
-- **Alova**: 轻量级的请求策略库。 (根据特性描述，替换了 `@uni-helper/uni-network`)
-- **Uniapp Router Next**: 类 VueRouter 的 Uniapp 路由库。
-- **Z-Paging**: 高性能分页组件。
-- **UnoCSS**: 即时按需原子化 CSS 引擎 (包括 `unocss-applet`)。
-
 ## 常见问题
 
 - **依赖安装/启动失败**:
   如果遇到问题，尝试删除 `pnpm-lock.yaml`、`yarn.lock` 或 `package-lock.json` 文件，然后重新运行安装命令 (例如 `pnpm install`)。
+- **路由守卫陷入循环**:
+  路由守卫中页面跳转不支持路径别名，请使用实际路径，避免使用别名(aliasPath)。
 
 ## 获取支持
 
@@ -225,7 +214,7 @@ router.afterEach((to, from) => {
 <div style="display:flex;">
   <img src="https://cdn.jsdelivr.net/gh/viarotel-org/escrcpy@main/src/assets/sponsor/viarotel-wepay.png" alt="viarotel-wepay" width="30%">
   <img src="https://cdn.jsdelivr.net/gh/viarotel-org/escrcpy@main/src/assets/sponsor/viarotel-alipay.png" alt="viarotel-alipay" width="30%">
-  <a href="https://www.paypal.com/paypalme/viarotel" target="_blank" rel="noopener noreferrer" width="30%">
+  <a href="https://www.paypal.com/paypalme/viarotel" target="_blank" rel="noopener noreferrer" width="30%" style="display: block;>
     <img src="https://cdn.jsdelivr.net/gh/viarotel-org/escrcpy@main/src/assets/sponsor/viarotel-paypal.png" alt="viarotel-paypal" width="100%">
   </a>
 </div>

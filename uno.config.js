@@ -1,10 +1,7 @@
 import presetIcons from '@unocss/preset-icons'
 import transformerDirectives from '@unocss/transformer-directives'
 import { defineConfig } from 'unocss'
-import {
-  presetApplet,
-  presetRemRpx,
-} from 'unocss-applet'
+import { presetUni } from '@uni-helper/unocss-preset-uni'
 
 import { presetShades } from './helpers/unocss-preset-shades/index.js'
 
@@ -16,8 +13,7 @@ const presets = []
 const transformers = []
 
 presets.push(presetIcons())
-presets.push(presetApplet())
-presets.push(presetRemRpx({ mode: 'rpx2rem' }))
+presets.push(presetUni({ attributify: false }))
 presets.push(presetShades(primaryColor, { root: isApplet ? 'page' : ':root' }))
 
 transformers.push(transformerDirectives())

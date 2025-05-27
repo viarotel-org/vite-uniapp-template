@@ -8,7 +8,9 @@ import postcss from './postcss.config.js'
 
 import plugins from './vite.config.plugins.js'
 
+
 export default defineConfig(({ mode }) => {
+  const isDevelopment = mode === 'development'
   const env = loadMapEnv(mode)
 
   return {
@@ -26,6 +28,17 @@ export default defineConfig(({ mode }) => {
     css: {
       /** 解决外部 postcss.config.js 不被解析的问题 */
       postcss,
+    },
+    build: {
+      /** 解决 Windows 下开发模式控制台提示崩溃的问题 */
+      ...(isDevelopment
+        ? {
+            watch: {
+              exclude: ['node_modules/**', '/__uno.css'],
+            },
+          }
+        : {}),
+      // minify: false,
     },
     define: {
       'process.env': env,

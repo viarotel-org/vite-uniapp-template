@@ -72,12 +72,21 @@ export function defineMiddleware(name, handler, options) {
       next()
     }
     else {
-      handler(
-        {
-          ...router,
-          beforeEach: callback => callback(to, from, next),
-        },
-      )
+      handler({
+        ...router,
+        beforeEach: (callback) => callback(to, from, next)
+      })
+    }
+  })
+
+  router.afterEach((to, from) => {
+    const middleware = to.meta.middleware || []
+
+    if (middleware.includes(name)) {
+      handler({
+        ...router,
+        afterEach: (callback) => callback(to, from)
+      })
     }
   })
 }

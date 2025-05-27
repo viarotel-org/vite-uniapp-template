@@ -1,6 +1,4 @@
 <script setup>
-import { isMp } from '@uni-helper/uni-env'
-
 const tabModel = [
   {
     label: '实用技巧',
@@ -34,7 +32,7 @@ const activeTabItem = computed(() => tabModel[tabIndex.value].children)
 
 <template>
   <view class="h-full flex flex-col overflow-hidden">
-    <view v-if="isMp" class="h-safe-top mt-4 flex-none"></view>
+    <view class="h-[--safe-top] uni-mp:mt-4 flex-none"></view>
 
     <view class="flex flex-none bg-white px-3 py-2 pr-[var(--safe-right)]">
       <view v-for="(item, index) of tabModel" :key="index" class="h-10 w-0 flex flex-1 items-center justify-center rounded-lg" :class="[tabIndex === index ? 'bg-primary-50 text-primary-600 font-bold' : '']" @click="onTabClick(index)">

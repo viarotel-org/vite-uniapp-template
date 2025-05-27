@@ -83,7 +83,7 @@ async function handleLogout() {
       <view class="absolute h-42 w-42 rounded-full bg-white opacity-10 -right-10 -top-10"></view>
       <view class="absolute bottom-0 right-20 h-20 w-20 rounded-full bg-white opacity-10"></view>
 
-      <view class="h-safe-top"></view>
+      <view class="h-[--safe-top]"></view>
 
       <view
         class="relative flex items-center px-6 pb-12 pt-12"
