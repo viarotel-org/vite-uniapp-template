@@ -141,7 +141,7 @@ async function handleLogout() {
 
     <view v-if="isLogin" class="mb-8 mt-auto px-5">
       <button
-        class="w-full bg-red-500 py-2 text-gray-50 font-medium transition-colors duration-200"
+        class="w-full bg-red-500 py-3 text-gray-50 font-medium transition-colors duration-200 !rounded-lg"
         hover-class="bg-red-700"
         @click="handleLogout"
       >

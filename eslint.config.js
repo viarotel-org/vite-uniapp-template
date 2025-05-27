@@ -28,6 +28,7 @@ export default antfu({
     'unused-imports/no-unused-vars': 'off',
     'no-console': 'off',
 
+    'vue/no-unused-vars': 'off',
     'vue/html-self-closing': 'off',
   },
 })

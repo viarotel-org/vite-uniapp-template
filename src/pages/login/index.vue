@@ -206,10 +206,6 @@ function onProjectClick() {
   animation: float 3s ease-in-out infinite;
 }
 
-.active\:scale-98:active {
-  transform: scale(0.98);
-}
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
