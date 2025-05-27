@@ -74,7 +74,7 @@ export function defineMiddleware(name, handler, options) {
     else {
       handler({
         ...router,
-        beforeEach: (callback) => callback(to, from, next)
+        beforeEach: callback => callback(to, from, next),
       })
     }
   })
@@ -85,7 +85,7 @@ export function defineMiddleware(name, handler, options) {
     if (middleware.includes(name)) {
       handler({
         ...router,
-        afterEach: (callback) => callback(to, from)
+        afterEach: callback => callback(to, from),
       })
     }
   })

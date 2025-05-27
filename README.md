@@ -25,7 +25,9 @@ git clone https://github.com/viarotel-org/vite-uniapp-template.git
 cd vite-uniapp-template
 ```
 
-### 2\. 安装依赖
+### 2. 安装依赖
+
+> 请使用 node@20.0 及以上版本。
 
 推荐使用 `pnpm`。当然，也可以使用 `npm` 或 `yarn`。
 
@@ -35,7 +37,7 @@ pnpm install
 
 > **注意：** 如果遇到安装问题，尝试删除 `pnpm-lock.yaml`、`yarn.lock` 或 `package-lock.json` 文件后重新安装依赖。
 
-### 3\. 运行项目
+### 3. 运行项目
 
 #### 使用代码编辑器 (例如 VS Code)
 
@@ -90,7 +92,8 @@ VITE_ASSETS_MODE=remote
 
 <div class="bg-primary-500"></div>
 
-<div class="border border-primary-500"></div>
+<!-- 仅在小程序中生效，具体使用方法请参考 [unocss-preset-uni](https://github.com/uni-helper/unocss-preset-uni)  -->
+<div class="uni-mp:border uni-mp:border-primary-500"></div>
 ```
 
 ### 页面导航
@@ -204,7 +207,7 @@ router.afterEach((to, from) => {
 
 这是一个依靠热爱驱动的开源项目，因此支持会根据时间情况提供，更新节奏可能不固定。
 
-- **项目问题与反馈**: [在 GitHub 上提交 Issue](https://www.google.com/search?q=https://github.com/viarotel/vite-uniapp-template/issues) _(已修正链接)_
+- **项目问题与反馈**: [在 GitHub 上提交 Issue](https://github.com/viarotel-org/vite-uniapp-template/issues)
 - **联系方式**: viarotel@qq.com
 
 ## 支持本项目

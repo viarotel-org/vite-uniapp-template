@@ -8,7 +8,6 @@ import postcss from './postcss.config.js'
 
 import plugins from './vite.config.plugins.js'
 
-
 export default defineConfig(({ mode }) => {
   const isDevelopment = mode === 'development'
   const env = loadMapEnv(mode)
