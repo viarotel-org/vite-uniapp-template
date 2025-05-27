@@ -2,7 +2,7 @@
 import { showToast } from '@uni-helper/uni-promises'
 import { appName, extraInfo } from '@/settings/index.js'
 import { sleep } from '@/utils'
-import { version } from '/package.json'
+import { version, description } from '@root/package.json'
 
 const userStore = useUserStore()
 const router = useRouter()
@@ -113,7 +113,7 @@ function onProjectClick() {
               {{ appName }}
             </text>
             <text class="block text-base text-gray-600">
-              Vite 驱动的 uni-app 高效开发模板
+              {{ description }}
             </text>
           </view>
         </view>
