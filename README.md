@@ -166,48 +166,48 @@ VITE_ASSETS_CDN=https://your-cdn.com/assets
 
 与 Vue Router 类似，您可以通过编程方式进行导航：
 
-- **在模板中：**
+#### 在模板中：
 
-  ```javascript
-  // 跳转到登录页并携带查询参数
-  this.$Router.push({
-    path: '/login',
-    query: {
-      id: 'someId',
-    },
-  })
+```javascript
+// 跳转到登录页并携带查询参数
+this.$Router.push({
+  path: '/login',
+  query: {
+    id: 'someId',
+  },
+})
 
-  // 获取路由参数
-  const userId = this.$Route.query.id
+// 获取路由参数
+const userId = this.$Route.query.id
 
-  // 替换当前页面
-  this.$Router.replace('/dashboard')
+// 替换当前页面
+this.$Router.replace('/dashboard')
 
-  // 关闭所有页面并跳转
-  this.$Router.replaceAll('/home')
-  ```
+// 关闭所有页面并跳转
+this.$Router.replaceAll('/home')
+```
 
-- **在脚本中 (支持自动导入)：**
+#### 在脚本中 (支持自动导入)：
 
-  ```javascript
-  // 已预置自动导入该部分可省略
-  // import { useRoute, useRouter } from '$uni-router'
+```javascript
+// 已预置自动导入该部分可省略
+// import { useRoute, useRouter } from '$uni-router'
 
-  const router = useRouter()
-  const route = useRoute()
+const router = useRouter()
+const route = useRoute()
 
-  router.push('/settings')
-  console.log(route.query)
-  ```
+router.push('/settings')
+console.log(route.query)
+```
 
-- **路由别名 (`pages.config.js`)：**
+#### 路由别名 (`pages.config.js`)：
 
-  ```javascript
-  const aliasConfig = {
-    path: 'pages/login/index', // 实际路径
-    aliasPath: '/login', // 别名
-  }
-  ```
+```javascript
+const aliasConfig = {
+  path: 'pages/login/index', // 实际路径
+  aliasPath: '/login', // 别名
+}
+```
 
 ### 路由守卫
 
@@ -236,7 +236,7 @@ router.afterEach((to, from) => {
 
 对特定路由应用中间件以实现精细化控制。
 
-- **使用中间件 (`pages.config.js`)：**
+#### 使用中间件 (`pages.config.js`)：
 
   ```javascript
   // 对用户页面应用 'test' 中间件
@@ -249,7 +249,7 @@ router.afterEach((to, from) => {
   }
   ```
 
-- **定义中间件：**
+#### 定义中间件：
   中间件代码结构与路由守卫基本一致，但仅拦截在其声明的路由中配置的中间件。
 
   ```javascript
