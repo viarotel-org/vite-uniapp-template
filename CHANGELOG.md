@@ -1,5 +1,36 @@
 # Changelog
 
+## [3.0.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.7.3...v3.0.0) (2025-05-28)
+
+
+### Features
+
+* 🚀 对演示页面进行重新设计 ([8b07348](https://github.com/viarotel-org/vite-uniapp-template/commit/8b07348a6bc2f858a450249cbf4b3bcc09dec6b2))
+* 🚀 更新主页 ([5fcf0fe](https://github.com/viarotel-org/vite-uniapp-template/commit/5fcf0fe53820799e6d70aba78c845fc652aa4fc9))
+* 🚀 添加通用列表页面演示 ([a7ff94b](https://github.com/viarotel-org/vite-uniapp-template/commit/a7ff94badba52211507ff7faa8ade7e40c64b7ec))
+
+
+### Bug Fixes
+
+* 🚀 修复小程序使用 Unocss 不支持渐变的问题 ([c001a05](https://github.com/viarotel-org/vite-uniapp-template/commit/c001a05d7a73b3d7b02e5f01c5615adf3252d0bb))
+
+
+### Performance Improvements
+
+* 💄 对登录页面进行重新设计 ([84b77f4](https://github.com/viarotel-org/vite-uniapp-template/commit/84b77f45f31032bf9f9a02b7136d45d67d284160))
+* 🚀 Update ([527e84d](https://github.com/viarotel-org/vite-uniapp-template/commit/527e84d7604fbbb4fba7c9bc6264bd4379ae9a5e))
+* 🚀 优化分包目录架构 ([06ca08f](https://github.com/viarotel-org/vite-uniapp-template/commit/06ca08fb5c630b4f3b35964626ab6e92e7d473cd))
+* 🚀 优化生产环境细节 ([d7870d4](https://github.com/viarotel-org/vite-uniapp-template/commit/d7870d4403730f479d34c18e1c3e213a356836b5))
+* 🚀 固定依赖包版本 ([c2d3535](https://github.com/viarotel-org/vite-uniapp-template/commit/c2d35357679bc861aacc6e222f90eb32fc3b4899))
+* 🚀 对小程序进行兼容性适配 ([1514898](https://github.com/viarotel-org/vite-uniapp-template/commit/1514898af9270fc9e1022d06a00cc8f02a1aa9c6))
+* 🚀 重构路由方法 ([739b68e](https://github.com/viarotel-org/vite-uniapp-template/commit/739b68e8391ecdaf407a957a1e9636c8d7268996))
+* 🚀 重构项目结构 ([54549de](https://github.com/viarotel-org/vite-uniapp-template/commit/54549de63da96703f28f3c3d66e078a38548e978))
+
+
+### Miscellaneous Chores
+
+* release 3.0.0 ([51d7e50](https://github.com/viarotel-org/vite-uniapp-template/commit/51d7e500c9f70051627d16ab520f1c8b75bf3f98))
+
 ## [2.7.3](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.7.2...v2.7.3) (2024-03-06)
 
 
