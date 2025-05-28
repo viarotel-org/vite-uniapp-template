@@ -35,8 +35,6 @@ cd vite-uniapp-template
 pnpm install
 ```
 
-> **注意：** 如果遇到安装问题，尝试删除 `pnpm-lock.yaml`、`yarn.lock` 或 `package-lock.json` 文件后重新安装依赖。
-
 ### 3. 运行项目
 
 #### 使用代码编辑器 (例如 VS Code)
@@ -80,7 +78,7 @@ src/
     └── detail.vue
 ```
 
-vite-uniapp-template 的创新分包结构：
+vite-uniapp-template 的分包结构：
 ```
 src/
 └── pages/
