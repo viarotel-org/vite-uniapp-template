@@ -72,16 +72,18 @@ pnpm dev:app-android
 - **加载本地静态资源：**
 
 ```bash
-# 转换过程: ~@/assets/images/logo.png -> /src/assets/images/logo.png
+# 转换过程: ~@assets/images/logo.png -> /src/assets/images/logo.png
 VITE_ASSETS_MODE=local
 ```
 
 - **加载远程静态资源：**
 
 ```bash
-# 转换过程: ~@/assets/images/logo.png -> `${process.env.VITE_ASSETS_CDN}/images/logo.png`
+# 转换过程: ~@assets/images/logo.png -> `${process.env.VITE_ASSETS_CDN}/images/logo.png`
 VITE_ASSETS_MODE=remote
 ```
+
+更多配置请参考 `vite.config.plugins.js` 中的 `useAssetPathResolver` 插件
 
 ### 全局主题定制
 
