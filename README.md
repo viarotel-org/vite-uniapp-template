@@ -66,6 +66,7 @@ pnpm dev:app-android
 ### 创新的分包结构
 
 传统分包结构：
+
 ```
 src/
 ├── pages/           # 主包页面
@@ -79,6 +80,7 @@ src/
 ```
 
 vite-uniapp-template 的分包结构：
+
 ```
 src/
 └── pages/
@@ -95,6 +97,7 @@ src/
 ```
 
 分包配置示例：
+
 ```javascript
 // pages.config.js
 export default {
@@ -113,7 +116,7 @@ export default {
       }
     }
   ],
-  
+
   // 分包配置
   subPackages: [
     {
@@ -141,6 +144,7 @@ VITE_ASSETS_CDN=https://your-cdn.com/assets
 ```
 
 使用示例：
+
 ```html
 <image src="~@assets/images/logo.png" />
 <!-- 开发环境: /src/assets/images/logo.png -->
@@ -238,29 +242,30 @@ router.afterEach((to, from) => {
 
 #### 使用中间件 (`pages.config.js`)：
 
-  ```javascript
-  // 对用户页面应用 'test' 中间件
-  const pageConfig = {
-    path: '/pages/user/index',
-    aliasPath: '/user',
-    meta: {
-      middleware: ['test'],
-    },
-  }
-  ```
+```javascript
+// 对用户页面应用 'test' 中间件
+const pageConfig = {
+  path: '/pages/user/index',
+  aliasPath: '/user',
+  meta: {
+    middleware: ['test'],
+  },
+}
+```
 
 #### 定义中间件：
-  中间件代码结构与路由守卫基本一致，但仅拦截在其声明的路由中配置的中间件。
 
-  ```javascript
-  // 示例: src/permission/test/index.js
-  import { defineMiddleware } from '$uni-router'
-  import testMiddlewareLogic from './test/index.js'
+中间件代码结构与路由守卫基本一致，但仅拦截在其声明的路由中配置的中间件。
 
-  export default (app, router) => {
-    defineMiddleware('test', testMiddlewareLogic, { router, app })
-  }
-  ```
+```javascript
+// 示例: src/permission/test/index.js
+import { defineMiddleware } from '$uni-router'
+import testMiddlewareLogic from './test/index.js'
+
+export default (app, router) => {
+  defineMiddleware('test', testMiddlewareLogic, { router, app })
+}
+```
 
 ## 常见问题
 

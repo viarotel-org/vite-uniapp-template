@@ -66,7 +66,7 @@ importers:
         specifier: 3.0.0-4060620250520001
         version: 3.0.0-4060620250520001(@nuxt/kit@3.17.3)(@vueuse/core@9.13.0(vue@3.4.21(typescript@5.8.3)))(postcss@8.5.3)(rollup@4.41.0)(vue@3.4.21(typescript@5.8.3))
       '@uni-helper/uni-env':
-        specifier: ^0.1.7
+        specifier: 0.1.7
         version: 0.1.7
       '@uni-helper/uni-promises':
         specifier: 0.2.1
@@ -90,10 +90,10 @@ importers:
         specifier: 1.2.7
         version: 1.2.7(vue@3.4.21(typescript@5.8.3))
       vue:
-        specifier: ^3.4.21
+        specifier: 3.4.21
         version: 3.4.21(typescript@5.8.3)
       vue-i18n:
-        specifier: ^9.1.9
+        specifier: 9.1.9
         version: 9.1.9(vue@3.4.21(typescript@5.8.3))
       wot-design-uni:
         specifier: 1.9.1
@@ -106,7 +106,7 @@ importers:
         specifier: 4.13.1
         version: 4.13.1(@unocss/eslint-plugin@0.65.4(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.14)(eslint-plugin-format@1.0.1(eslint@9.27.0(jiti@2.4.2)))(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
       '@dcloudio/types':
-        specifier: ^3.4.8
+        specifier: 3.4.8
         version: 3.4.8
       '@dcloudio/uni-automator':
         specifier: 3.0.0-4060620250520001
@@ -142,7 +142,7 @@ importers:
         specifier: 0.65.4
         version: 0.65.4
       '@vue/runtime-core':
-        specifier: ^3.4.21
+        specifier: 3.4.21
         version: 3.4.21
       eslint:
         specifier: 9.27.0
