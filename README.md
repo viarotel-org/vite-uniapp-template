@@ -65,22 +65,88 @@ pnpm dev:app-android
 
 ## 功能示例
 
-### 静态资源处理
+### 创新的分包结构
 
-通过 `.env` 文件配置静态资源的加载方式：
-
-- **加载本地静态资源：**
-
-```bash
-# 转换过程: ~@assets/images/logo.png -> /src/assets/images/logo.png
-VITE_ASSETS_MODE=local
+传统分包结构：
+```
+src/
+├── pages/           # 主包页面
+│   └── index.vue
+├── pages-user/      # 用户相关分包
+│   ├── profile.vue
+│   └── settings.vue
+└── pages-shop/      # 商城相关分包
+    ├── list.vue
+    └── detail.vue
 ```
 
-- **加载远程静态资源：**
+vite-uniapp-template 的创新分包结构：
+```
+src/
+└── pages/
+    ├── index/           # 主包页面（必需）
+    │   ├── index.vue    # 首页（必需）
+    │   ├── category.vue # Tab页面
+    │   └── mine.vue     # Tab页面
+    ├── user/            # 用户分包
+    │   ├── login.vue
+    │   └── profile.vue
+    └── shop/            # 商城分包
+        ├── list.vue
+        └── detail.vue
+```
+
+分包配置示例：
+```javascript
+// pages.config.js
+export default {
+  // 主包配置
+  pages: [
+    {
+      path: 'pages/index/index',
+      style: {
+        navigationBarTitleText: '首页'
+      }
+    },
+    {
+      path: 'pages/index/category',
+      style: {
+        navigationBarTitleText: '分类'
+      }
+    }
+  ],
+  
+  // 分包配置
+  subPackages: [
+    {
+      root: 'pages/user',
+      pages: [
+        {
+          path: 'login',
+          style: { navigationBarTitleText: '登录' }
+        }
+      ]
+    }
+  ]
+}
+```
+
+### 静态资源处理
 
 ```bash
-# 转换过程: ~@assets/images/logo.png -> `${process.env.VITE_ASSETS_CDN}/images/logo.png`
+# 本地开发模式 (.env.development)
+VITE_ASSETS_MODE=local
+
+# 生产环境 (.env.production)
 VITE_ASSETS_MODE=remote
+VITE_ASSETS_CDN=https://your-cdn.com/assets
+```
+
+使用示例：
+```html
+<image src="~@assets/images/logo.png" />
+<!-- 开发环境: /src/assets/images/logo.png -->
+<!-- 生产环境: https://your-cdn.com/assets/images/logo.png -->
 ```
 
 更多配置请参考 `vite.config.plugins.js` 中的 `useAssetPathResolver` 插件
