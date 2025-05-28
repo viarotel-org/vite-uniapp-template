@@ -1,11 +1,12 @@
 {
-  "exclude": ["node_modules", "dist"],
-  "include": ["src/**/*"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
-    },
-    "types": ["@dcloudio/types", "miniprogram-api-typings", "mini-types"]
-  }
+      "@/*": ["src/*"],
+      "@root": ["*"],
+      "$uni-router": ["helpers/uni-router/index.js"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "dist-electron", "dist-release"],
+  "include": ["src", "electron", "control"]
 }

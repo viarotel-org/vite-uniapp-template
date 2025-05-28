@@ -1,2 +1,3 @@
-@import "./applet.css";
-@import "./overrides.css";
+@import './reset.css';
+@import './variable.css';
+@import './global.css';

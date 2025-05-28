@@ -1,15 +1,10 @@
 # zero-markdown-view
 
 
-## 重要更新说明
+## 一. 重要更新说明
 
 ### v2.0.4
 - 新增点击代码块复制代码-仅小程序可用
-- 移除长按复制功能
-
-### v2.0.2
-- 新增长按复制代码-仅小程序可用
-- 新增代码块语言显示
 
 ### v2.0.1
 - 兼容vue2,vue3
@@ -20,7 +15,7 @@
 - 使用mp-html自带的插件,重新生成uniapp包,大幅减少插件体积
 传送门: [优化思路及详细过程](https://juejin.cn/post/7160995270476431373/) https://juejin.cn/post/7160995270476431373/
 
-## 使用方法
+## 二. 使用方法
 
 **符合`easycom`组件模式, 导入 `uni_modules` 后直接使用即可 **
 
@@ -41,6 +36,26 @@
 		},
 		created() {
 		},
+		computed: {
+			// 流式输出时代码块处理 , 这时候请使用 msgContent 传入组件中
+			msgContent() {
+				if (!this.content) {
+					return 
+				}
+				let htmlString = ''
+				// 判断markdown中代码块标识符的数量是否为偶数
+				if (this.content.split("```").length % 2) {
+					let content = this.content
+					if (content[content.length - 1] != '\n') {
+						content += '\n'
+					}
+					htmlString = content
+				} else {
+					htmlString = this.content
+				}
+				return htmlString
+			}
+		},
 		methods: {
 		
 		},
@@ -50,13 +65,45 @@
 	</style>
 ```
 
-## 参数说明
+## 三. 参数说明
 
 |参数		|类型	|默认值		|描述					|
 |--			|--		|--			|--						|
 |markdown	|String	|			|markdown文本			|
 |themeColor	|String	|'#007AFF'	|主题色					|
 |codeBgColor|String	|'#2d2d2d'	|代码块背景色	(不建议修改)	|
+
+
+
+## 四. 注意事项
+
+### 关于代码块流式输出闪烁,可以尝试 给代码块后增加 `\n`
+
+
+```javascript
+		computed: {
+			// 流式输出时代码块处理 , 这时候请使用 msgContent 传入组件中
+			msgContent() {
+				if (!this.content) {
+					return 
+				}
+				let htmlString = ''
+				// 判断markdown中代码块标识符的数量是否为偶数
+				if (this.content.split("```").length % 2) {
+					let content = this.content
+					if (content[content.length - 1] != '\n') {
+						content += '\n'
+					}
+					htmlString = content
+				} else {
+					htmlString = this.content
+				}
+				return htmlString
+			}
+		},
+```
+
+
 
 ### 如何关闭点击代码块复制功能?
 

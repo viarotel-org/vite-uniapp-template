@@ -1,20 +1,13 @@
 import { createRouter } from '$uni-router'
-import pages from '@/pages.json'
 
-// console.log('pages', pages)
+import routes from 'uni-router-routes'
+
+import permission from '@/permission/index.js'
 
 const router = createRouter({
-  pages,
-  addRoutes: [
-    {
-      path: '*',
-      redirect: () => {
-        return { path: '/404' }
-      },
-    },
-  ],
+  routes: [...routes],
 })
 
-// console.log('router', router)
+permission(router)
 
 export default router

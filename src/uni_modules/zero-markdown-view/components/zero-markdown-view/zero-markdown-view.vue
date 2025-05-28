@@ -76,6 +76,10 @@
 				text-align: center;
 				font-weight: bold;
 				color: ${themeColor};
+				padding:3px 10px 1px;
+				border-bottom: 2px solid ${themeColor};
+				border-top-right-radius:3px;
+				border-top-left-radius:3px;
 				`,
 					// 二级标题
 					h2: `

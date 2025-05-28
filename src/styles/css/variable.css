@@ -1,0 +1,10 @@
+:root,
+page {
+  --wot-color-theme: rgba(var(--primary-color-500), 1);
+
+  --safe-top: var(--status-bar-height);
+  --safe-bottom: env(safe-area-inset-bottom);
+  /* #ifdef MP */
+  --safe-right: 200rpx;
+  /* #endif */
+}

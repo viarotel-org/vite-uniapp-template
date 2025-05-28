@@ -1,21 +1,27 @@
-<script>
-export default {
-  async onLaunch() {
-    console.log('App Launch')
+<script setup>
+import { updateShades } from '$unocss-preset-shades'
 
-    this.$store.app.getSystemInfo()
-  },
-  async onShow() {
-    console.log('App Show')
-  },
-  onHide() {
-    console.log('App Hide')
-  },
-}
+onLaunch(() => {
+  console.log('App Launch')
+})
+onShow(() => {
+  console.log('App Show')
+})
+onHide(() => {
+  console.log('App Hide')
+})
+
+const appStore = useAppStore()
+
+// #ifndef MP
+watchEffect(() => {
+  updateShades(appStore.primaryColor)
+})
+// #endif
 </script>
 
 <style lang="scss">
-// @import "uview-plus/index.scss";
+@import '@unocss-applet/reset/uni-app/button-after.css';
+@import '@unocss-applet/reset/uni-app/tailwind-compat.css';
 @import './styles/css/index.css';
-@import '@climblee/uv-ui/index.scss';
 </style>

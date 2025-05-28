@@ -1,82 +1,59 @@
 import path from 'node:path'
-import { defineConfig, loadEnv } from 'vite'
-import useUni from '@dcloudio/vite-plugin-uni'
-import useUnoCSS from 'unocss/vite'
-import useUniPages from '@uni-helper/vite-plugin-uni-pages'
-import useRemoveConsole from 'vite-plugin-remove-console'
-import postcssConfig from './postcss.config.js'
 
-import {
-  proxyPath,
-  proxyPort,
-  requestFilePath,
-  requestPath,
-  useProxy,
-} from './src/configs/server.js'
+import { defineConfig } from 'vite'
 
-import { homePage } from './src/configs/index.js'
+import { isH5 } from '@uni-helper/uni-env'
 
-const isDevelopment = process.env.NODE_ENV === 'development'
-const isProduction = process.env.NODE_ENV === 'production'
+import { loadMapEnv } from './helpers/load-map-env/index.js'
 
-// https://vitejs.dev/config/
+import postcss from './postcss.config.js'
+
+import plugins from './vite.config.plugins.js'
+
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '')
+  const isDevelopment = mode === 'development'
+  const env = loadMapEnv(mode)
 
-  const proxyURL = env.VITE_APP_API_URL
+  const isUseProxy = env.VITE_PROXY_USE === '1'
 
-  const viteEnvKeys = Object.keys(env).filter(key => key.startsWith('VITE_'))
+  const appBase = env.VITE_APP_BASE
 
-  const define = {
-    ...viteEnvKeys.reduce((config, variable) => {
-      config[`process.env.${variable}`] = JSON.stringify(env[variable])
-      return config
-    }, {}),
+  const proxy = {}
+
+  if (isUseProxy && isH5) {
+    const proxyPath = env.VITE_PROXY_PATH
+    const apiOrigin = env.VITE_API_ORIGIN
+    const apiPath = env.VITE_API_PATH
+
+    proxy[proxyPath] = {
+      target: apiOrigin,
+      changeOrigin: true,
+      rewrite: path => {
+        return path.replace(new RegExp(`^${proxyPath}`), apiPath)
+      },
+    }
   }
-
+  
   return {
-    plugins: [
-      useUnoCSS(),
-      useUniPages({
-        mergePages: false,
-        homePage,
-      }),
-      useUni(),
-      ...(isProduction ? [useRemoveConsole()] : []),
-    ],
+    base: appBase,
     server: {
+      port: 1045,
       cors: true,
-      host: true,
-      port: proxyPort,
       proxy: {
-        ...(useProxy && proxyURL
-          ? {
-              [`^${proxyPath}`]: {
-                target: `${proxyURL}${requestPath}`,
-                changeOrigin: true,
-                rewrite: path =>
-                  path.replace(new RegExp(`^${proxyPath}`), ''),
-              },
-              // 解决开发环境上传图片无法直接显示的问题
-              [`^${requestFilePath}`]: {
-                target: `${proxyURL}${requestFilePath}`,
-                changeOrigin: true,
-                rewrite: path =>
-                  path.replace(new RegExp(`^${requestFilePath}`), ''),
-              },
-            }
-          : {}),
+        ...proxy,
       },
     },
     resolve: {
       alias: {
-        '^@': path.resolve(__dirname, './src/'),
-        '$uni-router': path.resolve(__dirname, './src/utils/uni-router/'),
+        '@': path.resolve('./src'),
+        '@root': path.resolve('./'),
+        '$uni-router': path.resolve('./helpers/uni-router'),
+        '$unocss-preset-shades': path.resolve('./helpers/unocss-preset-shades'),
       },
     },
     css: {
       /** 解决外部 postcss.config.js 不被解析的问题 */
-      postcss: postcssConfig,
+      postcss,
     },
     build: {
       /** 解决 Windows 下开发模式控制台提示崩溃的问题 */
@@ -89,6 +66,9 @@ export default defineConfig(({ mode }) => {
         : {}),
       // minify: false,
     },
-    define,
+    define: {
+      'process.env': env,
+    },
+    plugins: plugins({ env }),
   }
 })

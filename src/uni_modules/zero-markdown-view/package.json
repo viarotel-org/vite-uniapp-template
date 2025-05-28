@@ -1,7 +1,7 @@
 {
   "id": "zero-markdown-view",
   "displayName": "zero-markdown-view(markdown解析)",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "一行代码即可实现markdown解析,支持自定义主题色,支持vue2,vue3.",
   "keywords": [
     "markdown",
@@ -40,7 +40,8 @@
     "platforms": {
       "cloud": {
         "tcb": "y",
-        "aliyun": "y"
+        "aliyun": "y",
+        "alipay": "n"
       },
       "client": {
         "Vue": {
