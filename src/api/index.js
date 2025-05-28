@@ -1,7 +1,7 @@
 import uniappAdapter from '@alova/adapter-uniapp'
+import { isH5 } from '@uni-helper/uni-env'
 import { createAlova } from 'alova'
 import mockRequestAdapter from './mock'
-import { isH5 } from '@uni-helper/uni-env'
 
 function useAdapter(isMock) {
   if (isMock) {
@@ -15,7 +15,7 @@ function useAdapter(isMock) {
 
 function getBaseURL() {
   let value = process.env.VITE_API_ORIGIN + process.env.VITE_API_PATH
-  
+
   if (process.env.VITE_PROXY_USE === '1' && isH5) {
     value = process.env.VITE_PROXY_PATH
   }
@@ -25,13 +25,13 @@ function getBaseURL() {
 
 const alova = createAlova({
   ...useAdapter(process.env.VITE_API_MOCK === '1'),
-  
+
   baseURL: getBaseURL(),
 
-  beforeRequest: (method)=> {
+  beforeRequest: (method) => {
     const userStore = useUserStore()
 
-    if(userStore.token) {
+    if (userStore.token) {
       Object.assign(method.config.headers, {
         [process.env.VITE_API_TOKEN_KEY]: `Bearer ${userStore.token}`,
       })
@@ -41,25 +41,24 @@ const alova = createAlova({
   responded: {
     onSuccess: async (response) => {
       if (response.status >= 400) {
-        throw new Error(response.statusText);
+        throw new Error(response.statusText)
       }
 
-      
       const data = response.data
-      
+
       if (data.code !== Number(process.env.VITE_API_SUCCESS_CODE)) {
-        throw data;
+        throw data
       }
 
-      return data;
+      return data
     },
-    
+
     onError: (error) => {
       console.error(`alova.responded.onError:${error.message || error}`)
     },
 
-    onComplete:()=> {}
-  }
+    onComplete: () => {},
+  },
 })
 
 export default alova

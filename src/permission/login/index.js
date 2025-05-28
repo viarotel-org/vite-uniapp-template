@@ -6,7 +6,7 @@ export default function login(router) {
 
   router.beforeEach((to, from, next) => {
     const userStore = useUserStore()
-    
+
     // 可以在 .env.dev.local 定义用于接口测试的 Token 环境变量
     // 注意：实际项目中请勿将敏感信息直接写入代码或配置文件
     if (process.env.VITE_API_TOKEN) {

@@ -1,8 +1,8 @@
 <script setup>
+import { description, version } from '@root/package.json'
 import { showToast } from '@uni-helper/uni-promises'
 import { appName, extraInfo } from '@/settings/index.js'
 import { sleep } from '@/utils'
-import { version, description } from '@root/package.json'
 
 const userStore = useUserStore()
 const router = useRouter()
@@ -120,7 +120,7 @@ function onProjectClick() {
 
         <view class="space-y-6">
           <button
-            class="relative w-full overflow-hidden rounded-2xl from-primary-500 to-primary-400 bg-gradient-to-r px-6 py-4 !text-white font-semibold shadow-lg transition-all duration-200 active:scale-98 disabled:cursor-not-allowed disabled:opacity-70"
+            class="relative w-full overflow-hidden rounded-2xl from-primary-500 to-primary-400 bg-gradient-to-r px-6 py-4 font-semibold shadow-lg transition-all duration-200 active:scale-98 disabled:cursor-not-allowed !text-white disabled:opacity-70"
             :class="{ 'shadow-xl': !isLoading }"
             :disabled="isLoading"
             @click="onLoginClick"

@@ -1,8 +1,8 @@
 import path from 'node:path'
 
-import { defineConfig } from 'vite'
-
 import { isH5 } from '@uni-helper/uni-env'
+
+import { defineConfig } from 'vite'
 
 import { loadMapEnv } from './helpers/load-map-env/index.js'
 
@@ -28,12 +28,12 @@ export default defineConfig(({ mode }) => {
     proxy[proxyPath] = {
       target: apiOrigin,
       changeOrigin: true,
-      rewrite: path => {
+      rewrite: (path) => {
         return path.replace(new RegExp(`^${proxyPath}`), apiPath)
       },
     }
   }
-  
+
   return {
     base: appBase,
     server: {

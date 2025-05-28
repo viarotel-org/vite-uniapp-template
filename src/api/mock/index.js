@@ -31,7 +31,7 @@ function mockRequestAdapter() {
         response: {
           ...response,
           data: response.body,
-        }
+        },
       }
     },
   })

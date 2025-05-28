@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { postUserLogin, getUserInfo } from '@/api/user/index.js'
+import { getUserInfo, postUserLogin } from '@/api/user/index.js'
 
 export const useUserStore = defineStore(
   'user',
@@ -10,7 +10,7 @@ export const useUserStore = defineStore(
 
     async function login() {
       const res = await postUserLogin()
-      
+
       token.value = res.token
     }
 
