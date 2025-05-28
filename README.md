@@ -1,5 +1,9 @@
 # Vite Uniapp Template
 
+[![Gitee](https://gitee.com/viarotel-org/vite-uniapp-template/badge/star.svg?theme=dark)](https://gitee.com/viarotel-org/vite-uniapp-template)
+[![GitHub](https://img.shields.io/github/stars/viarotel-org/vite-uniapp-template?label=Github%20Stars)](https://github.com/viarotel-org/vite-uniapp-template)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/viarotel-org/vite-uniapp-template)
+
 🚀 **以实用为先的 uni-app 起手模板。** [查看演示](https://vite-uniapp-template.netlify.app/)
 
 该模板为您的 uniapp 项目提供了一个强大的起点，集成了现代化工具和精心设计的约定，以简化开发流程。
