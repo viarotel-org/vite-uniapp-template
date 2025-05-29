@@ -1,5 +1,5 @@
 <script setup>
-import { version } from '@root/package.json'
+import { appVersion } from '@/settings/index.js'
 
 const appStore = useAppStore()
 
@@ -19,7 +19,6 @@ const settings = ref({
 const storageUsed = ref('2.3GB')
 const storageTotal = ref('64GB')
 const cacheSize = ref('156MB')
-const appVersion = ref(version)
 const hasUpdate = ref(false)
 
 const fontSizes = {

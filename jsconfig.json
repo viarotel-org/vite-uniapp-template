@@ -3,10 +3,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@root": ["*"],
+      "@root/*": ["./*"],
       "$uni-router": ["helpers/uni-router/index.js"]
-    }
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
-  "exclude": ["node_modules", "dist"],
-  "include": ["src"]
+  "exclude": ["node_modules", "dist"]
 }

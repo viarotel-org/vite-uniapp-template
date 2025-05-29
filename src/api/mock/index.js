@@ -1,7 +1,7 @@
 import { createAlovaMockAdapter, defineMock } from '@alova/mock'
 import adapterFetch from 'alova/fetch'
 import avatarUrl from '~@/assets/images/avatar.gif'
-import { extraInfo } from '@/settings/index.js'
+import { appExtra } from '@/settings/index.js'
 
 function mockRequestAdapter() {
   const userMock = defineMock({
@@ -11,9 +11,9 @@ function mockRequestAdapter() {
     },
     '/getInfo': {
       data: {
-        ...extraInfo,
+        ...appExtra,
         userId: 1,
-        username: extraInfo.name,
+        username: appExtra.name,
         avatar: avatarUrl,
       },
       code: 200,

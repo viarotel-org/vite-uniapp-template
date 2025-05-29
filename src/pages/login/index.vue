@@ -1,7 +1,6 @@
 <script setup>
-import { description, version } from '@root/package.json'
 import { showToast } from '@uni-helper/uni-promises'
-import { appName, extraInfo } from '@/settings/index.js'
+import { appDescription, appExtra, appName, appVersion } from '@/settings/index.js'
 import { sleep } from '@/utils'
 
 const userStore = useUserStore()
@@ -82,7 +81,7 @@ function onAgreementClick() {
 
 function onProjectClick() {
   webView.open({
-    src: extraInfo.url,
+    src: appExtra.url,
   })
 }
 </script>
@@ -113,7 +112,7 @@ function onProjectClick() {
               {{ appName }}
             </text>
             <text class="block text-base text-gray-600">
-              {{ description }}
+              {{ appDescription }}
             </text>
           </view>
         </view>
@@ -176,14 +175,14 @@ function onProjectClick() {
               class="inline-flex items-center text-sm text-primary-600 font-medium transition-colors duration-200 space-x-1 active:text-primary-700"
               @click="onProjectClick"
             >
-              <view>{{ extraInfo.name }}</view>
+              <view>{{ appExtra.name }}</view>
               <view class="i-carbon-launch size-3"></view>
             </view>
           </view>
 
           <view class="flex items-center justify-center text-xs text-gray-400 space-x-2">
             <view class="i-carbon-information h-3 w-3"></view>
-            <text>版本 v{{ version }}</text>
+            <text>版本 v{{ appVersion }}</text>
           </view>
         </view>
       </view>

@@ -128,14 +128,14 @@ export default defineUniPages({
       ],
     },
     {
-      root: 'pages/settings',
+      root: 'pages/preference',
       pages: [
         {
           path: 'index',
-          aliasPath: '/settings',
-          name: 'settings',
+          aliasPath: '/preference',
+          name: 'preference',
           style: {
-            navigationBarTitleText: '系统设置',
+            navigationBarTitleText: '偏好设置',
           },
         },
       ],

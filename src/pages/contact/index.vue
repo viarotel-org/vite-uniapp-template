@@ -1,6 +1,6 @@
 <script setup>
 import wechatImage from '~@assets/images/contact/image-wechat.png?url'
-import { extraInfo } from '@/settings/index.js'
+import { appExtra } from '@/settings/index.js'
 
 // 复制文本到剪贴板
 function handleCopy(text) {
@@ -83,7 +83,7 @@ function showToast(title, icon = 'success') {
         </view>
 
         <view class="divide-y divide-gray-100">
-          <view class="contact-item" @click="handleCopy(extraInfo.email)">
+          <view class="contact-item" @click="handleCopy(appExtra.email)">
             <view class="icon-container">
               <view class="i-carbon-email size-6 text-primary-500"></view>
             </view>
@@ -92,7 +92,7 @@ function showToast(title, icon = 'success') {
                 电子邮箱
               </view>
               <view class="value">
-                {{ extraInfo.email }}
+                {{ appExtra.email }}
               </view>
             </view>
             <view class="action-container">
@@ -102,7 +102,7 @@ function showToast(title, icon = 'success') {
             </view>
           </view>
 
-          <view class="contact-item" @click="handleCopy(extraInfo.wechat)">
+          <view class="contact-item" @click="handleCopy(appExtra.wechat)">
             <view class="icon-container">
               <view class="i-carbon-logo-wechat size-6 text-primary-500"></view>
             </view>
@@ -111,7 +111,7 @@ function showToast(title, icon = 'success') {
                 微信号
               </view>
               <view class="value">
-                {{ extraInfo.wechat }}
+                {{ appExtra.wechat }}
               </view>
             </view>
             <view class="action-container">
@@ -152,7 +152,7 @@ function showToast(title, icon = 'success') {
 
     <view class="footer-section mt-auto p-4 text-center text-xs text-gray-400">
       <view class="mt-1">
-        © {{ new Date().getFullYear() }} {{ extraInfo.name }} 版权所有
+        © {{ new Date().getFullYear() }} {{ appExtra.name }} 版权所有
       </view>
     </view>
   </view>

@@ -1,8 +1,7 @@
 <script setup>
 import { showModal, showToast } from '@uni-helper/uni-promises'
-import { extraInfo } from '@/settings/index.js'
+import { appExtra, appVersion } from '@/settings/index.js'
 import { sleep } from '@/utils'
-import { version } from '/package.json'
 
 const userStore = useUserStore()
 const router = useRouter()
@@ -18,8 +17,8 @@ const systemItems = computed(() => [
   },
   {
     icon: 'i-carbon-settings',
-    text: '系统设置',
-    path: '/settings',
+    text: '偏好设置',
+    path: '/preference',
   },
 ])
 
@@ -44,7 +43,7 @@ function handleLogin() {
 }
 
 function onEnterpriseClick() {
-  window.open(extraInfo.url)
+  window.open(appExtra.url)
 }
 
 async function handleLogout() {
@@ -156,9 +155,9 @@ async function handleLogout() {
           class="text-primary-500 underline active:text-primary-700"
           @click="onEnterpriseClick"
         >
-          {{ extraInfo.name }}
+          {{ appExtra.name }}
         </text>
-        v{{ version }}
+        v{{ appVersion }}
       </view>
     </view>
   </view>
