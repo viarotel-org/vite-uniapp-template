@@ -5,7 +5,7 @@ const appStore = useAppStore()
 </script>
 
 <template>
-  <view class="">
+  <view class="h-full overflow-auto">
     <view class="h-[--safe-top]"></view>
     <zero-markdown-view :key="appStore.primaryColor" :markdown="content" :theme-color="appStore.primaryColor" />
   </view>

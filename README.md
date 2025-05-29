@@ -33,7 +33,7 @@ cd vite-uniapp-template
 
 > 请使用 node@20.0 及以上版本。
 
-推荐使用 `pnpm`。当然，也可以使用 `npm` 或 `yarn`。
+推荐使用 `pnpm` 安装依赖。当前未在 `npm` 或 `yarn` 环境下进行充分测试，可能存在依赖不兼容或版本对齐问题。
 
 ```shell
 pnpm install
