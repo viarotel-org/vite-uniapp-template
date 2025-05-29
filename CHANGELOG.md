@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.2](https://github.com/viarotel-org/vite-uniapp-template/compare/v3.0.1...v3.0.2) (2025-05-29)
+
+
+### Performance Improvements
+
+* 🚀 规范变量及目录结构命名 ([a636a67](https://github.com/viarotel-org/vite-uniapp-template/commit/a636a67c34325421a7a139b38cd7974a9a219b43))
+
 ## [3.0.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v3.0.0...v3.0.1) (2025-05-29)
 
 
