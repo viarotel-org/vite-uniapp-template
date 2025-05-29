@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/viarotel-org/vite-uniapp-template/compare/v3.0.0...v3.0.1) (2025-05-29)
+
+
+### Performance Improvements
+
+* 🌐 专注于使用 pnpm 包管理器 ([07679c8](https://github.com/viarotel-org/vite-uniapp-template/commit/07679c8716692cb09571a05855edec1bddb5210e))
+
 ## [3.0.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v2.7.3...v3.0.0) (2025-05-28)
 
 
