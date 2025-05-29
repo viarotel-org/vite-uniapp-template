@@ -1,8 +1,9 @@
 name: sync-gitee
 
 on:
+  workflow_dispatch:
   workflow_run:
-    workflows: [release-please]
+    workflows: [release]
     types:
       - completed
 
