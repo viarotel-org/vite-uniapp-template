@@ -1,5 +1,7 @@
 <script setup>
+// #ifdef WEB
 import { updateShades } from '$unocss-preset-shades'
+// #endif
 
 onLaunch(() => {
   console.log('App Launch')
@@ -13,7 +15,7 @@ onHide(() => {
 
 const appStore = useAppStore()
 
-// #ifndef MP
+// #ifdef WEB
 watchEffect(() => {
   updateShades(appStore.primaryColor)
 })

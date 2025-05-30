@@ -105,6 +105,7 @@
     "simple-git-hooks": "~2.13.0",
     "uni-parse-pages": "~0.0.1",
     "unocss": "~0.65.4",
+    "unocss-applet": "~0.9.0",
     "unplugin-auto-import": "~19.2.0",
     "unplugin-uni-router": "~1.2.7",
     "vite": "~6.3.5"

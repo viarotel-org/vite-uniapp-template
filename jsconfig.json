@@ -4,7 +4,8 @@
     "paths": {
       "@/*": ["src/*"],
       "@root/*": ["./*"],
-      "$uni-router": ["helpers/uni-router/index.js"]
+      "$uni-router": ["helpers/uni-router/index.js"],
+      "$unocss-preset-shades": ["helpers/unocss-preset-shades/index.js"]
     },
     "resolveJsonModule": true,
     "esModuleInterop": true

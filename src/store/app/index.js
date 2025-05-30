@@ -6,7 +6,7 @@ export const useAppStore = defineStore(
   () => {
     const themeModel = {
       primary: { color: defaultPrimaryColor, name: '默认' },
-      // #ifndef MP
+      // #ifdef WEB
       blue: { color: '#3b82f6', name: '经典蓝' },
       purple: { color: '#8b5cf6', name: '紫罗兰' },
       red: { color: '#ef4444', name: '活力红' },
