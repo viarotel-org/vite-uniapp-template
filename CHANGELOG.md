@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3](https://github.com/viarotel-org/vite-uniapp-template/compare/v3.0.2...v3.0.3) (2025-05-30)
+
+
+### Bug Fixes
+
+* 🐛 修复 APP 环境下依赖不兼容白屏问题 ([b892d59](https://github.com/viarotel-org/vite-uniapp-template/commit/b892d59bcde6d3f0e1bb7fc9f14596993d8958bd))
+
 ## [3.0.2](https://github.com/viarotel-org/vite-uniapp-template/compare/v3.0.1...v3.0.2) (2025-05-29)
 
 
