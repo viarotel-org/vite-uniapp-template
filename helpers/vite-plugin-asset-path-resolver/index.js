@@ -1,5 +1,4 @@
 import { console } from 'node:inspector'
-import path from 'node:path'
 
 /**
  * @typedef {object} AssetPathResolverOptions
@@ -19,10 +18,10 @@ export default function vitePluginAssetPathResolver(options) {
   // 设置默认选项
   options = {
     alias: options.alias || '~@assets',
-    local: options.local || path.join(process.cwd(), './src/assets'),
+    local: options.local || '/src/assets',
     cdn: options.cdn,
     remote: options.remote || false,
-    fileRegex: options.fileRegex || /\.(js|ts|jsx|tsx|vue|html|svelte|css)$/,
+    fileRegex: options.fileRegex || /\.(js|ts|jsx|tsx|vue|nvue|html|svelte|css)$/,
   }
 
   // 验证必要的配置项
@@ -37,8 +36,7 @@ export default function vitePluginAssetPathResolver(options) {
   const aliasPattern = new RegExp(`${escapeRegExp(options.alias)}\\/(.*?)(['"])`, 'g')
   const isRemote = options.remote === true
 
-  // 移除开头的斜杠以便于拼接
-  const localPath = options.local.startsWith('/') ? options.local : `/${options.local}`
+  const localPath = options.local.replace(/\\/g, '/').startsWith('/') ? options.local.replace(/\\/g, '/') : `/${options.local.replace(/\\/g, '/')}`
 
   // 确保CDN路径结尾有斜杠
   const cdnPath = options.cdn.endsWith('/') ? options.cdn : `${options.cdn}/`
@@ -65,10 +63,12 @@ export default function vitePluginAssetPathResolver(options) {
         return undefined
       }
 
-      // 根据模式决定替换为本地路径还是CDN路径
+      // --- FIX START ---
+      // The replacement now correctly uses forward slashes for the path.
       const replacement = isRemote
-        ? (_, assetPath, quote) => `${cdnPath}${assetPath}${quote}`
-        : (_, assetPath, quote) => `${localPath}/${assetPath}${quote}`
+        ? (_, assetPath, quote) => `${cdnPath}${assetPath.replace(/\\/g, '/')}${quote}`
+        : (_, assetPath, quote) => `${localPath}/${assetPath.replace(/\\/g, '/')}${quote}`
+      // --- FIX END ---
 
       // 执行替换
       const result = code.replace(aliasPattern, replacement)
@@ -83,10 +83,15 @@ export default function vitePluginAssetPathResolver(options) {
      * @returns {string} 转换后的HTML代码
      */
     transformIndexHtml(html) {
+      // --- FIX START ---
+      // The replacement now correctly uses forward slashes for the path.
+      const replacement = isRemote
+        ? (_, assetPath, quote) => `${cdnPath}${assetPath.replace(/\\/g, '/')}${quote}`
+        : (_, assetPath, quote) => `${localPath}/${assetPath.replace(/\\/g, '/')}${quote}`
+      // --- FIX END ---
+
       // 处理HTML中的资源路径
-      return html.replace(aliasPattern, isRemote
-        ? (_, assetPath, quote) => `${cdnPath}${assetPath}${quote}`
-        : (_, assetPath, quote) => `${localPath}/${assetPath}${quote}`)
+      return html.replace(aliasPattern, replacement)
     },
 
     /**
