@@ -1,6 +1,6 @@
 <script setup>
 import { showToast } from '@uni-helper/uni-promises'
-import { appDescription, appExtra, appName, appVersion } from '@/settings/index.js'
+import { appDescription, appExtra, appName, appVersion } from '@/settings/index.mjs'
 import { sleep } from '@/utils'
 
 const userStore = useUserStore()

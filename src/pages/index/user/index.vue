@@ -1,6 +1,6 @@
 <script setup>
 import { showModal, showToast } from '@uni-helper/uni-promises'
-import { appExtra, appVersion } from '@/settings/index.js'
+import { appExtra, appVersion } from '@/settings/index.mjs'
 import { sleep } from '@/utils'
 
 const userStore = useUserStore()

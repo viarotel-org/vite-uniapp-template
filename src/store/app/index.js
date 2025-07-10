@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { primaryColor as defaultPrimaryColor } from '@/settings'
+import { primaryColor as defaultPrimaryColor } from '@/settings/index.mjs'
 
 export const useAppStore = defineStore(
   'app',

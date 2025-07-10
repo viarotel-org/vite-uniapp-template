@@ -11,7 +11,6 @@ import postcss from './postcss.config.js'
 import plugins from './vite.config.plugins.js'
 
 export default defineConfig(({ mode }) => {
-  const isDevelopment = mode === 'development'
   const env = loadMapEnv(mode)
 
   const isUseProxy = env.VITE_PROXY_USE === '1'
@@ -57,7 +56,7 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       /** 解决 Windows 下开发模式控制台提示崩溃的问题 */
-      ...(isDevelopment
+      ...(process.platform === 'win32'
         ? {
             watch: {
               exclude: ['node_modules/**', '/__uno.css'],

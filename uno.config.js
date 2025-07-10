@@ -7,7 +7,7 @@ import { defineConfig } from 'unocss'
 
 import { presetShades } from './helpers/unocss-preset-shades/index.js'
 
-import { primaryColor } from './src/settings/index.js'
+import { primaryColor } from './src/settings/index.mjs'
 
 const presets = []
 const transformers = []

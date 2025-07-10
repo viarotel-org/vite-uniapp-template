@@ -1,6 +1,6 @@
 <script setup>
 import wechatImage from '~@assets/images/contact/image-wechat.png?url'
-import { appExtra } from '@/settings/index.js'
+import { appExtra } from '@/settings/index.mjs'
 
 // 复制文本到剪贴板
 function handleCopy(text) {
@@ -48,7 +48,6 @@ function showToast(title, icon = 'success') {
   uni.showToast({
     title,
     icon,
-    duration: 2000000,
   })
 }
 </script>

@@ -1,5 +1,5 @@
 import { defineUniPages } from '@uni-helper/vite-plugin-uni-pages'
-import { appName } from './src/settings/index.js'
+import { appName } from './src/settings/index.mjs'
 
 export default defineUniPages({
   easycom: {

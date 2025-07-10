@@ -4,6 +4,7 @@
     "paths": {
       "@/*": ["src/*"],
       "@root/*": ["./*"],
+      "~@assets": ["src/assets/*"],
       "$uni-router": ["helpers/uni-router/index.js"],
       "$unocss-preset-shades": ["helpers/unocss-preset-shades/index.js"]
     },

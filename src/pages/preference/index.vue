@@ -1,5 +1,5 @@
 <script setup>
-import { appVersion } from '@/settings/index.js'
+import { appVersion } from '@/settings/index.mjs'
 
 const appStore = useAppStore()
 
