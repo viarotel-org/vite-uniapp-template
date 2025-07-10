@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.0.4](https://github.com/viarotel-org/vite-uniapp-template/compare/v3.0.3...v3.0.4) (2025-07-10)
+
+
+### Bug Fixes
+
+* 🐛 修复 windows 下静态资源插件路径转换异常的问题 ([ac3059f](https://github.com/viarotel-org/vite-uniapp-template/commit/ac3059f464d0fe82005d75c9e2cb27ca7556eeca))
+
+
+### Performance Improvements
+
+* 🔍️ 调整依赖项以解决 APP 端兼容性问题 ([d001f74](https://github.com/viarotel-org/vite-uniapp-template/commit/d001f747e8620e3965506110d3629121b79fd790))
+* 🚀 优化样式加载逻辑 ([6679418](https://github.com/viarotel-org/vite-uniapp-template/commit/667941827ca0c367a8982b733e6cc9706c4db635))
+
 ## [3.0.3](https://github.com/viarotel-org/vite-uniapp-template/compare/v3.0.2...v3.0.3) (2025-05-30)
 
 
