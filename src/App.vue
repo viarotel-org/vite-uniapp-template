@@ -23,7 +23,9 @@ watchEffect(() => {
 </script>
 
 <style lang="scss">
+// #ifndef APP-NVUE
 @import '@unocss-applet/reset/uni-app/button-after.css';
 @import '@unocss-applet/reset/uni-app/tailwind-compat.css';
+// #endif
 @import './styles/css/index.css';
 </style>

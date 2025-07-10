@@ -23,10 +23,10 @@ export default defineConfig({
   presets,
   transformers,
   shortcuts: {
+    'text-2xs': 'text-[0.625rem] leading-[0.875rem]',
     'inset-0': 'top-0 bottom-0 left-0 right-0',
-    'inset-center':
-      'top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2',
-    'top-center': 'top-1/2 transform -translate-y-1/2',
-    'left-center': 'left-1/2 transform -translate-x-1/2',
+    'inset-center': 'absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2',
+    'inset-center-x': 'absolute left-1/2 transform -translate-x-1/2',
+    'inset-center-y': 'absolute top-1/2 transform -translate-y-1/2',
   },
 })
