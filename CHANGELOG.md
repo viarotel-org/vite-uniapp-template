@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.5](https://github.com/viarotel-org/vite-uniapp-template/compare/v3.0.4...v3.0.5) (2025-09-02)
+
+
+### Bug Fixes
+
+* 🐛 解决 Windows 下云打包编译阶段卡死的问题 ([1b57707](https://github.com/viarotel-org/vite-uniapp-template/commit/1b57707dca3727b2c72ba948d9e6caf4712e08a4))
+
 ## [3.0.4](https://github.com/viarotel-org/vite-uniapp-template/compare/v3.0.3...v3.0.4) (2025-07-10)
 
 
