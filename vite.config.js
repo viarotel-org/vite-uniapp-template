@@ -55,14 +55,6 @@ export default defineConfig(({ mode }) => {
       postcss,
     },
     build: {
-      /** 解决 Windows 下开发模式控制台提示崩溃的问题 */
-      ...(process.platform === 'win32'
-        ? {
-            watch: {
-              exclude: ['node_modules/**', '/__uno.css'],
-            },
-          }
-        : {}),
       // minify: false,
     },
     define: {
