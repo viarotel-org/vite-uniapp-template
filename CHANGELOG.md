@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.1.0](https://github.com/viarotel-org/vite-uniapp-template/compare/v3.0.5...v3.1.0) (2025-09-09)
+
+
+### Features
+
+* 🚀 新增意见反馈模板 ([69f9440](https://github.com/viarotel-org/vite-uniapp-template/commit/69f94404c3e02a75199c0f32af15701fbe8e39dc))
+
+
+### Bug Fixes
+
+* 🐛 修复微信小程序部分样式展示异常的问题 ([643e8e6](https://github.com/viarotel-org/vite-uniapp-template/commit/643e8e65f71dca56410cd84e99d712afc63ea57b))
+
 ## [3.0.5](https://github.com/viarotel-org/vite-uniapp-template/compare/v3.0.4...v3.0.5) (2025-09-02)
 
 
