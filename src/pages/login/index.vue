@@ -117,21 +117,23 @@ function onProjectClick() {
           </view>
         </view>
 
-        <view class="space-y-6">
-          <button
-            class="relative w-full overflow-hidden rounded-2xl from-primary-500 to-primary-400 bg-gradient-to-r px-6 py-4 font-semibold shadow-lg transition-all duration-200 active:scale-98 disabled:cursor-not-allowed !text-white disabled:opacity-70"
-            :class="{ 'shadow-xl': !isLoading }"
-            :disabled="isLoading"
-            @click="onLoginClick"
-          >
-            <view class="flex items-center justify-center space-x-3">
-              <view v-if="isLoading" class="i-carbon-fade h-5 w-5 animate-spin bg-white"></view>
-              <view v-else class="i-carbon-phone h-5 w-5"></view>
-              <text>{{ isLoading ? '登录中...' : '手机号快捷登录' }}</text>
-            </view>
+        <view class="space-y-4">
+          <view class="">
+            <button
+              class="relative w-full overflow-hidden rounded-2xl from-primary-500 to-primary-400 bg-gradient-to-r px-6 py-4 font-semibold shadow-lg transition-all duration-200 active:scale-98 disabled:cursor-not-allowed !text-white disabled:opacity-70"
+              :class="{ 'shadow-xl': !isLoading }"
+              :disabled="isLoading"
+              @click="onLoginClick"
+            >
+              <view class="flex items-center justify-center space-x-3">
+                <view v-if="isLoading" class="i-carbon-fade h-5 w-5 animate-spin bg-white"></view>
+                <view v-else class="i-carbon-phone h-5 w-5"></view>
+                <text>{{ isLoading ? '登录中...' : '手机号快捷登录' }}</text>
+              </view>
 
-            <view class="absolute inset-0 from-transparent via-white to-transparent bg-gradient-to-r opacity-0 transition-all duration-500 -translate-x-full group-active:translate-x-full group-active:opacity-20"></view>
-          </button>
+              <view class="absolute inset-0 from-transparent via-white to-transparent bg-gradient-to-r opacity-0 transition-all duration-500 -translate-x-full group-active:translate-x-full group-active:opacity-20"></view>
+            </button>
+          </view>
 
           <view class="flex items-center px-2 space-x-2">
             <view

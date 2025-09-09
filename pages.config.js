@@ -1,5 +1,5 @@
 import { defineUniPages } from '@uni-helper/vite-plugin-uni-pages'
-import { appName } from './src/settings/index.mjs'
+import { appName, primaryColor } from './src/settings/index.mjs'
 
 export default defineUniPages({
   easycom: {
@@ -143,7 +143,7 @@ export default defineUniPages({
   ],
   tabBar: {
     color: '#999999',
-    selectedColor: '#018d71',
+    selectedColor: primaryColor,
     backgroundColor: '#FFFFFF',
     list: [
       {
