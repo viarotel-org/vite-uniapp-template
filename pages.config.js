@@ -140,6 +140,20 @@ export default defineUniPages({
         },
       ],
     },
+    {
+      root: 'pages/feedback',
+      pages: [
+        {
+          path: 'index',
+          aliasPath: '/feedback',
+          name: 'feedback',
+          style: {
+            navigationBarTitleText: '意见反馈',
+            transparentTitle: 'auto',
+          },
+        },
+      ],
+    },
   ],
   tabBar: {
     color: '#999999',

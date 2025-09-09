@@ -16,6 +16,11 @@ const systemItems = computed(() => [
     path: '/contact',
   },
   {
+    icon: 'i-carbon-chat',
+    text: '意见反馈',
+    path: '/feedback',
+  },
+  {
     icon: 'i-carbon-settings',
     text: '偏好设置',
     path: '/preference',
